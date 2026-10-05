@@ -11,50 +11,170 @@ const refLink = "/go/1win";
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
   <meta name="description" content={description} />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #090d16;
+      color: #f1f5f9;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 16px;
+    }
+    .container {
+      max-width: 440px;
+      margin: 0 auto;
+      width: 100%;
+      padding-top: 24px;
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #34d399;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: 26px;
+      line-height: 1.25;
+      font-weight: 800;
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
+    p.desc {
+      color: #94a3b8;
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 24px;
+    }
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    .btn-primary {
+      background: #10b981;
+      color: #041f14;
+      font-weight: 800;
+      font-size: 17px;
+      padding: 16px;
+      border-radius: 16px;
+      text-decoration: none;
+      box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.35);
+      transition: transform 0.15s ease, background-color 0.15s ease;
+      display: block;
+    }
+    .btn-primary:active {
+      transform: scale(0.98);
+      background: #059669;
+    }
+    .btn-secondary {
+      background: #1e293b;
+      color: #f8fafc;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 14px;
+      border-radius: 16px;
+      text-decoration: none;
+      border: 1px solid #334155;
+      display: block;
+      transition: background-color 0.15s ease;
+    }
+    .btn-secondary:active {
+      background: #334155;
+    }
+    .card-info {
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 18px;
+      padding: 16px;
+      text-align: left;
+      font-size: 14px;
+    }
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(51, 65, 85, 0.4);
+    }
+    .row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .label {
+      color: #64748b;
+    }
+    .val-accent {
+      font-weight: 700;
+      color: #34d399;
+    }
+    .val {
+      font-weight: 600;
+      color: #e2e8f0;
+    }
+    footer {
+      text-align: center;
+      font-size: 11px;
+      color: #475569;
+      padding: 24px 0 8px;
+    }
+  </style>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between p-4">
-  <main class="max-w-md mx-auto w-full pt-8 text-center">
-    <div class="inline-block bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider mb-4">
+<body>
+  <main class="container">
+    <div class="badge">
       ⚡️ Rasmiy va Yangilangan Versiya 2026
     </div>
     
-    <h1 class="text-3xl font-extrabold leading-tight mb-3">
+    <h1>
       Aviator O'yini — O'zbekistonda Pul Ishlash Sirlari
     </h1>
     
-    <p class="text-slate-400 text-sm mb-6">
+    <p class="desc">
       Uzcard va Humo orqali to'lovlar, tezkor pul yechib olish va yangi o'yinchilar uchun +500% xush kelibsiz bonusi.
     </p>
 
-    <div class="space-y-3 mb-8">
-      <a href={refLink} target="_blank" rel="nofollow sponsored" 
-         class="block w-full bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold py-4 px-6 rounded-2xl text-lg shadow-lg shadow-emerald-500/25 transition">
+    <div class="btn-group">
+      <a href={refLink} target="_blank" rel="nofollow sponsored" class="btn-primary">
         🚀 O'yinni Boshlash (+500% Bonus)
       </a>
-      <a href={refLink} target="_blank" rel="nofollow sponsored" 
-         class="block w-full bg-slate-900 border border-slate-800 hover:bg-slate-800 text-white font-semibold py-3.5 px-6 rounded-2xl transition text-sm">
+      <a href={refLink} target="_blank" rel="nofollow sponsored" class="btn-secondary">
         📲 Android APK Yuklab Olish (45 MB)
       </a>
     </div>
 
-    <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 text-left text-sm space-y-2.5">
-      <div class="flex justify-between border-b border-slate-800/60 pb-2">
-        <span class="text-slate-400">Minimal depozit:</span>
-        <span class="font-medium text-emerald-400">10 000 so'm</span>
+    <div class="card-info">
+      <div class="row">
+        <span class="label">Minimal depozit:</span>
+        <span class="val-accent">10 000 so'm</span>
       </div>
-      <div class="flex justify-between border-b border-slate-800/60 pb-2">
-        <span class="text-slate-400">To'lov tizimlari:</span>
-        <span class="font-medium">Uzcard, Humo, Visa</span>
+      <div class="row">
+        <span class="label">To'lov tizimlari:</span>
+        <span class="val">Uzcard, Humo, Visa</span>
       </div>
-      <div class="flex justify-between">
-        <span class="text-slate-400">Pul yechish vaqti:</span>
-        <span class="font-medium">5-15 daqiqa</span>
+      <div class="row">
+        <span class="label">Pul yechish vaqti:</span>
+        <span class="val">5-15 daqiqa</span>
       </div>
     </div>
   </main>
 
-  <footer class="text-center text-xs text-slate-600 py-4">
+  <footer>
     © 2026 Aviator Uzbek. 18+ Mas'uliyat bilan o'ynang.
   </footer>
 </body>
