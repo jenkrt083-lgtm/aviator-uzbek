@@ -1,0 +1,618 @@
+---
+const title = "Lucky Jet O'yini Uzbekistan (2026) — 1win Rasmiy Sayt va Demo";
+const description = "1win Lucky Jet o'yini O'zbekistonda: Omadli Jo bilan crash o'yini, yutish strategiyalari, bepul demo va Uzcard orqali 10 000 so'mdan to'ldirish.";
+const refLink = "/go/1win";
+const apkLink = "/download/apk";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Lucky Jet o'yinida qanday qilib pul yutsa bo'ladi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lucky Jet o'yinida Omadli Jo uchib ketishidan oldin yutuqni yechib olish kerak. Eng xavfsiz taktika — 1.30x dan 1.60x gacha bo'lgan koeffitsiyentlarda avtomatik yechib olishni yoqishdir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Lucky Jet o'yiniga Uzcard yoki Humo orqali pul kiritish mumkinmi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ha, 1win rasmiy platformasida barcha O'zbekiston bank kartalari (Uzcard, Humo) orqali minimal 10 000 so'mdan boshlab komissiyasiz hisobni to'ldirish mumkin."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Lucky Jet o'yini va Aviator o'rtasidagi farq nima?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lucky Jet 1win platformasining eksklyuziv o'yini bo'lib, unda samolyot o'rniga Omadli Jo (Lucky Joe) uchadi va koeffitsiyentlar tez-tez 100x dan yuqoriga ko'tariladi."
+      }
+    }
+  ]
+};
+---
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+    body {
+      background-color: #0b0e14;
+      color: #f1f5f9;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      min-height: 100vh;
+      padding-bottom: 84px;
+    }
+    .app-wrapper {
+      max-width: 460px;
+      margin: 0 auto;
+      padding: 14px 14px 20px;
+    }
+
+    /* Навигационные табы */
+    .top-chips {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 14px;
+      scrollbar-width: none;
+    }
+    .top-chips::-webkit-scrollbar { display: none; }
+    .chip {
+      background: #171d28;
+      color: #94a3b8;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 8px 16px;
+      border-radius: 20px;
+      white-space: nowrap;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .chip.active-purple {
+      background: #7c3aed;
+      color: #ffffff;
+      border-color: #8b5cf6;
+      box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);
+    }
+
+    /* Главный фиолетовый баннер Lucky Jet */
+    .hero-card {
+      background: linear-gradient(145deg, #4c1d95 0%, #6d28d9 50%, #7c3aed 100%);
+      border-radius: 24px;
+      padding: 22px 18px 20px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 14px;
+      box-shadow: 0 12px 28px rgba(109, 40, 217, 0.3);
+    }
+    .hero-card::after {
+      content: '🚀';
+      position: absolute;
+      right: -8px;
+      top: 10px;
+      font-size: 88px;
+      opacity: 0.18;
+      transform: rotate(-15deg);
+      pointer-events: none;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 12px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .hero-title {
+      font-size: 22px;
+      font-weight: 900;
+      line-height: 1.25;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+    .hero-subtitle {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.88);
+      line-height: 1.45;
+      margin-bottom: 18px;
+      max-width: 85%;
+    }
+    .btn-play-lj {
+      background: #ffffff;
+      color: #4c1d95;
+      font-weight: 800;
+      font-size: 16px;
+      text-align: center;
+      padding: 15px;
+      border-radius: 16px;
+      display: block;
+      text-decoration: none;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Симулятор Lucky Jet */
+    .sim-card {
+      background: linear-gradient(180deg, #191228 0%, #0d0a17 100%);
+      border: 1px solid #2d1f47;
+      border-radius: 24px;
+      padding: 16px;
+      margin-bottom: 14px;
+    }
+    .sim-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .sim-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .sim-badge {
+      background: rgba(168, 85, 247, 0.2);
+      color: #c084fc;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 6px;
+      text-transform: uppercase;
+    }
+    .sim-screen {
+      background: radial-gradient(circle at bottom left, #29154a 0%, #0a0712 100%);
+      border: 1px solid #3b206b;
+      border-radius: 18px;
+      height: 160px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+    .sim-grid {
+      position: absolute;
+      inset: 0;
+      background-size: 20px 20px;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+    .sim-mult {
+      font-size: 42px;
+      font-weight: 900;
+      color: #ffffff;
+      z-index: 2;
+      text-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+      font-variant-numeric: tabular-nums;
+    }
+    .sim-joe {
+      position: absolute;
+      font-size: 32px;
+      z-index: 2;
+      transition: all 0.1s linear;
+      bottom: 20px;
+      left: 20px;
+    }
+    .sim-status {
+      font-size: 12px;
+      color: #94a3b8;
+      z-index: 2;
+      margin-top: 4px;
+      font-weight: 600;
+    }
+    .sim-controls {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .sim-chips {
+      display: flex;
+      gap: 6px;
+    }
+    .sim-chip-btn {
+      flex: 1;
+      background: #1b172a;
+      border: 1px solid #31274a;
+      color: #94a3b8;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 7px 0;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .sim-chip-btn.active {
+      background: #7c3aed;
+      color: #ffffff;
+      border-color: #8b5cf6;
+    }
+    .sim-action-btn {
+      background: #10b981;
+      color: #041f14;
+      font-weight: 900;
+      font-size: 16px;
+      padding: 14px;
+      border-radius: 14px;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3);
+    }
+    .sim-action-btn.cashing {
+      background: #f59e0b;
+      color: #2b1800;
+      box-shadow: 0 4px 16px rgba(245, 158, 11, 0.35);
+    }
+    .sim-result {
+      display: none;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: 14px;
+      padding: 10px;
+      text-align: center;
+      margin-top: 10px;
+      font-size: 13px;
+    }
+
+    /* Инфо-карточка характеристик Lucky Jet */
+    .info-card {
+      background: #120e1e;
+      border: 1px solid #231b38;
+      border-radius: 20px;
+      padding: 16px 18px;
+      margin-bottom: 14px;
+    }
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      font-size: 13px;
+    }
+    .info-row:last-child {
+      border-bottom: none;
+      padding-bottom: 2px;
+    }
+    .info-label { color: #8fa0b5; }
+    .info-val { font-weight: 700; color: #ffffff; }
+    .info-val-purple { font-weight: 800; color: #c084fc; }
+
+    /* FAQ */
+    .faq-section {
+      margin-bottom: 20px;
+    }
+    .faq-header {
+      font-size: 17px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 12px;
+      padding-left: 4px;
+    }
+    .faq-item {
+      background: #120e1e;
+      border: 1px solid #231b38;
+      border-radius: 16px;
+      margin-bottom: 8px;
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 14px 16px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #f1f5f9;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-question::-webkit-details-marker { display: none; }
+    .faq-question::after {
+      content: '+';
+      font-size: 18px;
+      color: #a855f7;
+      font-weight: 800;
+    }
+    details[open] .faq-question::after { content: '−'; }
+    .faq-answer {
+      padding: 0 16px 14px;
+      font-size: 12px;
+      color: #94a3b8;
+      line-height: 1.55;
+      border-top: 1px solid rgba(255, 255, 255, 0.04);
+      padding-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 11px;
+      color: #4f5f73;
+      padding: 10px 0 20px;
+    }
+    footer a {
+      color: #64748b;
+      text-decoration: underline;
+      margin: 0 6px;
+    }
+
+    /* Нижнее меню */
+    .bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #0f141d;
+      border-top: 1px solid #1c2433;
+      height: 64px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 100;
+      box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.4);
+    }
+    .bottom-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #708096;
+      font-size: 10px;
+      font-weight: 600;
+      gap: 3px;
+      flex: 1;
+    }
+    .bottom-item.active-purple { color: #a855f7; }
+    .bottom-icon { font-size: 18px; }
+  </style>
+</head>
+<body>
+
+  <div class="app-wrapper">
+    <div class="top-chips">
+      <a href="/" class="chip">🚀 Aviator</a>
+      <span class="chip active-purple">🎰 Lucky Jet</span>
+      <a href="/uzcard-depozit" class="chip">💳 Uzcard / Humo</a>
+      <a href="/ilova" class="chip">📲 APK Ilova</a>
+      <a href={refLink} target="_blank" rel="nofollow sponsored" class="chip">🎁 +500% Bonus</a>
+    </div>
+
+    <!-- Главный баннер Lucky Jet -->
+    <div class="hero-card">
+      <div class="hero-tag">🔥 1win Eksklyuziv O'yin</div>
+      <h1 class="hero-title">Lucky Jet — Omadli Jo Bilan 500% Bonus</h1>
+      <p class="hero-subtitle">Maksimal koeffitsiyentlar 200x gacha. Uzcard va Humo orqali minimal 10 000 so'mdan depozit qiling.</p>
+      <a href={refLink} target="_blank" rel="nofollow sponsored" class="btn-play-lj">
+        Lucky Jet O'ynash (Ro'yxatdan O'tish)
+      </a>
+    </div>
+
+    <!-- Демо-симулятор с Омадли Джо -->
+    <div class="sim-card">
+      <div class="sim-header">
+        <div class="sim-title">
+          <span>🎒 Omadli Jo Simulyatori</span>
+        </div>
+        <span class="sim-badge">Demo Rejim</span>
+      </div>
+
+      <div class="sim-screen">
+        <div class="sim-grid"></div>
+        <div id="sim-joe" class="sim-joe">🧑‍🚀</div>
+        <div id="sim-mult" class="sim-mult">1.00x</div>
+        <div id="sim-status" class="sim-status">Tikish summasini tanlang va boshlang</div>
+      </div>
+
+      <div class="sim-controls">
+        <div class="sim-chips">
+          <button class="sim-chip-btn active" data-bet="10000">10 000 so'm</button>
+          <button class="sim-chip-btn" data-bet="20000">20 000 so'm</button>
+          <button class="sim-chip-btn" data-bet="50000">50 000 so'm</button>
+          <button class="sim-chip-btn" data-bet="100000">100 000 so'm</button>
+        </div>
+
+        <button id="sim-btn" class="sim-action-btn">
+          🚀 Jo Parvozini Boshlash (Demo)
+        </button>
+      </div>
+
+      <div id="sim-result" class="sim-result">
+        <p id="sim-result-text" style="color: #c084fc; font-weight: 800; margin-bottom: 6px;"></p>
+        <a href={refLink} target="_blank" rel="nofollow sponsored" style="color: #ffffff; background: #7c3aed; display: inline-block; padding: 8px 16px; border-radius: 10px; text-decoration: none; font-size: 12px; font-weight: 700;">
+          Haqiqiy Lucky Jet-da o'ynash →
+        </a>
+      </div>
+    </div>
+
+    <!-- Характеристики игры -->
+    <div class="info-card">
+      <div class="info-row">
+        <span class="info-label">O'yin turi:</span>
+        <span class="info-val">Crash Game (1win Original)</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">RTP (Qaytish darajasi):</span>
+        <span class="info-val-purple">97.0%</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Minimal stavka:</span>
+        <span class="info-val">1 000 so'm</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Minimal depozit:</span>
+        <span class="info-val-purple">10 000 so'm</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">To'lovlar:</span>
+        <span class="info-val">Uzcard, Humo, Visa</span>
+      </div>
+    </div>
+
+    <!-- FAQ блок -->
+    <div class="faq-section">
+      <h2 class="faq-header">Lucky Jet Savollar va Javoblar</h2>
+      
+      <details class="faq-item">
+        <summary class="faq-question">Lucky Jet o'yinida qanday qilib yutsa bo'ladi?</summary>
+        <div class="faq-answer">
+          Asosiy qoida — Jo uchib ketishidan oldin tugmani bosish. Tajribali o'yinchilar 1.30x - 1.60x koeffitsiyentlar oralig'ida avtomatik pul yechishni tanlashadi.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Uzcard yoki Humo orqali to'ldirish mumkinmi?</summary>
+        <div class="faq-answer">
+          Ha, minimal 10 000 so'mdan boshlab komissiyasiz depozit qilishingiz va yutuqlaringizni 5-15 daqiqa ichida kartangizga yechib olishingiz mumkin.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Lucky Jet ilovasini yuklab olish kerakmi?</summary>
+        <div class="faq-answer">
+          Ixtiyoriy. Sayt orqali brauzerda to'g'ridan-to'g'ri o'ynash mumkin yoki qulaylik uchun rasmiy 1win Android APK ilovasini yuklab olishingiz mumkin.
+        </div>
+      </details>
+    </div>
+
+    <footer>
+      <div style="margin-bottom: 8px;">
+        <a href="/masuliyatli-oyin">Mas'uliyatli o'yin (18+)</a>
+        <a href="/maxfiylik-siyosati">Maxfiylik siyosati</a>
+      </div>
+      © 2026 Aviator & Lucky Jet Uzbek. 18+ Mas'uliyat bilan o'ynang.
+    </footer>
+  </div>
+
+  <!-- Нижнее меню навигации -->
+  <nav class="bottom-bar">
+    <a href="/" class="bottom-item">
+      <span class="bottom-icon">🏠</span>
+      <span>Asosiy</span>
+    </a>
+    <a href={refLink} target="_blank" rel="nofollow sponsored" class="bottom-item">
+      <span class="bottom-icon">✈️</span>
+      <span>Aviator</span>
+    </a>
+    <a href="/lucky-jet" class="bottom-item active-purple">
+      <span class="bottom-icon">🎰</span>
+      <span>Lucky Jet</span>
+    </a>
+    <a href="/uzcard-depozit" class="bottom-item">
+      <span class="bottom-icon">💳</span>
+      <span>To'lov</span>
+    </a>
+    <a href={refLink} target="_blank" rel="nofollow sponsored" class="bottom-item">
+      <span class="bottom-icon">🎁</span>
+      <span>Bonus</span>
+    </a>
+  </nav>
+
+  <!-- Скрипт симулятора Lucky Jet -->
+  <script>
+    let currentBet = 10000;
+    let isRunning = false;
+    let multiplier = 1.0;
+    let interval = null;
+    let crashPoint = 2.0;
+
+    const multEl = document.getElementById('sim-mult');
+    const statusEl = document.getElementById('sim-status');
+    const joeEl = document.getElementById('sim-joe');
+    const btnEl = document.getElementById('sim-btn');
+    const resultBox = document.getElementById('sim-result');
+    const resultText = document.getElementById('sim-result-text');
+    const chipBtns = document.querySelectorAll('.sim-chip-btn');
+
+    chipBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (isRunning) return;
+        chipBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentBet = parseInt(btn.dataset.bet || '10000', 10);
+      });
+    });
+
+    btnEl?.addEventListener('click', () => {
+      if (!isRunning) {
+        isRunning = true;
+        multiplier = 1.0;
+        resultBox.style.display = 'none';
+        btnEl.classList.add('cashing');
+        btnEl.textContent = "💰 Jo Yutug'ini Olish";
+        statusEl.textContent = "Jo parvoz qilmoqda...";
+        statusEl.style.color = "#c084fc";
+        
+        crashPoint = (Math.random() * 4.5 + 1.25);
+
+        interval = setInterval(() => {
+          multiplier += 0.02 * (multiplier * 0.4);
+          multEl.textContent = multiplier.toFixed(2) + 'x';
+
+          const progress = Math.min((multiplier - 1) / 3, 1);
+          joeEl.style.bottom = (20 + progress * 70) + 'px';
+          joeEl.style.left = (20 + progress * 240) + 'px';
+
+          if (multiplier >= crashPoint) {
+            clearInterval(interval);
+            isRunning = false;
+            btnEl.classList.remove('cashing');
+            btnEl.textContent = "🔄 Qayta Boshlash";
+            statusEl.textContent = "Jo uchib ketdi!";
+            statusEl.style.color = "#ef4444";
+            multEl.style.color = "#ef4444";
+            joeEl.style.transform = "rotate(40deg) translateY(-80px)";
+            joeEl.style.opacity = "0";
+
+            setTimeout(() => {
+              joeEl.style.transform = "none";
+              joeEl.style.opacity = "1";
+              joeEl.style.bottom = "20px";
+              joeEl.style.left = "20px";
+              multEl.style.color = "#ffffff";
+            }, 1000);
+          }
+        }, 50);
+
+      } else {
+        clearInterval(interval);
+        isRunning = false;
+        btnEl.classList.remove('cashing');
+        btnEl.textContent = "🚀 Yana O'ynash";
+        statusEl.textContent = "Yutuq qayd etildi!";
+        statusEl.style.color = "#10b981";
+
+        const wonAmount = Math.round(currentBet * multiplier).toLocaleString('uz-UZ');
+        resultText.innerHTML = `Omadli Jo bilan <b>${wonAmount} so'm</b> yutdingiz! 🚀`;
+        resultBox.style.display = 'block';
+      }
+    });
+  </script>
+
+</body>
+</html>
