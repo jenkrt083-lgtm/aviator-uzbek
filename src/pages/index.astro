@@ -1,6 +1,6 @@
 ---
-const title = "Aviator O'yini Uzbekistan (2026) — Rasmiy Sayt va Signallar";
-const description = "O'zbekistonda Aviator o'yinida yutish sirlari, 1win rasmiy kirish va Uzcard/Humo orqali 10 000 so'mdan depozit qilish.";
+const title = "Aviator O'yini Uzbekistan (2026) — 1win Rasmiy Sayt";
+const description = "O'zbekistonda Aviator o'yinida yutish sirlari, 1win rasmiy kirish, Android APK va Uzcard/Humo orqali 10 000 so'mdan depozit.";
 const refLink = "/go/1win";
 const apkLink = "/download/apk";
 ---
@@ -9,7 +9,7 @@ const apkLink = "/download/apk";
 <html lang="uz">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>{title}</title>
   <meta name="description" content={description} />
   <style>
@@ -17,178 +17,367 @@ const apkLink = "/download/apk";
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      -webkit-tap-highlight-color: transparent;
     }
     body {
-      background-color: #090d16;
+      background-color: #0b0e14;
       color: #f1f5f9;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 16px;
+      padding-bottom: 84px; /* отступ под нижнее меню */
     }
-    .container {
-      max-width: 440px;
+    .app-wrapper {
+      max-width: 460px;
       margin: 0 auto;
-      width: 100%;
-      padding-top: 24px;
-      text-align: center;
+      padding: 14px 14px 20px;
     }
-    .badge {
-      display: inline-block;
-      background: rgba(16, 185, 129, 0.12);
-      border: 1px solid rgba(16, 185, 129, 0.3);
-      color: #34d399;
-      font-size: 12px;
+
+    /* Верхние пилюли (табы) */
+    .top-chips {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 14px;
+      scrollbar-width: none;
+    }
+    .top-chips::-webkit-scrollbar {
+      display: none;
+    }
+    .chip {
+      background: #171d28;
+      color: #94a3b8;
+      font-size: 13px;
       font-weight: 700;
-      padding: 6px 14px;
-      border-radius: 9999px;
+      padding: 8px 16px;
+      border-radius: 20px;
+      white-space: nowrap;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.2s;
+    }
+    .chip.active {
+      background: #007aff;
+      color: #ffffff;
+      border-color: #007aff;
+      box-shadow: 0 4px 12px rgba(0, 122, 255, 0.35);
+    }
+
+    /* Главная карточка (Синий градиент 1win) */
+    .hero-card {
+      background: linear-gradient(145deg, #0738b8 0%, #0056e0 50%, #007aff 100%);
+      border-radius: 24px;
+      padding: 22px 18px 20px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 14px;
+      box-shadow: 0 12px 28px rgba(0, 86, 224, 0.25);
+    }
+    .hero-card::after {
+      content: '✈️';
+      position: absolute;
+      right: -8px;
+      top: 10px;
+      font-size: 88px;
+      opacity: 0.18;
+      transform: rotate(-15deg);
+      pointer-events: none;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(8px);
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 12px;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      margin-bottom: 16px;
-    }
-    h1 {
-      font-size: 26px;
-      line-height: 1.25;
-      font-weight: 800;
       margin-bottom: 12px;
+    }
+    .hero-title {
+      font-size: 23px;
+      font-weight: 900;
+      line-height: 1.25;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+    .hero-subtitle {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.45;
+      margin-bottom: 20px;
+      max-width: 85%;
+    }
+    .btn-play {
+      background: #ffffff;
+      color: #0738b8;
+      font-weight: 800;
+      font-size: 16px;
+      text-align: center;
+      padding: 15px;
+      border-radius: 16px;
+      display: block;
+      text-decoration: none;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+      transition: transform 0.1s ease;
+    }
+    .btn-play:active {
+      transform: scale(0.98);
+    }
+
+    /* Вторая карточка (Темно-бирюзовая в стиле блога/каналов) */
+    .second-card {
+      background: linear-gradient(145deg, #102434 0%, #0d1e2d 100%);
+      border: 1px solid #1a2f42;
+      border-radius: 24px;
+      padding: 18px;
+      margin-bottom: 14px;
+    }
+    .second-card-header {
+      margin-bottom: 14px;
+    }
+    .second-title {
+      font-size: 17px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+    .second-subtitle {
+      font-size: 12px;
+      color: #8fa0b5;
+    }
+
+    /* Внутренние стеклянные плашки */
+    .card-row {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    .card-row:last-child {
+      margin-bottom: 0;
+    }
+    .card-row-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .row-icon {
+      font-size: 22px;
+    }
+    .row-text-main {
+      font-size: 13px;
+      font-weight: 700;
       color: #ffffff;
     }
-    p.desc {
-      color: #94a3b8;
-      font-size: 14px;
-      line-height: 1.5;
+    .row-text-sub {
+      font-size: 11px;
+      color: #7b8e9f;
+    }
+    .btn-action-small {
+      background: #ffffff;
+      color: #0b1520;
+      font-weight: 700;
+      font-size: 12px;
+      padding: 8px 14px;
+      border-radius: 12px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: opacity 0.15s;
+    }
+    .btn-action-small:active {
+      opacity: 0.85;
+    }
+
+    /* Третья карточка (Условия и платежи) */
+    .info-card {
+      background: #111722;
+      border: 1px solid #1c2637;
+      border-radius: 20px;
+      padding: 16px 18px;
       margin-bottom: 24px;
     }
-    .btn-group {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-bottom: 28px;
-    }
-    .btn-primary {
-      background: #10b981;
-      color: #041f14;
-      font-weight: 800;
-      font-size: 17px;
-      padding: 16px;
-      border-radius: 16px;
-      text-decoration: none;
-      box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.35);
-      transition: transform 0.15s ease, background-color 0.15s ease;
-      display: block;
-    }
-    .btn-primary:active {
-      transform: scale(0.98);
-      background: #059669;
-    }
-    .btn-secondary {
-      background: #1e293b;
-      color: #f8fafc;
-      font-weight: 600;
-      font-size: 15px;
-      padding: 14px;
-      border-radius: 16px;
-      text-decoration: none;
-      border: 1px solid #334155;
-      display: block;
-      transition: background-color 0.15s ease;
-    }
-    .btn-secondary:active {
-      background: #334155;
-    }
-    .card-info {
-      background: #0f172a;
-      border: 1px solid #1e293b;
-      border-radius: 18px;
-      padding: 16px;
-      text-align: left;
-      font-size: 14px;
-    }
-    .row {
+    .info-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 8px 0;
-      border-bottom: 1px solid rgba(51, 65, 85, 0.4);
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      font-size: 13px;
     }
-    .row:last-child {
+    .info-row:last-child {
       border-bottom: none;
-      padding-bottom: 0;
+      padding-bottom: 2px;
     }
-    .label {
-      color: #64748b;
+    .info-label {
+      color: #76879d;
     }
-    .val-accent {
+    .info-val {
       font-weight: 700;
-      color: #34d399;
+      color: #ffffff;
     }
-    .val {
-      font-weight: 600;
-      color: #e2e8f0;
+    .info-val-green {
+      font-weight: 800;
+      color: #10b981;
     }
+
+    /* Футер */
     footer {
       text-align: center;
       font-size: 11px;
-      color: #475569;
-      padding: 24px 0 8px;
+      color: #4f5f73;
+      padding: 10px 0 20px;
+    }
+    footer a {
+      color: #64748b;
+      text-decoration: underline;
+      margin: 0 6px;
+    }
+
+    /* Фиксированное нижнее меню (1win Bottom Navigation) */
+    .bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #0f141d;
+      border-top: 1px solid #1c2433;
+      height: 64px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 100;
+      box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.4);
+    }
+    .bottom-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #708096;
+      font-size: 10px;
+      font-weight: 600;
+      gap: 3px;
+      flex: 1;
+    }
+    .bottom-item.active {
+      color: #007aff;
+    }
+    .bottom-icon {
+      font-size: 18px;
     }
   </style>
 </head>
 <body>
-  <main class="container">
-    <div class="badge">
-      ⚡️ Rasmiy va Yangilangan Versiya 2026
-    </div>
-    
-    <h1>
-      Aviator O'yini — O'zbekistonda Pul Ishlash Sirlari
-    </h1>
-    
-    <p class="desc">
-      Uzcard va Humo orqali to'lovlar, tezkor pul yechib olish va yangi o'yinchilar uchun +500% xush kelibsiz bonusi.
-    </p>
 
-    <div class="btn-group">
-      <a href={refLink} target="_blank" rel="nofollow sponsored" class="btn-primary">
-        🚀 O'yinni Boshlash (+500% Bonus)
-      </a>
-      <a href={apkLink} target="_blank" rel="nofollow sponsored" class="btn-secondary">
-        📲 Android APK Yuklab Olish (45 MB)
+  <div class="app-wrapper">
+    <!-- Горизонтальные пилюли (как в шапке 1win) -->
+    <div class="top-chips">
+      <span class="chip active">🚀 Aviator</span>
+      <a href={refLink} target="_blank" rel="nofollow sponsored" class="chip">🎰 Lucky Jet</a>
+      <a href="/uzcard-depozit" class="chip">💳 Uzcard / Humo</a>
+      <a href={refLink} target="_blank" rel="nofollow sponsored" class="chip">🎁 +500% Bonus</a>
+    </div>
+
+    <!-- Главная карточка (синий баннер 1win) -->
+    <div class="hero-card">
+      <div class="hero-tag">🔥 1win Rasmiy O'yin</div>
+      <h1 class="hero-title">Aviator O'yini — 500% Bonus Bilan O'ynang</h1>
+      <p class="hero-subtitle">Minimal depozit 10 000 so'm. Uzcard va Humo orqali 5 daqiqada hisob to'ldirish va yechib olish.</p>
+      <a href={refLink} target="_blank" rel="nofollow sponsored" class="btn-play">
+        O'ynash (Ro'yxatdan O'tish)
       </a>
     </div>
 
-    <div class="card-info">
-      <div class="row">
-        <span class="label">Minimal depozit:</span>
-        <span class="val-accent">10 000 so'm</span>
+    <!-- Вторая карточка (со стеклянными элементами) -->
+    <div class="second-card">
+      <div class="second-card-header">
+        <div class="second-title">Ilova va Qo'llanma</div>
+        <div class="second-subtitle">Smartfoningizda qulay va tez o'ynang</div>
       </div>
-      <div class="row">
-        <span class="label">To'lov tizimlari:</span>
-        <span class="val">
-          <a href="/uzcard-depozit" style="color: #34d399; text-decoration: underline;">Uzcard, Humo (Qo'llanma)</a>
-        </span>
-      </div>
-      <div class="row">
-        <span class="label">Pul yechish vaqti:</span>
-        <span class="val">5-15 daqiqa</span>
-      </div>
-      <div class="row">
-        <span class="label">Mobil ilova:</span>
-        <span class="val">
-          <a href="/ilova" style="color: #34d399; text-decoration: underline;">Android APK (Yuklab olish)</a>
-        </span>
-      </div>
-    </div>
-  </main>
 
-  <footer>
-    <div style="margin-bottom: 8px;">
-      <a href="/masuliyatli-oyin" style="color: #64748b; text-decoration: underline; margin-right: 12px;">Mas'uliyatli o'yin (18+)</a>
-      <a href="/maxfiylik-siyosati" style="color: #64748b; text-decoration: underline;">Maxfiylik siyosati</a>
+      <div class="card-row">
+        <div class="card-row-left">
+          <span class="row-icon">📲</span>
+          <div>
+            <div class="row-text-main">Android APK Ilova</div>
+            <div class="row-text-sub">Blokirovkasiz rasmiy versiya (45 MB)</div>
+          </div>
+        </div>
+        <a href={apkLink} target="_blank" rel="nofollow sponsored" class="btn-action-small">Yuklab olish</a>
+      </div>
+
+      <div class="card-row">
+        <div class="card-row-left">
+          <span class="row-icon">💳</span>
+          <div>
+            <div class="row-text-main">Hisobni To'ldirish</div>
+            <div class="row-text-sub">Uzcard va Humo 0% komissiya</div>
+          </div>
+        </div>
+        <a href="/uzcard-depozit" class="btn-action-small">Qo'llanma</a>
+      </div>
     </div>
-    © 2026 Aviator Uzbek. 18+ Mas'uliyat bilan o'ynang.
-  </footer>
+
+    <!-- Информационная карточка -->
+    <div class="info-card">
+      <div class="info-row">
+        <span class="info-label">Minimal depozit:</span>
+        <span class="info-val-green">10 000 so'm</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">To'lov tizimlari:</span>
+        <span class="info-val">Uzcard, Humo, Visa</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Pul yechish vaqti:</span>
+        <span class="info-val">5-15 daqiqa</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Batafsil ma'lumot:</span>
+        <span class="info-val"><a href="/ilova" style="color: #007aff; text-decoration: underline;">APK sahifasi</a></span>
+      </div>
+    </div>
+
+    <!-- Подвал с трастовыми страницами -->
+    <footer>
+      <div style="margin-bottom: 8px;">
+        <a href="/masuliyatli-oyin">Mas'uliyatli o'yin (18+)</a>
+        <a href="/maxfiylik-siyosati">Maxfiylik siyosati</a>
+      </div>
+      © 2026 Aviator Uzbek. 18+ Mas'uliyat bilan o'ynang.
+    </footer>
+  </div>
+
+  <!-- Фиксированное мобильное меню (1win Bottom Navigation) -->
+  <nav class="bottom-bar">
+    <a href="/" class="bottom-item active">
+      <span class="bottom-icon">🏠</span>
+      <span>Asosiy</span>
+    </a>
+    <a href={refLink} target="_blank" rel="nofollow sponsored" class="bottom-item">
+      <span class="bottom-icon">✈️</span>
+      <span>Aviator</span>
+    </a>
+    <a href="/ilova" class="bottom-item">
+      <span class="bottom-icon">📲</span>
+      <span>APK</span>
+    </a>
+    <a href="/uzcard-depozit" class="bottom-item">
+      <span class="bottom-icon">💳</span>
+      <span>To'lov</span>
+    </a>
+    <a href={refLink} target="_blank" rel="nofollow sponsored" class="bottom-item">
+      <span class="bottom-icon">🎁</span>
+      <span>Bonus</span>
+    </a>
+  </nav>
+
 </body>
 </html>
