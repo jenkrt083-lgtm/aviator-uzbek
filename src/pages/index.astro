@@ -1,8 +1,47 @@
 ---
-const title = "Aviator O'yini Uzbekistan (2026) — 1win Rasmiy Sayt";
-const description = "O'zbekistonda Aviator o'yinida yutish sirlari, 1win rasmiy kirish, Android APK va Uzcard/Humo orqali 10 000 so'mdan depozit.";
+const title = "Aviator O'yini Uzbekistan (2026) — 1win Rasmiy Sayt va Demo";
+const description = "O'zbekistonda Aviator o'yini: bepul demo simulyator, yutish sirlari, 1win rasmiy kirish va Uzcard/Humo orqali 10 000 so'mdan depozit qilish.";
 const refLink = "/go/1win";
 const apkLink = "/download/apk";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Aviator o'yinida qanday qilib yutish mumkin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Aviator o'yinida yutish uchun kichik koeffitsiyentlar (1.20x - 1.50x) strategiyasidan va avtomatik pul yechib olish (Auto Cashout) funksiyasidan foydalanish tavsiya etiladi."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Minimal depozit qancha va qaysi kartalar qabul qilinadi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "1win platformasida Aviator uchun minimal depozit atigi 10 000 so'm. O'zbekistonning barcha Uzcard va Humo bank kartalari 0% komissiya bilan qabul qilinadi."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Yutilgan pulni qanday qilib Uzcard yoki Humo kartasiga yechib olsa bo'ladi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pul yechish uchun «Kassa» bo'limiga o'ting, karta raqamingizni kiriting. Mablag' odatda 5 daqiqadan 15 daqiqagacha bo'lgan vaqt ichida to'liq tushadi."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Aviator APK ilovasini qayerdan xavfsiz yuklab olish mumkin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Saytimizdagi «APK Ilova» bo'limiga o'tib, rasmiy Android ilovasini xavfsiz va blokirovkasiz yuklab olishingiz mumkin."
+      }
+    }
+  ]
+};
 ---
 
 <!DOCTYPE html>
@@ -12,6 +51,7 @@ const apkLink = "/download/apk";
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>{title}</title>
   <meta name="description" content={description} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <style>
     * {
       box-sizing: border-box;
@@ -22,9 +62,9 @@ const apkLink = "/download/apk";
     body {
       background-color: #0b0e14;
       color: #f1f5f9;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       min-height: 100vh;
-      padding-bottom: 84px; /* отступ под нижнее меню */
+      padding-bottom: 84px;
     }
     .app-wrapper {
       max-width: 460px;
@@ -32,7 +72,7 @@ const apkLink = "/download/apk";
       padding: 14px 14px 20px;
     }
 
-    /* Верхние пилюли (табы) */
+    /* Табы */
     .top-chips {
       display: flex;
       gap: 8px;
@@ -40,9 +80,7 @@ const apkLink = "/download/apk";
       padding-bottom: 14px;
       scrollbar-width: none;
     }
-    .top-chips::-webkit-scrollbar {
-      display: none;
-    }
+    .top-chips::-webkit-scrollbar { display: none; }
     .chip {
       background: #171d28;
       color: #94a3b8;
@@ -53,7 +91,6 @@ const apkLink = "/download/apk";
       white-space: nowrap;
       text-decoration: none;
       border: 1px solid rgba(255, 255, 255, 0.05);
-      transition: all 0.2s;
     }
     .chip.active {
       background: #007aff;
@@ -62,7 +99,7 @@ const apkLink = "/download/apk";
       box-shadow: 0 4px 12px rgba(0, 122, 255, 0.35);
     }
 
-    /* Главная карточка (Синий градиент 1win) */
+    /* Главная карточка */
     .hero-card {
       background: linear-gradient(145deg, #0738b8 0%, #0056e0 50%, #007aff 100%);
       border-radius: 24px;
@@ -79,7 +116,6 @@ const apkLink = "/download/apk";
       top: 10px;
       font-size: 88px;
       opacity: 0.18;
-      transform: rotate(-15deg);
       pointer-events: none;
     }
     .hero-tag {
@@ -92,11 +128,10 @@ const apkLink = "/download/apk";
       padding: 4px 10px;
       border-radius: 12px;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
       margin-bottom: 12px;
     }
     .hero-title {
-      font-size: 23px;
+      font-size: 22px;
       font-weight: 900;
       line-height: 1.25;
       color: #ffffff;
@@ -106,7 +141,7 @@ const apkLink = "/download/apk";
       font-size: 13px;
       color: rgba(255, 255, 255, 0.85);
       line-height: 1.45;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       max-width: 85%;
     }
     .btn-play {
@@ -120,13 +155,140 @@ const apkLink = "/download/apk";
       display: block;
       text-decoration: none;
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-      transition: transform 0.1s ease;
-    }
-    .btn-play:active {
-      transform: scale(0.98);
     }
 
-    /* Вторая карточка (Темно-бирюзовая в стиле блога/каналов) */
+    /* Интерактивный симулятор Aviator */
+    .sim-card {
+      background: linear-gradient(180deg, #101726 0%, #090e18 100%);
+      border: 1px solid #1c293d;
+      border-radius: 24px;
+      padding: 16px;
+      margin-bottom: 14px;
+    }
+    .sim-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .sim-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .sim-badge {
+      background: rgba(16, 185, 129, 0.2);
+      color: #10b981;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 6px;
+      text-transform: uppercase;
+    }
+    .sim-screen {
+      background: radial-gradient(circle at bottom left, #12223a 0%, #060a12 100%);
+      border: 1px solid #1f2f47;
+      border-radius: 18px;
+      height: 160px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+    .sim-grid {
+      position: absolute;
+      inset: 0;
+      background-size: 20px 20px;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+    .sim-mult {
+      font-size: 42px;
+      font-weight: 900;
+      color: #ffffff;
+      z-index: 2;
+      text-shadow: 0 0 20px rgba(0, 122, 255, 0.5);
+      font-variant-numeric: tabular-nums;
+    }
+    .sim-plane {
+      position: absolute;
+      font-size: 32px;
+      z-index: 2;
+      transition: all 0.1s linear;
+      bottom: 20px;
+      left: 20px;
+    }
+    .sim-status {
+      font-size: 12px;
+      color: #64748b;
+      z-index: 2;
+      margin-top: 4px;
+      font-weight: 600;
+    }
+    .sim-controls {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .sim-chips {
+      display: flex;
+      gap: 6px;
+    }
+    .sim-chip-btn {
+      flex: 1;
+      background: #172133;
+      border: 1px solid #24344d;
+      color: #94a3b8;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 7px 0;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .sim-chip-btn.active {
+      background: #007aff;
+      color: #ffffff;
+      border-color: #007aff;
+    }
+    .sim-action-btn {
+      background: #10b981;
+      color: #041f14;
+      font-weight: 900;
+      font-size: 16px;
+      padding: 14px;
+      border-radius: 14px;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3);
+      transition: transform 0.1s;
+    }
+    .sim-action-btn.cashing {
+      background: #f59e0b;
+      color: #2b1800;
+      box-shadow: 0 4px 16px rgba(245, 158, 11, 0.35);
+    }
+    .sim-result {
+      display: none;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: 14px;
+      padding: 10px;
+      text-align: center;
+      margin-top: 10px;
+      font-size: 13px;
+    }
+
+    /* Вторая карточка */
     .second-card {
       background: linear-gradient(145deg, #102434 0%, #0d1e2d 100%);
       border: 1px solid #1a2f42;
@@ -134,52 +296,28 @@ const apkLink = "/download/apk";
       padding: 18px;
       margin-bottom: 14px;
     }
-    .second-card-header {
-      margin-bottom: 14px;
-    }
     .second-title {
-      font-size: 17px;
+      font-size: 16px;
       font-weight: 800;
       color: #ffffff;
-      margin-bottom: 4px;
+      margin-bottom: 2px;
     }
     .second-subtitle {
       font-size: 12px;
       color: #8fa0b5;
+      margin-bottom: 12px;
     }
-
-    /* Внутренние стеклянные плашки */
     .card-row {
       background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: 16px;
-      padding: 12px 14px;
+      border-radius: 14px;
+      padding: 10px 14px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
-    .card-row:last-child {
-      margin-bottom: 0;
-    }
-    .card-row-left {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .row-icon {
-      font-size: 22px;
-    }
-    .row-text-main {
-      font-size: 13px;
-      font-weight: 700;
-      color: #ffffff;
-    }
-    .row-text-sub {
-      font-size: 11px;
-      color: #7b8e9f;
-    }
+    .card-row:last-child { margin-bottom: 0; }
     .btn-action-small {
       background: #ffffff;
       color: #0b1520;
@@ -189,45 +327,57 @@ const apkLink = "/download/apk";
       border-radius: 12px;
       text-decoration: none;
       white-space: nowrap;
-      transition: opacity 0.15s;
-    }
-    .btn-action-small:active {
-      opacity: 0.85;
     }
 
-    /* Третья карточка (Условия и платежи) */
-    .info-card {
+    /* FAQ блок */
+    .faq-section {
+      margin-bottom: 20px;
+    }
+    .faq-header {
+      font-size: 17px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 12px;
+      padding-left: 4px;
+    }
+    .faq-item {
       background: #111722;
       border: 1px solid #1c2637;
-      border-radius: 20px;
-      padding: 16px 18px;
-      margin-bottom: 24px;
+      border-radius: 16px;
+      margin-bottom: 8px;
+      overflow: hidden;
     }
-    .info-row {
+    .faq-question {
+      padding: 14px 16px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #f1f5f9;
+      cursor: pointer;
+      list-style: none;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      font-size: 13px;
     }
-    .info-row:last-child {
-      border-bottom: none;
-      padding-bottom: 2px;
-    }
-    .info-label {
-      color: #76879d;
-    }
-    .info-val {
-      font-weight: 700;
-      color: #ffffff;
-    }
-    .info-val-green {
+    .faq-question::-webkit-details-marker { display: none; }
+    .faq-question::after {
+      content: '+';
+      font-size: 18px;
+      color: #007aff;
       font-weight: 800;
-      color: #10b981;
+    }
+    details[open] .faq-question::after {
+      content: '−';
+    }
+    .faq-answer {
+      padding: 0 16px 14px;
+      font-size: 12px;
+      color: #94a3b8;
+      line-height: 1.55;
+      border-top: 1px solid rgba(255, 255, 255, 0.04);
+      padding-top: 10px;
     }
 
-    /* Футер */
+    /* Подвал */
     footer {
       text-align: center;
       font-size: 11px;
@@ -240,7 +390,7 @@ const apkLink = "/download/apk";
       margin: 0 6px;
     }
 
-    /* Фиксированное нижнее меню (1win Bottom Navigation) */
+    /* Нижнее меню */
     .bottom-bar {
       position: fixed;
       bottom: 0;
@@ -266,18 +416,14 @@ const apkLink = "/download/apk";
       gap: 3px;
       flex: 1;
     }
-    .bottom-item.active {
-      color: #007aff;
-    }
-    .bottom-icon {
-      font-size: 18px;
-    }
+    .bottom-item.active { color: #007aff; }
+    .bottom-icon { font-size: 18px; }
   </style>
 </head>
 <body>
 
   <div class="app-wrapper">
-    <!-- Горизонтальные пилюли (как в шапке 1win) -->
+    <!-- Верхние пилюли -->
     <div class="top-chips">
       <span class="chip active">🚀 Aviator</span>
       <a href={refLink} target="_blank" rel="nofollow sponsored" class="chip">🎰 Lucky Jet</a>
@@ -285,7 +431,7 @@ const apkLink = "/download/apk";
       <a href={refLink} target="_blank" rel="nofollow sponsored" class="chip">🎁 +500% Bonus</a>
     </div>
 
-    <!-- Главная карточка (синий баннер 1win) -->
+    <!-- Главный синий баннер 1win -->
     <div class="hero-card">
       <div class="hero-tag">🔥 1win Rasmiy O'yin</div>
       <h1 class="hero-title">Aviator O'yini — 500% Bonus Bilan O'ynang</h1>
@@ -295,57 +441,99 @@ const apkLink = "/download/apk";
       </a>
     </div>
 
-    <!-- Вторая карточка (со стеклянными элементами) -->
-    <div class="second-card">
-      <div class="second-card-header">
-        <div class="second-title">Ilova va Qo'llanma</div>
-        <div class="second-subtitle">Smartfoningizda qulay va tez o'ynang</div>
+    <!-- ИНТЕРАКТИВНЫЙ СИМУЛЯТОР AVIATOR -->
+    <div class="sim-card">
+      <div class="sim-header">
+        <div class="sim-title">
+          <span>✈️ Demo Simulyator</span>
+        </div>
+        <span class="sim-badge">Sinab Ko'rish</span>
       </div>
 
+      <div class="sim-screen">
+        <div class="sim-grid"></div>
+        <div id="sim-plane" class="sim-plane">🚀</div>
+        <div id="sim-mult" class="sim-mult">1.00x</div>
+        <div id="sim-status" class="sim-status">Tikish summasini tanlang va boshlang</div>
+      </div>
+
+      <div class="sim-controls">
+        <div class="sim-chips">
+          <button class="sim-chip-btn active" data-bet="10000">10 000 so'm</button>
+          <button class="sim-chip-btn" data-bet="20000">20 000 so'm</button>
+          <button class="sim-chip-btn" data-bet="50000">50 000 so'm</button>
+          <button class="sim-chip-btn" data-bet="100000">100 000 so'm</button>
+        </div>
+
+        <button id="sim-btn" class="sim-action-btn">
+          🚀 O'yinni Boshlash (Demo)
+        </button>
+      </div>
+
+      <div id="sim-result" class="sim-result">
+        <p id="sim-result-text" style="color: #34d399; font-weight: 800; margin-bottom: 6px;"></p>
+        <a href={refLink} target="_blank" rel="nofollow sponsored" style="color: #ffffff; background: #007aff; display: inline-block; padding: 8px 16px; border-radius: 10px; text-decoration: none; font-size: 12px; font-weight: 700;">
+          Haqiqiy pulda o'ynash (+500% Bonus) →
+        </a>
+      </div>
+    </div>
+
+    <!-- Вторая карточка -->
+    <div class="second-card">
+      <div class="second-title">Ilova va To'lovlar</div>
+      <div class="second-subtitle">Smartfoningizda qulay va tez o'ynang</div>
+
       <div class="card-row">
-        <div class="card-row-left">
-          <span class="row-icon">📲</span>
-          <div>
-            <div class="row-text-main">Android APK Ilova</div>
-            <div class="row-text-sub">Blokirovkasiz rasmiy versiya (45 MB)</div>
-          </div>
+        <div>
+          <div style="font-size: 13px; font-weight: 700; color: #fff;">Android APK Ilova</div>
+          <div style="font-size: 11px; color: #7b8e9f;">Rasmiy versiya (45 MB)</div>
         </div>
         <a href={apkLink} target="_blank" rel="nofollow sponsored" class="btn-action-small">Yuklab olish</a>
       </div>
 
       <div class="card-row">
-        <div class="card-row-left">
-          <span class="row-icon">💳</span>
-          <div>
-            <div class="row-text-main">Hisobni To'ldirish</div>
-            <div class="row-text-sub">Uzcard va Humo 0% komissiya</div>
-          </div>
+        <div>
+          <div style="font-size: 13px; font-weight: 700; color: #fff;">Hisobni To'ldirish</div>
+          <div style="font-size: 11px; color: #7b8e9f;">Uzcard / Humo 0% komissiya</div>
         </div>
         <a href="/uzcard-depozit" class="btn-action-small">Qo'llanma</a>
       </div>
     </div>
 
-    <!-- Информационная карточка -->
-    <div class="info-card">
-      <div class="info-row">
-        <span class="info-label">Minimal depozit:</span>
-        <span class="info-val-green">10 000 so'm</span>
-      </div>
-      <div class="info-row">
-        <span class="info-label">To'lov tizimlari:</span>
-        <span class="info-val">Uzcard, Humo, Visa</span>
-      </div>
-      <div class="info-row">
-        <span class="info-label">Pul yechish vaqti:</span>
-        <span class="info-val">5-15 daqiqa</span>
-      </div>
-      <div class="info-row">
-        <span class="info-label">Batafsil ma'lumot:</span>
-        <span class="info-val"><a href="/ilova" style="color: #007aff; text-decoration: underline;">APK sahifasi</a></span>
-      </div>
+    <!-- FAQ БЛОК СО SCHEMA.ORG -->
+    <div class="faq-section">
+      <h2 class="faq-header">Ko'p Beriladigan Savollar (FAQ)</h2>
+      
+      <details class="faq-item">
+        <summary class="faq-question">Aviator o'yinida qanday qilib yutish mumkin?</summary>
+        <div class="faq-answer">
+          Aviator o'yinida yutish uchun kichik koeffitsiyentlar (1.20x - 1.50x) strategiyasidan va avtomatik pul yechib olish (Auto Cashout) funksiyasidan foydalanish tavsiya etiladi.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Minimal depozit qancha va qaysi kartalar qabul qilinadi?</summary>
+        <div class="faq-answer">
+          1win platformasida Aviator uchun minimal depozit atigi 10 000 so'm. O'zbekistonning barcha Uzcard va Humo bank kartalari 0% komissiya bilan bir zumda qabul qilinadi.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Yutilgan pulni qanday qilib Uzcard kartasiga yechish mumkin?</summary>
+        <div class="faq-answer">
+          Pul yechish uchun «Kassa» bo'limiga o'ting, karta raqamingizni kiriting. Mablag' odatda 5 daqiqadan 15 daqiqagacha bo'lgan vaqt ichida to'liq hisobingizga o'tkaziladi.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Aviator APK ilovasini qayerdan xavfsiz yuklab olish mumkin?</summary>
+        <div class="faq-answer">
+          Saytimizdagi «APK Ilova» bo'limiga o'tib, rasmiy Android ilovasini xavfsiz va blokirovkasiz to'g'ridan-to'g'ri yuklab olishingiz mumkin.
+        </div>
+      </details>
     </div>
 
-    <!-- Подвал с трастовыми страницами -->
+    <!-- Футер -->
     <footer>
       <div style="margin-bottom: 8px;">
         <a href="/masuliyatli-oyin">Mas'uliyatli o'yin (18+)</a>
@@ -355,7 +543,7 @@ const apkLink = "/download/apk";
     </footer>
   </div>
 
-  <!-- Фиксированное мобильное меню (1win Bottom Navigation) -->
+  <!-- Нижнее меню навигации -->
   <nav class="bottom-bar">
     <a href="/" class="bottom-item active">
       <span class="bottom-icon">🏠</span>
@@ -378,6 +566,93 @@ const apkLink = "/download/apk";
       <span>Bonus</span>
     </a>
   </nav>
+
+  <!-- ЛОГИКА СИМУЛЯТОРА -->
+  <script>
+    let currentBet = 10000;
+    let isRunning = false;
+    let multiplier = 1.0;
+    let interval = null;
+    let crashPoint = 2.0;
+
+    const multEl = document.getElementById('sim-mult');
+    const statusEl = document.getElementById('sim-status');
+    const planeEl = document.getElementById('sim-plane');
+    const btnEl = document.getElementById('sim-btn');
+    const resultBox = document.getElementById('sim-result');
+    const resultText = document.getElementById('sim-result-text');
+    const chipBtns = document.querySelectorAll('.sim-chip-btn');
+
+    chipBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (isRunning) return;
+        chipBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentBet = parseInt(btn.dataset.bet || '10000', 10);
+      });
+    });
+
+    btnEl?.addEventListener('click', () => {
+      if (!isRunning) {
+        // Старт раунда
+        isRunning = true;
+        multiplier = 1.0;
+        resultBox.style.display = 'none';
+        btnEl.classList.add('cashing');
+        btnEl.textContent = "💰 Yutuqni Olish (Kassa)";
+        statusEl.textContent = "Samolyot parvozda...";
+        statusEl.style.color = "#34d399";
+        
+        // Генерация случайного коэффициента краша от 1.3 до 5.5
+        crashPoint = (Math.random() * 4.2 + 1.3);
+
+        const startTime = Date.now();
+        interval = setInterval(() => {
+          multiplier += 0.02 * (multiplier * 0.4);
+          multEl.textContent = multiplier.toFixed(2) + 'x';
+
+          // Движение самолетика
+          const progress = Math.min((multiplier - 1) / 3, 1);
+          planeEl.style.bottom = (20 + progress * 70) + 'px';
+          planeEl.style.left = (20 + progress * 240) + 'px';
+
+          if (multiplier >= crashPoint) {
+            // Краш (самолет улетел)
+            clearInterval(interval);
+            isRunning = false;
+            btnEl.classList.remove('cashing');
+            btnEl.textContent = "🔄 Qayta Sinab Ko'rish";
+            statusEl.textContent = "Uchib ketdi!";
+            statusEl.style.color = "#ef4444";
+            multEl.style.color = "#ef4444";
+            planeEl.style.transform = "rotate(-25deg) translateY(-80px)";
+            planeEl.style.opacity = "0";
+
+            setTimeout(() => {
+              planeEl.style.transform = "none";
+              planeEl.style.opacity = "1";
+              planeEl.style.bottom = "20px";
+              planeEl.style.left = "20px";
+              multEl.style.color = "#ffffff";
+            }, 1000);
+          }
+        }, 50);
+
+      } else {
+        // Успешный кэшаут игрока
+        clearInterval(interval);
+        isRunning = false;
+        btnEl.classList.remove('cashing');
+        btnEl.textContent = "🚀 Yana O'ynash";
+        statusEl.textContent = "Yutuq yechildi!";
+        statusEl.style.color = "#10b981";
+
+        const wonAmount = Math.round(currentBet * multiplier).toLocaleString('uz-UZ');
+        resultText.innerHTML = `Tabriklaymiz! Siz <b>${wonAmount} so'm</b> yutdingiz! 🎉`;
+        resultBox.style.display = 'block';
+      }
+    });
+  </script>
 
 </body>
 </html>
