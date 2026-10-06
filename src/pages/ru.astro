@@ -1,0 +1,677 @@
+---
+const title = "Авиатор Игра Узбекистан (2026) — 1win Официальный Сайт и Демо";
+const description = "Играть в Авиатор онлайн в Узбекистане: бесплатный демо симулятор, стратегии выигрыша, официальный вход 1win и пополнение через Uzcard/Humo от 10 000 сум.";
+const refLink = "/go/1win";
+const apkLink = "/download/apk";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Как играть и выигрывать в игре Авиатор?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Для стабильного выигрыша в Авиатор рекомендуется использовать стратегию умеренных коэффициентов (1.20x – 1.50x) и включать функцию автоматического кэшаута (Auto Cashout)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Какой минимальный депозит для игроков из Узбекистана?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Минимальный депозит на платформе 1win составляет всего 10 000 сум. Оплата без комиссии через местные карты Uzcard и Humo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Как быстро выводятся выигранные деньги на Uzcard или Humo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Вывод средств на карты Uzcard и Humo осуществляется в сумах и занимает в среднем от 5 до 15 минут в разделе «Касса»."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Где безопасно скачать официальное приложение 1win на Android?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Скачать актуальный APK-файл без блокировок можно напрямую через наш сайт в разделе «APK Приложение»."
+      }
+    }
+  ]
+};
+---
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+    body {
+      background-color: #0b0e14;
+      color: #f1f5f9;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      min-height: 100vh;
+      padding-bottom: 84px;
+    }
+    .app-wrapper {
+      max-width: 460px;
+      margin: 0 auto;
+      padding: 14px 14px 20px;
+    }
+
+    /* Переключатель языка */
+    .lang-bar {
+      display: flex;
+      justify-content: flex-end;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+    .lang-btn {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #94a3b8;
+      background: #171d28;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .lang-btn.active {
+      background: #007aff;
+      color: #ffffff;
+      border-color: #007aff;
+    }
+
+    /* Табы */
+    .top-chips {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 14px;
+      scrollbar-width: none;
+    }
+    .top-chips::-webkit-scrollbar { display: none; }
+    .chip {
+      background: #171d28;
+      color: #94a3b8;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 8px 16px;
+      border-radius: 20px;
+      white-space: nowrap;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .chip.active {
+      background: #007aff;
+      color: #ffffff;
+      border-color: #007aff;
+      box-shadow: 0 4px 12px rgba(0, 122, 255, 0.35);
+    }
+
+    /* Главный синий баннер */
+    .hero-card {
+      background: linear-gradient(145deg, #0738b8 0%, #0056e0 50%, #007aff 100%);
+      border-radius: 24px;
+      padding: 22px 18px 20px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 14px;
+      box-shadow: 0 12px 28px rgba(0, 86, 224, 0.25);
+    }
+    .hero-card::after {
+      content: '✈️';
+      position: absolute;
+      right: -8px;
+      top: 10px;
+      font-size: 88px;
+      opacity: 0.18;
+      pointer-events: none;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(8px);
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 12px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .hero-title {
+      font-size: 22px;
+      font-weight: 900;
+      line-height: 1.25;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+    .hero-subtitle {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.45;
+      margin-bottom: 18px;
+      max-width: 85%;
+    }
+    .btn-play {
+      background: #ffffff;
+      color: #0738b8;
+      font-weight: 800;
+      font-size: 16px;
+      text-align: center;
+      padding: 15px;
+      border-radius: 16px;
+      display: block;
+      text-decoration: none;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Симулятор */
+    .sim-card {
+      background: linear-gradient(180deg, #101726 0%, #090e18 100%);
+      border: 1px solid #1c293d;
+      border-radius: 24px;
+      padding: 16px;
+      margin-bottom: 14px;
+    }
+    .sim-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .sim-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .sim-badge {
+      background: rgba(16, 185, 129, 0.2);
+      color: #10b981;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 6px;
+      text-transform: uppercase;
+    }
+    .sim-screen {
+      background: radial-gradient(circle at bottom left, #12223a 0%, #060a12 100%);
+      border: 1px solid #1f2f47;
+      border-radius: 18px;
+      height: 160px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+    .sim-grid {
+      position: absolute;
+      inset: 0;
+      background-size: 20px 20px;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+    .sim-mult {
+      font-size: 42px;
+      font-weight: 900;
+      color: #ffffff;
+      z-index: 2;
+      text-shadow: 0 0 20px rgba(0, 122, 255, 0.5);
+      font-variant-numeric: tabular-nums;
+    }
+    .sim-plane {
+      position: absolute;
+      font-size: 32px;
+      z-index: 2;
+      transition: all 0.1s linear;
+      bottom: 20px;
+      left: 20px;
+    }
+    .sim-status {
+      font-size: 12px;
+      color: #64748b;
+      z-index: 2;
+      margin-top: 4px;
+      font-weight: 600;
+    }
+    .sim-controls {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .sim-chips {
+      display: flex;
+      gap: 6px;
+    }
+    .sim-chip-btn {
+      flex: 1;
+      background: #172133;
+      border: 1px solid #24344d;
+      color: #94a3b8;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 7px 0;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .sim-chip-btn.active {
+      background: #007aff;
+      color: #ffffff;
+      border-color: #007aff;
+    }
+    .sim-action-btn {
+      background: #10b981;
+      color: #041f14;
+      font-weight: 900;
+      font-size: 16px;
+      padding: 14px;
+      border-radius: 14px;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3);
+    }
+    .sim-action-btn.cashing {
+      background: #f59e0b;
+      color: #2b1800;
+      box-shadow: 0 4px 16px rgba(245, 158, 11, 0.35);
+    }
+    .sim-result {
+      display: none;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: 14px;
+      padding: 10px;
+      text-align: center;
+      margin-top: 10px;
+      font-size: 13px;
+    }
+
+    /* Карточка приложений */
+    .second-card {
+      background: linear-gradient(145deg, #102434 0%, #0d1e2d 100%);
+      border: 1px solid #1a2f42;
+      border-radius: 24px;
+      padding: 18px;
+      margin-bottom: 14px;
+    }
+    .second-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 2px;
+    }
+    .second-subtitle {
+      font-size: 12px;
+      color: #8fa0b5;
+      margin-bottom: 12px;
+    }
+    .card-row {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 14px;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+    .card-row:last-child { margin-bottom: 0; }
+    .btn-action-small {
+      background: #ffffff;
+      color: #0b1520;
+      font-weight: 700;
+      font-size: 12px;
+      padding: 8px 14px;
+      border-radius: 12px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    /* FAQ */
+    .faq-section {
+      margin-bottom: 20px;
+    }
+    .faq-header {
+      font-size: 17px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 12px;
+      padding-left: 4px;
+    }
+    .faq-item {
+      background: #111722;
+      border: 1px solid #1c2637;
+      border-radius: 16px;
+      margin-bottom: 8px;
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 14px 16px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #f1f5f9;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-question::-webkit-details-marker { display: none; }
+    .faq-question::after {
+      content: '+';
+      font-size: 18px;
+      color: #007aff;
+      font-weight: 800;
+    }
+    details[open] .faq-question::after { content: '−'; }
+    .faq-answer {
+      padding: 0 16px 14px;
+      font-size: 12px;
+      color: #94a3b8;
+      line-height: 1.55;
+      border-top: 1px solid rgba(255, 255, 255, 0.04);
+      padding-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 11px;
+      color: #4f5f73;
+      padding: 10px 0 20px;
+    }
+    footer a {
+      color: #64748b;
+      text-decoration: underline;
+      margin: 0 6px;
+    }
+
+    /* Нижнее меню */
+    .bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #0f141d;
+      border-top: 1px solid #1c2433;
+      height: 64px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 100;
+      box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.4);
+    }
+    .bottom-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #708096;
+      font-size: 10px;
+      font-weight: 600;
+      gap: 3px;
+      flex: 1;
+    }
+    .bottom-item.active { color: #007aff; }
+    .bottom-icon { font-size: 18px; }
+  </style>
+</head>
+<body>
+
+  <div class="app-wrapper">
+    <!-- Переключатель языка -->
+    <div class="lang-bar">
+      <a href="/" class="lang-btn">🇺🇿 O'zbek</a>
+      <span class="lang-btn active">🇷🇺 Русский</span>
+    </div>
+
+    <!-- Верхние табы -->
+    <div class="top-chips">
+      <span class="chip active">🚀 Авиатор</span>
+      <a href="/lucky-jet" class="chip">🎰 Lucky Jet</a>
+      <a href="/uzcard-depozit" class="chip">💳 Uzcard / Humo</a>
+      <a href={refLink} target="_blank" rel="nofollow sponsored" class="chip">🎁 +500% Бонус</a>
+    </div>
+
+    <!-- Главный баннер -->
+    <div class="hero-card">
+      <div class="hero-tag">🔥 1win Официальный Сайт</div>
+      <h1 class="hero-title">Игра Авиатор в Узбекистане — Бонус +500%</h1>
+      <p class="hero-subtitle">Минимальный депозит от 10 000 сум. Пополнение и быстрый вывод на Uzcard и Humo за 5-15 минут.</p>
+      <a href={refLink} target="_blank" rel="nofollow sponsored" class="btn-play">
+        Играть (Регистрация)
+      </a>
+    </div>
+
+    <!-- Демо симулятор -->
+    <div class="sim-card">
+      <div class="sim-header">
+        <div class="sim-title">
+          <span>✈️ Демо Симулятор Авиатор</span>
+        </div>
+        <span class="sim-badge">Тест Онлайн</span>
+      </div>
+
+      <div class="sim-screen">
+        <div class="sim-grid"></div>
+        <div id="sim-plane" class="sim-plane">🚀</div>
+        <div id="sim-mult" class="sim-mult">1.00x</div>
+        <div id="sim-status" class="sim-status">Выберите ставку и начните раунд</div>
+      </div>
+
+      <div class="sim-controls">
+        <div class="sim-chips">
+          <button class="sim-chip-btn active" data-bet="10000">10 000 сум</button>
+          <button class="sim-chip-btn" data-bet="20000">20 000 сум</button>
+          <button class="sim-chip-btn" data-bet="50000">50 000 сум</button>
+          <button class="sim-chip-btn" data-bet="100000">100 000 сум</button>
+        </div>
+
+        <button id="sim-btn" class="sim-action-btn">
+          🚀 Запустить Самолет (Демо)
+        </button>
+      </div>
+
+      <div id="sim-result" class="sim-result">
+        <p id="sim-result-text" style="color: #34d399; font-weight: 800; margin-bottom: 6px;"></p>
+        <a href={refLink} target="_blank" rel="nofollow sponsored" style="color: #ffffff; background: #007aff; display: inline-block; padding: 8px 16px; border-radius: 10px; text-decoration: none; font-size: 12px; font-weight: 700;">
+          Играть на реальные сумы (+500% Бонус) →
+        </a>
+      </div>
+    </div>
+
+    <!-- Карточка действий -->
+    <div class="second-card">
+      <div class="second-title">Приложение и Депозит</div>
+      <div class="second-subtitle">Быстрый доступ со смартфона</div>
+
+      <div class="card-row">
+        <div>
+          <div style="font-size: 13px; font-weight: 700; color: #fff;">Android APK Приложение</div>
+          <div style="font-size: 11px; color: #7b8e9f;">Официальная версия без блокировок (45 МБ)</div>
+        </div>
+        <a href={apkLink} target="_blank" rel="nofollow sponsored" class="btn-action-small">Скачать APK</a>
+      </div>
+
+      <div class="card-row">
+        <div>
+          <div style="font-size: 13px; font-weight: 700; color: #fff;">Пополнение Счета</div>
+          <div style="font-size: 11px; color: #7b8e9f;">Uzcard / Humo комиссия 0%</div>
+        </div>
+        <a href="/uzcard-depozit" class="btn-action-small">Инструкция</a>
+      </div>
+    </div>
+
+    <!-- FAQ блок -->
+    <div class="faq-section">
+      <h2 class="faq-header">Часто задаваемые вопросы (FAQ)</h2>
+      
+      <details class="faq-item">
+        <summary class="faq-question">Как играть и выигрывать в Авиатор?</summary>
+        <div class="faq-answer">
+          Основная тактика — вовремя забрать выигрыш до того, как самолет улетит. Большинство опытных игроков играют на небольших коэффициентах (1.20x – 1.50x) с автовыводом.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Какой минимальный депозит в сумах?</summary>
+        <div class="faq-answer">
+          Минимальный депозит на 1win составляет 10 000 сум. Оплата картами Uzcard и Humo зачисляется мгновенно без скрытых комиссий.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Как быстро приходят деньги при выводе?</summary>
+        <div class="faq-answer">
+          Вывод средств на карты банков Узбекистана занимает от 5 до 15 минут через раздел «Касса».
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Где скачать приложение на Android?</summary>
+        <div class="faq-answer">
+          APK-файл можно бесплатно скачать на странице приложения нашего сайта. Он работает напрямую и не подвержен блокировкам.
+        </div>
+      </details>
+    </div>
+
+    <!-- Футер -->
+    <footer>
+      <div style="margin-bottom: 8px;">
+        <a href="/masuliyatli-oyin">Ответственная игра (18+)</a>
+        <a href="/maxfiylik-siyosati">Политика конфиденциальности</a>
+      </div>
+      © 2026 Авиатор Узбекистан 1win. 18+ Играйте ответственно.
+    </footer>
+  </div>
+
+  <!-- Нижнее меню навигации -->
+  <nav class="bottom-bar">
+    <a href="/ru" class="bottom-item active">
+      <span class="bottom-icon">🏠</span>
+      <span>Главная</span>
+    </a>
+    <a href={refLink} target="_blank" rel="nofollow sponsored" class="bottom-item">
+      <span class="bottom-icon">✈️</span>
+      <span>Авиатор</span>
+    </a>
+    <a href="/ilova" class="bottom-item">
+      <span class="bottom-icon">📲</span>
+      <span>APK</span>
+    </a>
+    <a href="/uzcard-depozit" class="bottom-item">
+      <span class="bottom-icon">💳</span>
+      <span>Депозит</span>
+    </a>
+    <a href={refLink} target="_blank" rel="nofollow sponsored" class="bottom-item">
+      <span class="bottom-icon">🎁</span>
+      <span>Бонус</span>
+    </a>
+  </nav>
+
+  <!-- Скрипт симулятора -->
+  <script>
+    let currentBet = 10000;
+    let isRunning = false;
+    let multiplier = 1.0;
+    let interval = null;
+    let crashPoint = 2.0;
+
+    const multEl = document.getElementById('sim-mult');
+    const statusEl = document.getElementById('sim-status');
+    const planeEl = document.getElementById('sim-plane');
+    const btnEl = document.getElementById('sim-btn');
+    const resultBox = document.getElementById('sim-result');
+    const resultText = document.getElementById('sim-result-text');
+    const chipBtns = document.querySelectorAll('.sim-chip-btn');
+
+    chipBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (isRunning) return;
+        chipBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentBet = parseInt(btn.dataset.bet || '10000', 10);
+      });
+    });
+
+    btnEl?.addEventListener('click', () => {
+      if (!isRunning) {
+        isRunning = true;
+        multiplier = 1.0;
+        resultBox.style.display = 'none';
+        btnEl.classList.add('cashing');
+        btnEl.textContent = "💰 Забрать Выигрыш";
+        statusEl.textContent = "Самолет в полете...";
+        statusEl.style.color = "#34d399";
+        
+        crashPoint = (Math.random() * 4.2 + 1.3);
+
+        interval = setInterval(() => {
+          multiplier += 0.02 * (multiplier * 0.4);
+          multEl.textContent = multiplier.toFixed(2) + 'x';
+
+          const progress = Math.min((multiplier - 1) / 3, 1);
+          planeEl.style.bottom = (20 + progress * 70) + 'px';
+          planeEl.style.left = (20 + progress * 240) + 'px';
+
+          if (multiplier >= crashPoint) {
+            clearInterval(interval);
+            isRunning = false;
+            btnEl.classList.remove('cashing');
+            btnEl.textContent = "🔄 Попробовать Снова";
+            statusEl.textContent = "Самолет улетел!";
+            statusEl.style.color = "#ef4444";
+            multEl.style.color = "#ef4444";
+            planeEl.style.transform = "rotate(-25deg) translateY(-80px)";
+            planeEl.style.opacity = "0";
+
+            setTimeout(() => {
+              planeEl.style.transform = "none";
+              planeEl.style.opacity = "1";
+              planeEl.style.bottom = "20px";
+              planeEl.style.left = "20px";
+              multEl.style.color = "#ffffff";
+            }, 1000);
+          }
+        }, 50);
+
+      } else {
+        clearInterval(interval);
+        isRunning = false;
+        btnEl.classList.remove('cashing');
+        btnEl.textContent = "🚀 Играть Еще Раз";
+        statusEl.textContent = "Выигрыш зафиксирован!";
+        statusEl.style.color = "#10b981";
+
+        const wonAmount = Math.round(currentBet * multiplier).toLocaleString('ru-RU');
+        resultText.innerHTML = `Поздравляем! Ваш выигрыш: <b>${wonAmount} сум</b>! 🎉`;
+        resultBox.style.display = 'block';
+      }
+    });
+  </script>
+
+</body>
+</html>
