@@ -71,6 +71,27 @@ const faqSchema = {
       margin: 0 auto;
       padding: 14px 14px 20px;
     }
+.lang-bar {
+      display: flex;
+      justify-content: flex-end;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+    .lang-btn {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #94a3b8;
+      background: #171d28;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .lang-btn.active {
+      background: #007aff;
+      color: #ffffff;
+      border-color: #007aff;
+    }
 
     /* Табы */
     .top-chips {
@@ -423,7 +444,12 @@ const faqSchema = {
 <body>
 
   <div class="app-wrapper">
-    <!-- Верхние пилюли -->
+<!-- Переключатель языка -->
+    <div class="lang-bar">
+      <span class="lang-btn active">🇺🇿 O'zbek</span>
+      <a href="/ru" class="lang-btn">🇷🇺 Русский</a>
+    </div>
+<!-- Верхние пилюли -->
     <div class="top-chips">
       <span class="chip active">🚀 Aviator</span>
       <a href="/lucky-jet" class="chip">🎰 Lucky Jet</a>
