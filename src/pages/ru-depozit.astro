@@ -1,0 +1,359 @@
+---
+const title = "Пополнение Авиатор через Uzcard и Humo (2026) — 1win Узбекистан";
+const description = "Инструкция по пополнению счета в Авиатор через карты Uzcard и Humo от 10 000 сум без комиссии. Быстрый вывод выигрышей за 5-15 минут.";
+const playLink = "/go/1win";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Пополнение счета в Авиатор через карты Uzcard и Humo",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Регистрация аккаунта",
+      "text": "Перейдите на официальный сайт 1win и выберите валюту UZS (узбекский сум)."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Выбор платежного метода",
+      "text": "В разделе «Пополнить» выберите Uzcard или Humo."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Подтверждение оплаты",
+      "text": "Введите сумму от 10 000 сум и подтвердите перевод без комиссии."
+    }
+  ]
+};
+---
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+    body {
+      background-color: #0b0e14;
+      color: #f1f5f9;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      min-height: 100vh;
+      padding-bottom: 120px;
+    }
+    .app-wrapper {
+      max-width: 460px;
+      margin: 0 auto;
+      padding: 14px 14px 20px;
+    }
+    .lang-bar {
+      display: flex;
+      justify-content: flex-end;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+    .lang-btn {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #94a3b8;
+      background: #171d28;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .lang-btn.active {
+      background: #007aff;
+      color: #ffffff;
+      border-color: #007aff;
+    }
+    .top-chips {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 14px;
+      scrollbar-width: none;
+    }
+    .top-chips::-webkit-scrollbar { display: none; }
+    .chip {
+      background: #171d28;
+      color: #94a3b8;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 8px 16px;
+      border-radius: 20px;
+      white-space: nowrap;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .chip.active {
+      background: #007aff;
+      color: #ffffff;
+      border-color: #007aff;
+      box-shadow: 0 4px 12px rgba(0, 122, 255, 0.35);
+    }
+    .hero-card {
+      background: linear-gradient(145deg, #0738b8 0%, #0056e0 50%, #007aff 100%);
+      border-radius: 24px;
+      padding: 22px 18px 20px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 14px;
+      box-shadow: 0 12px 28px rgba(0, 86, 224, 0.25);
+    }
+    .hero-card::after {
+      content: '💳';
+      position: absolute;
+      right: -8px;
+      top: 10px;
+      font-size: 88px;
+      opacity: 0.18;
+      pointer-events: none;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(8px);
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 12px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .hero-title {
+      font-size: 22px;
+      font-weight: 900;
+      line-height: 1.25;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+    .hero-subtitle {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.45;
+      margin-bottom: 20px;
+      max-width: 85%;
+    }
+    .btn-deposit {
+      background: #ffffff;
+      color: #0738b8;
+      font-weight: 800;
+      font-size: 16px;
+      text-align: center;
+      padding: 15px;
+      border-radius: 16px;
+      display: block;
+      text-decoration: none;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    }
+    .step-box {
+      background: linear-gradient(145deg, #102434 0%, #0d1e2d 100%);
+      border: 1px solid #1a2f42;
+      border-radius: 20px;
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+    .step-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .step-badge {
+      background: #007aff;
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 12px;
+      width: 24px;
+      height: 24px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .step-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: #ffffff;
+    }
+    .step-desc {
+      font-size: 13px;
+      color: #8fa0b5;
+      line-height: 1.5;
+      padding-left: 34px;
+    }
+    .info-card {
+      background: #111722;
+      border: 1px solid #1c2637;
+      border-radius: 20px;
+      padding: 16px 18px;
+      margin: 16px 0 24px;
+    }
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      font-size: 13px;
+    }
+    .info-row:last-child {
+      border-bottom: none;
+      padding-bottom: 2px;
+    }
+    .info-label { color: #76879d; }
+    .info-val-green { font-weight: 800; color: #10b981; }
+    .info-val { font-weight: 700; color: #ffffff; }
+    footer {
+      text-align: center;
+      font-size: 11px;
+      color: #4f5f73;
+      padding: 16px 0 20px;
+    }
+    footer a {
+      color: #64748b;
+      text-decoration: underline;
+      margin: 0 6px;
+    }
+    .bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #0f141d;
+      border-top: 1px solid #1c2433;
+      height: 64px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 100;
+      box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.4);
+    }
+    .bottom-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #708096;
+      font-size: 10px;
+      font-weight: 600;
+      gap: 3px;
+      flex: 1;
+    }
+    .bottom-item.active { color: #007aff; }
+    .bottom-icon { font-size: 18px; }
+  </style>
+</head>
+<body>
+
+  <div class="app-wrapper">
+    <div class="lang-bar">
+      <a href="/uzcard-depozit" class="lang-btn">🇺🇿 O'zbek</a>
+      <span class="lang-btn active">🇷🇺 Русский</span>
+    </div>
+
+    <div class="top-chips">
+      <a href="/ru" class="chip">🚀 Авиатор</a>
+      <a href="/ru-apk" class="chip">📲 APK Скачать</a>
+      <span class="chip active">💳 Uzcard / Humo</span>
+      <a href={playLink} target="_blank" rel="nofollow sponsored" class="chip">🎁 +500% Бонус</a>
+    </div>
+
+    <div class="hero-card">
+      <div class="hero-tag">💳 Комиссия 0%</div>
+      <h1 class="hero-title">Пополнение через Uzcard и Humo</h1>
+      <p class="hero-subtitle">Моментальное зачисление от 10 000 сум. Быстрый вывод на карту за 5-15 минут.</p>
+      <a href={playLink} target="_blank" rel="nofollow sponsored" class="btn-deposit">
+        💰 Пополнить Счет и Играть
+      </a>
+    </div>
+
+    <div class="step-box">
+      <div class="step-header">
+        <span class="step-badge">1</span>
+        <span class="step-title">Зарегистрируйтесь</span>
+      </div>
+      <p class="step-desc">
+        Откройте сайт 1win и выберите валюту счета <b>UZS (узбекский сум)</b>. Регистрация занимает 30 секунд.
+      </p>
+    </div>
+
+    <div class="step-box">
+      <div class="step-header">
+        <span class="step-badge">2</span>
+        <span class="step-title">Выберите способ оплаты</span>
+      </div>
+      <p class="step-desc">
+        В разделе «Пополнить» нажмите на логотип <b>Uzcard</b> или <b>Humo</b>.
+      </p>
+    </div>
+
+    <div class="step-box">
+      <div class="step-header">
+        <span class="step-badge">3</span>
+        <span class="step-title">Подтвердите перевод</span>
+      </div>
+      <p class="step-desc">
+        Минимальная сумма — <b>10 000 сум</b>. Деньги зачисляются на игровой баланс мгновенно без комиссии.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <div class="info-row">
+        <span class="info-label">Минимальный депозит:</span>
+        <span class="info-val-green">10 000 сум</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Время зачисления:</span>
+        <span class="info-val">Мгновенно (0 сек)</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Время вывода:</span>
+        <span class="info-val">5-15 минут</span>
+      </div>
+    </div>
+
+    <footer>
+      <div style="margin-bottom: 8px;">
+        <a href="/ru-otvetstvennaya-igra">Ответственная игра (18+)</a>
+        <a href="/ru-politika">Политика конфиденциальности</a>
+      </div>
+      © 2026 Авиатор Узбекистан 1win. 18+ Играйте ответственно.
+    </footer>
+  </div>
+
+  <nav class="bottom-bar">
+    <a href="/ru" class="bottom-item">
+      <span class="bottom-icon">🏠</span>
+      <span>Главная</span>
+    </a>
+    <a href={playLink} target="_blank" rel="nofollow sponsored" class="bottom-item">
+      <span class="bottom-icon">✈️</span>
+      <span>Авиатор</span>
+    </a>
+    <a href="/ru-apk" class="bottom-item">
+      <span class="bottom-icon">📲</span>
+      <span>APK</span>
+    </a>
+    <a href="/ru-depozit" class="bottom-item active">
+      <span class="bottom-icon">💳</span>
+      <span>Депозит</span>
+    </a>
+    <a href={playLink} target="_blank" rel="nofollow sponsored" class="bottom-item">
+      <span class="bottom-icon">🎁</span>
+      <span>Бонус</span>
+    </a>
+  </nav>
+
+</body>
+</html>
