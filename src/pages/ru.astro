@@ -64,15 +64,13 @@ const faqSchema = {
       color: #f1f5f9;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       min-height: 100vh;
-      padding-bottom: 84px;
+      padding-bottom: 120px;
     }
     .app-wrapper {
       max-width: 460px;
       margin: 0 auto;
       padding: 14px 14px 20px;
     }
-
-    /* Переключатель языка */
     .lang-bar {
       display: flex;
       justify-content: flex-end;
@@ -94,8 +92,6 @@ const faqSchema = {
       color: #ffffff;
       border-color: #007aff;
     }
-
-    /* Табы */
     .top-chips {
       display: flex;
       gap: 8px;
@@ -121,8 +117,6 @@ const faqSchema = {
       border-color: #007aff;
       box-shadow: 0 4px 12px rgba(0, 122, 255, 0.35);
     }
-
-    /* Главный синий баннер */
     .hero-card {
       background: linear-gradient(145deg, #0738b8 0%, #0056e0 50%, #007aff 100%);
       border-radius: 24px;
@@ -179,8 +173,6 @@ const faqSchema = {
       text-decoration: none;
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
     }
-
-    /* Симулятор */
     .sim-card {
       background: linear-gradient(180deg, #101726 0%, #090e18 100%);
       border: 1px solid #1c293d;
@@ -309,8 +301,6 @@ const faqSchema = {
       margin-top: 10px;
       font-size: 13px;
     }
-
-    /* Карточка приложений */
     .second-card {
       background: linear-gradient(145deg, #102434 0%, #0d1e2d 100%);
       border: 1px solid #1a2f42;
@@ -350,8 +340,6 @@ const faqSchema = {
       text-decoration: none;
       white-space: nowrap;
     }
-
-    /* FAQ */
     .faq-section {
       margin-bottom: 20px;
     }
@@ -396,20 +384,17 @@ const faqSchema = {
       border-top: 1px solid rgba(255, 255, 255, 0.04);
       padding-top: 10px;
     }
-
     footer {
       text-align: center;
       font-size: 11px;
       color: #4f5f73;
-      padding: 10px 0 20px;
+      padding: 16px 0 20px;
     }
     footer a {
       color: #64748b;
       text-decoration: underline;
       margin: 0 6px;
     }
-
-    /* Нижнее меню */
     .bottom-bar {
       position: fixed;
       bottom: 0;
@@ -442,21 +427,19 @@ const faqSchema = {
 <body>
 
   <div class="app-wrapper">
-    <!-- Переключатель языка -->
     <div class="lang-bar">
       <a href="/" class="lang-btn">🇺🇿 O'zbek</a>
       <span class="lang-btn active">🇷🇺 Русский</span>
     </div>
 
-    <!-- Верхние табы -->
     <div class="top-chips">
       <span class="chip active">🚀 Авиатор</span>
       <a href="/lucky-jet" class="chip">🎰 Lucky Jet</a>
-      <a href="/uzcard-depozit" class="chip">💳 Uzcard / Humo</a>
+      <a href="/ru-depozit" class="chip">💳 Uzcard / Humo</a>
+      <a href="/ru-apk" class="chip">📲 APK Скачать</a>
       <a href={refLink} target="_blank" rel="nofollow sponsored" class="chip">🎁 +500% Бонус</a>
     </div>
 
-    <!-- Главный баннер -->
     <div class="hero-card">
       <div class="hero-tag">🔥 1win Официальный Сайт</div>
       <h1 class="hero-title">Игра Авиатор в Узбекистане — Бонус +500%</h1>
@@ -466,7 +449,6 @@ const faqSchema = {
       </a>
     </div>
 
-    <!-- Демо симулятор -->
     <div class="sim-card">
       <div class="sim-header">
         <div class="sim-title">
@@ -503,7 +485,6 @@ const faqSchema = {
       </div>
     </div>
 
-    <!-- Карточка действий -->
     <div class="second-card">
       <div class="second-title">Приложение и Депозит</div>
       <div class="second-subtitle">Быстрый доступ со смартфона</div>
@@ -513,7 +494,7 @@ const faqSchema = {
           <div style="font-size: 13px; font-weight: 700; color: #fff;">Android APK Приложение</div>
           <div style="font-size: 11px; color: #7b8e9f;">Официальная версия без блокировок (45 МБ)</div>
         </div>
-        <a href={apkLink} target="_blank" rel="nofollow sponsored" class="btn-action-small">Скачать APK</a>
+        <a href="/ru-apk" class="btn-action-small">Скачать APK</a>
       </div>
 
       <div class="card-row">
@@ -521,11 +502,10 @@ const faqSchema = {
           <div style="font-size: 13px; font-weight: 700; color: #fff;">Пополнение Счета</div>
           <div style="font-size: 11px; color: #7b8e9f;">Uzcard / Humo комиссия 0%</div>
         </div>
-        <a href="/uzcard-depozit" class="btn-action-small">Инструкция</a>
+        <a href="/ru-depozit" class="btn-action-small">Инструкция</a>
       </div>
     </div>
 
-    <!-- FAQ блок -->
     <div class="faq-section">
       <h2 class="faq-header">Часто задаваемые вопросы (FAQ)</h2>
       
@@ -558,17 +538,15 @@ const faqSchema = {
       </details>
     </div>
 
-    <!-- Футер -->
     <footer>
       <div style="margin-bottom: 8px;">
-        <a href="/masuliyatli-oyin">Ответственная игра (18+)</a>
-        <a href="/maxfiylik-siyosati">Политика конфиденциальности</a>
+        <a href="/ru-otvetstvennaya-igra">Ответственная игра (18+)</a>
+        <a href="/ru-politika">Политика конфиденциальности</a>
       </div>
       © 2026 Авиатор Узбекистан 1win. 18+ Играйте ответственно.
     </footer>
   </div>
 
-  <!-- Нижнее меню навигации -->
   <nav class="bottom-bar">
     <a href="/ru" class="bottom-item active">
       <span class="bottom-icon">🏠</span>
@@ -578,11 +556,11 @@ const faqSchema = {
       <span class="bottom-icon">✈️</span>
       <span>Авиатор</span>
     </a>
-    <a href="/ilova" class="bottom-item">
+    <a href="/ru-apk" class="bottom-item">
       <span class="bottom-icon">📲</span>
       <span>APK</span>
     </a>
-    <a href="/uzcard-depozit" class="bottom-item">
+    <a href="/ru-depozit" class="bottom-item">
       <span class="bottom-icon">💳</span>
       <span>Депозит</span>
     </a>
@@ -592,7 +570,6 @@ const faqSchema = {
     </a>
   </nav>
 
-  <!-- Скрипт симулятора -->
   <script>
     let currentBet = 10000;
     let isRunning = false;
