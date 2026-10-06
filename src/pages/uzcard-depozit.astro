@@ -1,7 +1,8 @@
 ---
-const title = "Uzcard va Humo Orqali Aviatorga Pul Kiritish (2026)";
-const description = "O'zbekistonda Aviator hisobini Uzcard va Humo orqali 10 000 so'mdan boshlab to'ldirish bo'yicha to'liq qo'llanma. 5 daqiqada depozit va pul yechish.";
+const title = "Uzcard va Humo Orqali Aviatorga Pul Kiritish (2026) — 1win";
+const description = "O'zbekistonda Aviator hisobini Uzcard va Humo orqali 10 000 so'mdan boshlab 0% komissiya bilan to'ldirish bo'yicha to'liq qo'llanma.";
 const playLink = "/go/1win";
+const apkLink = "/download/apk";
 
 const schema = {
   "@context": "https://schema.org",
@@ -11,7 +12,7 @@ const schema = {
     {
       "@type": "HowToStep",
       "name": "Ro'yxatdan o'tish",
-      "text": "Rasmiy saytga kiring va 1 daqiqada hisob oching."
+      "text": "1win rasmiy saytiga kiring va UZS valyutasida hisob oching."
     },
     {
       "@type": "HowToStep",
@@ -31,154 +32,307 @@ const schema = {
 <html lang="uz">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>{title}</title>
   <meta name="description" content={description} />
   <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
     body {
-      background-color: #090d16;
+      background-color: #0b0e14;
       color: #f1f5f9;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 16px;
+      padding-bottom: 84px;
     }
-    .container {
-      max-width: 440px;
+    .app-wrapper {
+      max-width: 460px;
       margin: 0 auto;
-      width: 100%;
-      padding-top: 16px;
+      padding: 14px 14px 20px;
     }
-    .nav-back {
-      display: inline-block;
+    .top-chips {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 14px;
+      scrollbar-width: none;
+    }
+    .top-chips::-webkit-scrollbar { display: none; }
+    .chip {
+      background: #171d28;
       color: #94a3b8;
       font-size: 13px;
-      text-decoration: none;
-      margin-bottom: 16px;
-    }
-    .badge {
-      display: inline-block;
-      background: rgba(16, 185, 129, 0.12);
-      border: 1px solid rgba(16, 185, 129, 0.3);
-      color: #34d399;
-      font-size: 11px;
       font-weight: 700;
-      padding: 4px 10px;
-      border-radius: 9999px;
-      margin-bottom: 12px;
+      padding: 8px 16px;
+      border-radius: 20px;
+      white-space: nowrap;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.05);
     }
-    h1 {
-      font-size: 23px;
-      line-height: 1.3;
+    .chip.active {
+      background: #007aff;
+      color: #ffffff;
+      border-color: #007aff;
+      box-shadow: 0 4px 12px rgba(0, 122, 255, 0.35);
+    }
+    .hero-card {
+      background: linear-gradient(145deg, #0738b8 0%, #0056e0 50%, #007aff 100%);
+      border-radius: 24px;
+      padding: 22px 18px 20px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 14px;
+      box-shadow: 0 12px 28px rgba(0, 86, 224, 0.25);
+    }
+    .hero-card::after {
+      content: '💳';
+      position: absolute;
+      right: -8px;
+      top: 10px;
+      font-size: 88px;
+      opacity: 0.18;
+      pointer-events: none;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(8px);
+      color: #ffffff;
+      font-size: 11px;
       font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 12px;
+      text-transform: uppercase;
       margin-bottom: 12px;
-      text-align: center;
     }
-    .btn-action {
-      background: #10b981;
-      color: #041f14;
+    .hero-title {
+      font-size: 22px;
+      font-weight: 900;
+      line-height: 1.25;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+    .hero-subtitle {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.45;
+      margin-bottom: 20px;
+      max-width: 85%;
+    }
+    .btn-deposit {
+      background: #ffffff;
+      color: #0738b8;
       font-weight: 800;
       font-size: 16px;
-      padding: 16px;
+      text-align: center;
+      padding: 15px;
       border-radius: 16px;
-      text-decoration: none;
       display: block;
-      text-align: center;
-      margin: 20px 0 24px;
-      box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.35);
+      text-decoration: none;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
     }
-    .step-card {
-      background: #0f172a;
-      border: 1px solid #1e293b;
-      border-radius: 16px;
+
+    .step-box {
+      background: linear-gradient(145deg, #102434 0%, #0d1e2d 100%);
+      border: 1px solid #1a2f42;
+      border-radius: 20px;
       padding: 16px;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
-    .step-num {
-      display: inline-block;
-      background: #34d399;
-      color: #041f14;
-      font-size: 12px;
+    .step-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .step-badge {
+      background: #007aff;
+      color: #ffffff;
       font-weight: 800;
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      text-align: center;
-      line-height: 22px;
-      margin-right: 8px;
+      font-size: 12px;
+      width: 24px;
+      height: 24px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .step-title {
       font-size: 15px;
-      font-weight: 700;
+      font-weight: 800;
       color: #ffffff;
-      margin-bottom: 6px;
-      display: flex;
-      align-items: center;
     }
     .step-desc {
       font-size: 13px;
-      color: #94a3b8;
+      color: #8fa0b5;
       line-height: 1.5;
+      padding-left: 34px;
     }
+
+    .info-card {
+      background: #111722;
+      border: 1px solid #1c2637;
+      border-radius: 20px;
+      padding: 16px 18px;
+      margin: 16px 0 24px;
+    }
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      font-size: 13px;
+    }
+    .info-row:last-child {
+      border-bottom: none;
+      padding-bottom: 2px;
+    }
+    .info-label { color: #76879d; }
+    .info-val-green { font-weight: 800; color: #10b981; }
+    .info-val { font-weight: 700; color: #ffffff; }
+
     footer {
       text-align: center;
       font-size: 11px;
-      color: #475569;
-      padding: 16px 0;
+      color: #4f5f73;
+      padding: 10px 0 20px;
     }
+    footer a {
+      color: #64748b;
+      text-decoration: underline;
+      margin: 0 6px;
+    }
+
+    .bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #0f141d;
+      border-top: 1px solid #1c2433;
+      height: 64px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 100;
+      box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.4);
+    }
+    .bottom-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #708096;
+      font-size: 10px;
+      font-weight: 600;
+      gap: 3px;
+      flex: 1;
+    }
+    .bottom-item.active { color: #007aff; }
+    .bottom-icon { font-size: 18px; }
   </style>
 </head>
 <body>
-  <main class="container">
-    <a href="/" class="nav-back">← Asosiy sahifaga qaytish</a>
-    <div style="text-align: center;">
-      <span class="badge">💳 0% Komissiya bilan to'lov</span>
-      <h1>Uzcard va Humo Orqali Hisobni To'ldirish</h1>
+
+  <div class="app-wrapper">
+    <div class="top-chips">
+      <a href="/" class="chip">🚀 Aviator</a>
+      <a href="/ilova" class="chip">📲 APK Ilova</a>
+      <span class="chip active">💳 Uzcard / Humo</span>
+      <a href={playLink} target="_blank" rel="nofollow sponsored" class="chip">🎁 +500% Bonus</a>
     </div>
 
-    <a href={playLink} target="_blank" rel="nofollow sponsored" class="btn-action">
-      💰 Hisobni To'ldirish va O'ynash
-    </a>
-
-    <div class="step-card">
-      <div class="step-title">
-        <span class="step-num">1</span> 1 daqiqada ro'yxatdan o'ting
-      </div>
-      <p class="step-desc">
-        Saytga kiring va telefon raqamingiz orqali tezkor hisob oching. Valyuta sifatida <b>UZS (So'm)</b> tanlanadi.
-      </p>
-    </div>
-
-    <div class="step-card">
-      <div class="step-title">
-        <span class="step-num">2</span> To'lov tizimini tanlang
-      </div>
-      <p class="step-desc">
-        «Depozit» bo'limiga kiring. O'zbekiston bank kartalari uchun <b>Uzcard</b> yoki <b>Humo</b> variantini tanlang.
-      </p>
-    </div>
-
-    <div class="step-card">
-      <div class="step-title">
-        <span class="step-num">3</span> Summani kiriting
-      </div>
-      <p class="step-desc">
-        Minimal depozit — <b>10 000 so'm</b>. Mablag' hisobingizga bir necha soniya ichida komissiyasiz tushadi.
-      </p>
-    </div>
-<div style="text-align: center; margin: 18px 0;">
-      <a href="/ilova" style="color: #34d399; font-size: 13px; text-decoration: underline;">
-        📲 O'yin uchun Android APK ilovasini yuklab olish →
+    <div class="hero-card">
+      <div class="hero-tag">💳 0% Komissiya bilan to'lov</div>
+      <h1 class="hero-title">Uzcard va Humo Orqali Hisobni To'ldirish</h1>
+      <p class="hero-subtitle">10 000 so'mdan boshlab darhol hisobga tushadi. 5 daqiqada yechib olish kafolati.</p>
+      <a href={playLink} target="_blank" rel="nofollow sponsored" class="btn-deposit">
+        💰 Hisobni To'ldirish va O'ynash
       </a>
     </div>
-  </main>
 
-  <footer>
-    © 2026 Aviator Uzbek. 18+ Mas'uliyat bilan o'ynang.
-  </footer>
+    <div class="step-box">
+      <div class="step-header">
+        <span class="step-badge">1</span>
+        <span class="step-title">Ro'yxatdan o'ting</span>
+      </div>
+      <p class="step-desc">
+        Saytga kiring va telefon raqamingiz orqali 1 daqiqada hisob oching. Valyuta sifatida <b>UZS (So'm)</b> tanlanadi.
+      </p>
+    </div>
+
+    <div class="step-box">
+      <div class="step-header">
+        <span class="step-badge">2</span>
+        <span class="step-title">To'lov usulini tanlang</span>
+      </div>
+      <p class="step-desc">
+        «Depozit» bo'limida <b>Uzcard</b> yoki <b>Humo</b> tugmasini bosing.
+      </p>
+    </div>
+
+    <div class="step-box">
+      <div class="step-header">
+        <span class="step-badge">3</span>
+        <span class="step-title">Summani tasdiqlang</span>
+      </div>
+      <p class="step-desc">
+        Minimal summa — <b>10 000 so'm</b>. Mablag' hech qanday komissiyasiz balansingizda paydo bo'ladi.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <div class="info-row">
+        <span class="info-label">Minimal depozit:</span>
+        <span class="info-val-green">10 000 so'm</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Pul tushish vaqti:</span>
+        <span class="info-val">Darhol (0 soniya)</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Pul yechish:</span>
+        <span class="info-val">5-15 daqiqa</span>
+      </div>
+    </div>
+
+    <footer>
+      <div style="margin-bottom: 8px;">
+        <a href="/masuliyatli-oyin">Mas'uliyatli o'yin (18+)</a>
+        <a href="/maxfiylik-siyosati">Maxfiylik siyosati</a>
+      </div>
+      © 2026 Aviator Uzbek. 18+ Mas'uliyat bilan o'ynang.
+    </footer>
+  </div>
+
+  <nav class="bottom-bar">
+    <a href="/" class="bottom-item">
+      <span class="bottom-icon">🏠</span>
+      <span>Asosiy</span>
+    </a>
+    <a href={playLink} target="_blank" rel="nofollow sponsored" class="bottom-item">
+      <span class="bottom-icon">✈️</span>
+      <span>Aviator</span>
+    </a>
+    <a href="/ilova" class="bottom-item">
+      <span class="bottom-icon">📲</span>
+      <span>APK</span>
+    </a>
+    <a href="/uzcard-depozit" class="bottom-item active">
+      <span class="bottom-icon">💳</span>
+      <span>To'lov</span>
+    </a>
+    <a href={playLink} target="_blank" rel="nofollow sponsored" class="bottom-item">
+      <span class="bottom-icon">🎁</span>
+      <span>Bonus</span>
+    </a>
+  </nav>
+
 </body>
 </html>
