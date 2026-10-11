@@ -1,7 +1,7 @@
 ---
-const title = "Лаки Джет в Узбекистане (2026) — демо, стратегия Джо, APK и Uzcard";
+const title = "Лаки Джет в Узбекистане (2026) — Демо, Стратегия и APK";
 const description = "Проверено: Lucky Jet от 1win — демо с Джо, автовывод 1.30x-1.60x, депозит от 10 000 сум Uzcard/Humo, вывод 5-15 минут, RTP 97%.";
-const canonical = "https://aviator-uzbek.online/ru-lucky-jet";
+const canonical = "https://aviator-uzbek.online/ru-lucky-jet/";
 const refLink = "/go/lucky-jet";
 
 const faqSchema = {
@@ -61,91 +61,1088 @@ const howToSchema = {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
   <meta name="description" content={description} />
-  <link rel="canonical" href={canonical} />
-  <link rel="alternate" hreflang="ru" href="https://aviator-uzbek.online/ru-lucky-jet" />
-  <link rel="alternate" hreflang="uz" href="https://aviator-uzbek.online/lucky-jet" />
-  <link rel="alternate" hreflang="x-default" href="https://aviator-uzbek.online/lucky-jet" />
+  <link rel="canonical" href="https://aviator-uzbek.online/ru-lucky-jet/" />
+  <link rel="alternate" hreflang="ru" href="https://aviator-uzbek.online/ru-lucky-jet/" />
+  <link rel="alternate" hreflang="uz" href="https://aviator-uzbek.online/lucky-jet/" />
+  <link rel="alternate" hreflang="x-default" href="https://aviator-uzbek.online/lucky-jet/" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ru_RU" />
-  <meta property="og:locale:alternate" content="uz_UZ" />
-  <meta property="og:site_name" content="Авиатор Узбекистан" />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
-  <meta property="og:url" content={canonical} />
+  <meta property="og:url" content="https://aviator-uzbek.online/ru-lucky-jet/" />
+  <meta property="og:image" content="https://aviator-uzbek.online/og-preview.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content={title} />
-  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content="https://aviator-uzbek.online/og-preview.png" />
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
-  <script type="application/ld+json" set:html={JSON.stringify(howToSchema)} />
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
-    body { background-color: #0b0e14; color: #f1f5f9; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; min-height: 100vh; padding-bottom: 120px; }
-    .app-wrapper { max-width: 460px; margin: 0 auto; padding: 14px 14px 20px; }
-    .lang-bar { display: flex; justify-content: flex-end; gap: 6px; margin-bottom: 12px; }
-    .lang-btn { font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 8px; text-decoration: none; color: #94a3b8; background: #171d28; border: 1px solid rgba(255,255,255,.05); }
-    .lang-btn.active { background: #7c3aed; color: #fff; border-color: #7c3aed; }
-    .top-chips { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 14px; scrollbar-width: none; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+    body {
+      background-color: #0b0e14;
+      color: #f1f5f9;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      min-height: 100vh;
+      padding-bottom: 90px;
+      display: flex;
+      justify-content: center;
+    }
+    .app-wrapper {
+      max-width: 460px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 14px 14px 20px;
+      background-color: #0b0e14;
+    }
+
+    /* Top Bar */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 19px;
+      font-weight: 900;
+      color: #ffffff;
+      text-decoration: none;
+      letter-spacing: -0.3px;
+    }
+    .lang-bar {
+      display: flex;
+      gap: 6px;
+    }
+    .lang-btn {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 5px 11px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #94a3b8;
+      background: #171d28;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.2s;
+    }
+    .lang-btn.active {
+      background: #7c3aed;
+      color: #ffffff;
+      border-color: #7c3aed;
+    }
+
+    /* Top Chips */
+    .top-chips {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 14px;
+      scrollbar-width: none;
+    }
     .top-chips::-webkit-scrollbar { display: none; }
-    .chip { background: #171d28; color: #94a3b8; font-size: 13px; font-weight: 700; padding: 8px 16px; border-radius: 20px; white-space: nowrap; text-decoration: none; border: 1px solid rgba(255,255,255,.05); }
-    .chip.active-purple { background: #7c3aed; color: #fff; border-color: #8b5cf6; }
-    .hero-card { background: linear-gradient(145deg,#4c1d95 0%,#6d28d9 50%,#7c3aed 100%); border-radius: 24px; padding: 22px 18px 20px; position: relative; overflow: hidden; margin-bottom: 14px; }
-    .hero-tag { display: inline-block; background: rgba(255,255,255,.2); color: #fff; font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 12px; text-transform: uppercase; margin-bottom: 12px; }
-    .hero-title { font-size: 22px; font-weight: 900; line-height: 1.25; color: #fff; margin-bottom: 8px; }
-    .hero-subtitle { font-size: 13px; color: rgba(255,255,255,.88); line-height: 1.45; margin-bottom: 18px; max-width: 85%; }
-    .btn-play-lj { background: #fff; color: #4c1d95; font-weight: 800; font-size: 16px; text-align: center; padding: 15px; border-radius: 16px; display: block; text-decoration: none; }
-    .second-card { background: #111722; border: 1px solid #1c2637; border-radius: 18px; padding: 16px; margin-bottom: 12px; }
-    .second-title { font-size: 15px; font-weight: 800; color: #fff; margin-bottom: 4px; }
-    .second-subtitle { font-size: 12px; color: #94a3b8; line-height: 1.5; }
-    .faq-section { margin-bottom: 20px; }
-    .faq-header { font-size: 17px; font-weight: 800; color: #fff; margin-bottom: 12px; }
-    .faq-item { background: #111722; border: 1px solid #1c2637; border-radius: 16px; margin-bottom: 8px; overflow: hidden; }
-    .faq-question { padding: 14px 16px; font-size: 13px; font-weight: 700; color: #f1f5f9; cursor: pointer; list-style: none; }
-    .faq-answer { padding: 0 16px 14px; font-size: 12px; color: #94a3b8; line-height: 1.55; }
-    footer { text-align: center; font-size: 11px; color: #4f5f73; padding: 16px 0 20px; }
-    footer a { color: #64748b; margin: 0 6px; }
+    .chip {
+      background: #171d28;
+      color: #94a3b8;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 8px 16px;
+      border-radius: 20px;
+      white-space: nowrap;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .chip.active-purple {
+      background: #7c3aed;
+      color: #ffffff;
+      border-color: #8b5cf6;
+      box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);
+    }
+
+    /* Lucky Jet Hero Banner */
+    .hero-card {
+      background: linear-gradient(145deg, #4c1d95 0%, #6d28d9 50%, #7c3aed 100%);
+      border-radius: 24px;
+      padding: 22px 18px 20px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 16px;
+      box-shadow: 0 12px 28px rgba(109, 40, 217, 0.35);
+    }
+    .hero-card::after {
+      content: '🚀';
+      position: absolute;
+      right: -8px;
+      top: 10px;
+      font-size: 88px;
+      opacity: 0.18;
+      transform: rotate(-15deg);
+      pointer-events: none;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 12px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+    .hero-title {
+      font-size: 22px;
+      font-weight: 900;
+      line-height: 1.25;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+    .hero-subtitle {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.45;
+      margin-bottom: 18px;
+    }
+    .btn-play-lj {
+      background: #ffffff;
+      color: #4c1d95;
+      font-weight: 900;
+      font-size: 15px;
+      text-align: center;
+      padding: 13px;
+      border-radius: 14px;
+      display: block;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+      transition: transform 0.15s;
+    }
+    .btn-play-lj:active { transform: scale(0.98); }
+
+    /* LUCKY JET CANVAS SIMULATOR */
+    .sim-card {
+      background: #141624;
+      border: 1px solid rgba(168, 85, 247, 0.2);
+      border-radius: 22px;
+      padding: 14px;
+      margin-bottom: 16px;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+    }
+    .sim-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .bal-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 800;
+      color: #c084fc;
+      background: #1c1830;
+      padding: 4px 10px;
+      border-radius: 10px;
+      border: 1px solid rgba(168, 85, 247, 0.2);
+    }
+    .sim-badge {
+      background: rgba(168, 85, 247, 0.2);
+      color: #c084fc;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 8px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .purple-dot {
+      width: 6px;
+      height: 6px;
+      background: #a855f7;
+      border-radius: 50%;
+      box-shadow: 0 0 6px #a855f7;
+    }
+
+    /* History Ribbon */
+    .history-ribbon {
+      display: flex;
+      gap: 5px;
+      overflow-x: auto;
+      margin-bottom: 10px;
+      padding: 2px 0 6px;
+      scrollbar-width: none;
+    }
+    .history-ribbon::-webkit-scrollbar { display: none; }
+    .history-pill {
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 8px;
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+    }
+    .pill-blue { background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); }
+    .pill-purple { background: rgba(168, 85, 247, 0.2); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.35); }
+    .pill-gold { background: rgba(245, 158, 11, 0.25); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.45); }
+
+    /* Canvas Arena */
+    .sim-screen {
+      background: radial-gradient(circle at 75% 25%, #2a154d 0%, #0c0817 80%);
+      border: 1px solid rgba(168, 85, 247, 0.25);
+      border-radius: 18px;
+      height: 240px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 12px;
+    }
+    #lj-canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .sim-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      pointer-events: none;
+      z-index: 10;
+    }
+    .sim-mult {
+      font-size: 54px;
+      font-weight: 900;
+      color: #ffffff;
+      letter-spacing: -1.5px;
+      text-shadow: 0 4px 24px rgba(168, 85, 247, 0.8);
+      font-variant-numeric: tabular-nums;
+      line-height: 1;
+    }
+    .flew-tag {
+      font-size: 15px;
+      font-weight: 900;
+      color: #ef4444;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      display: none;
+      margin-top: 6px;
+      text-shadow: 0 0 14px rgba(239, 68, 68, 0.8);
+    }
+    .waiting-bar-wrap {
+      position: absolute;
+      bottom: 18px;
+      left: 28px;
+      right: 28px;
+      background: rgba(255, 255, 255, 0.08);
+      height: 7px;
+      border-radius: 4px;
+      overflow: hidden;
+      display: none;
+    }
+    .waiting-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #7c3aed 0%, #c084fc 100%);
+      transition: width 0.1s linear;
+    }
+    .waiting-label {
+      position: absolute;
+      bottom: 30px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 11px;
+      font-weight: 800;
+      color: #c084fc;
+      display: none;
+    }
+
+    /* Controls Console */
+    .sim-controls {
+      background: #0f0c1a;
+      border-radius: 16px;
+      padding: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .bet-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .stepper {
+      display: flex;
+      align-items: center;
+      background: #191428;
+      border-radius: 12px;
+      border: 1px solid rgba(168, 85, 247, 0.2);
+      padding: 2px 4px;
+    }
+    .step-btn {
+      background: none;
+      border: none;
+      color: #94a3b8;
+      font-size: 18px;
+      font-weight: 900;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .bet-amount {
+      font-size: 14px;
+      font-weight: 800;
+      color: #ffffff;
+      padding: 0 8px;
+      min-width: 90px;
+      text-align: center;
+      font-variant-numeric: tabular-nums;
+    }
+    .auto-cash-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: #94a3b8;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .auto-cash-select {
+      background: #191428;
+      border: 1px solid rgba(168, 85, 247, 0.2);
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 4px 8px;
+      border-radius: 8px;
+      outline: none;
+    }
+    .sim-chips {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+    .sim-chip-btn {
+      background: #191428;
+      color: #94a3b8;
+      border: 1px solid rgba(168, 85, 247, 0.15);
+      padding: 8px 0;
+      border-radius: 10px;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.15s;
+    }
+    .sim-chip-btn.active {
+      background: #7c3aed;
+      color: #ffffff;
+      border-color: #8b5cf6;
+      box-shadow: 0 2px 8px rgba(124, 58, 237, 0.4);
+    }
+    .sim-action-btn {
+      width: 100%;
+      height: 52px;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: #ffffff;
+      border: none;
+      border-radius: 14px;
+      font-size: 16px;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(16, 185, 129, 0.35);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.2s;
+    }
+    .sim-action-btn.cashing {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      box-shadow: 0 4px 20px rgba(245, 158, 11, 0.5);
+      animation: pulse-cash 1.2s infinite;
+    }
+    .sim-action-btn.waiting {
+      background: #272138;
+      color: #94a3b8;
+      cursor: not-allowed;
+    }
+    @keyframes pulse-cash {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+      100% { transform: scale(1); }
+    }
+    .sim-result {
+      margin-top: 10px;
+      padding: 12px;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: 12px;
+      text-align: center;
+      display: none;
+    }
+
+    /* Specs Info Card */
+    .info-card {
+      background: #141a24;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 16px 18px;
+      margin-bottom: 14px;
+    }
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      font-size: 13px;
+    }
+    .info-row:last-child {
+      border-bottom: none;
+      padding-bottom: 2px;
+    }
+    .info-label { color: #8fa0b5; }
+    .info-val { font-weight: 700; color: #ffffff; }
+    .info-val-purple { font-weight: 800; color: #c084fc; }
+
+    /* FAQ */
+    .faq-section {
+      margin-top: 16px;
+    }
+    .faq-header {
+      font-size: 16px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+    .faq-item {
+      background: #141a24;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 14px;
+      margin-bottom: 8px;
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 14px 16px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #f1f5f9;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-question::-webkit-details-marker { display: none; }
+    .faq-question::after {
+      content: '+';
+      font-size: 18px;
+      color: #a855f7;
+      font-weight: 800;
+    }
+    details[open] .faq-question::after { content: '−'; }
+    .faq-answer {
+      padding: 0 16px 14px;
+      font-size: 12px;
+      color: #94a3b8;
+      line-height: 1.55;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 11px;
+      color: #4f5f73;
+      padding: 16px 0 20px;
+    }
+    footer a {
+      color: #64748b;
+      text-decoration: underline;
+      margin: 0 6px;
+    }
+
+    /* Bottom Bar */
+    .bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #0f141d;
+      border-top: 1px solid #1c2433;
+      height: 64px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 100;
+      box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.4);
+      max-width: 460px;
+      margin: 0 auto;
+    }
+    .bottom-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #708096;
+      font-size: 10px;
+      font-weight: 600;
+      gap: 3px;
+      flex: 1;
+    }
+    .bottom-item.active-purple { color: #a855f7; }
+    .bottom-icon { font-size: 18px; }
   </style>
 </head>
 <body>
+
   <div class="app-wrapper">
-    <div class="lang-bar">
-      <a href="/lucky-jet" class="lang-btn">🇺🇿 O'zbek</a>
-      <span class="lang-btn active">🇷🇺 Русский</span>
-    </div>
-    <div class="top-chips">
-      <a href="/ru" class="chip">🚀 Авиатор</a>
+    
+    <!-- Top Bar -->
+    <header class="top-bar">
+      <a href="/ru/" class="logo">
+        <span>✈️</span>
+        <span>Aviator UZ</span>
+      </a>
+      <div class="lang-bar">
+        <a href="/lucky-jet/" class="lang-btn">🇺🇿 O'zbek</a>
+        <span class="lang-btn active">🇷🇺 Русский</span>
+      </div>
+    </header>
+
+    <!-- Top Chips -->
+    <nav class="top-chips">
+      <a href="/ru/" class="chip">🚀 Авиатор</a>
       <span class="chip active-purple">🎰 Lucky Jet</span>
-      <a href="/ru-depozit" class="chip">💳 Uzcard / Humo</a>
-      <a href="/ru-apk" class="chip">📲 APK Скачать</a>
-    </div>
-    <div class="hero-card">
-      <div class="hero-tag">🔥 1win Эксклюзив</div>
-      <h1 class="hero-title">Лаки Джет — Джо летит, забирай до падения</h1>
-      <p class="hero-subtitle">Мои 30 раундов: чаще 1.50x-2.80x, автовывод 1.30x-1.60x. Депозит от 10 000 сум, вывод 5-15 минут.</p>
-      <a href={refLink} target="_blank" rel="nofollow sponsored" class="btn-play-lj">Играть в Lucky Jet</a>
-    </div>
-    <div class="second-card">
-      <h2 class="second-title">Чем отличается от Авиатора</h2>
-      <p class="second-subtitle">Джо вместо самолета, раунды резче. Я заметил: серии низких иксов чаще, чем в Авиаторе, поэтому ставку делил пополам — одна рано, вторая позже.</p>
-    </div>
-    <div class="second-card">
-      <h2 class="second-title">Как начать за 3 шага</h2>
-      <p class="second-subtitle">1) Демо 10 раундов. 2) UZS-счет. 3) Касса Uzcard/Humo. На Humo у меня пришло за 8 минут вечером.</p>
-    </div>
-    <div class="faq-section">
-      <h2 class="faq-header">Вопросы про Lucky Jet</h2>
-      <details class="faq-item"><summary class="faq-question">Какая тактика держалась?</summary><div class="faq-answer">Автовывод 1.30x-1.60x. Ждать 100x каждый раз — слив за вечер.</div></details>
-      <details class="faq-item"><summary class="faq-question">Отличие от Авиатора?</summary><div class="faq-answer">Джо вместо самолета, эксклюзив 1win. По ощущениям резче, максимумы до 200x, обычно 1.5x-3x.</div></details>
-      <details class="faq-item"><summary class="faq-question">Депозит и вывод?</summary><div class="faq-answer">От 10 000 сум, без комиссии. Humo 8 минут, Uzcard 13 минут у меня.</div></details>
-      <details class="faq-item"><summary class="faq-question">Нужен ли APK?</summary><div class="faq-answer">Нет, браузер тянет. APK 45 МБ для Android, iPhone через Safari.</div></details>
-      <details class="faq-item"><summary class="faq-question">Демо = реал?</summary><div class="faq-answer">Нет по нервам. Начните с 10 000 сум после демо.</div></details>
-      <details class="faq-item"><summary class="faq-question">Бонус +500% работает?</summary><div class="faq-answer">Да, частями + отыгрыш. Сразу вывести нельзя.</div></details>
-    </div>
+      <a href="/ru-depozit/" class="chip">💳 Uzcard / Humo</a>
+      <a href="/ru-apk/" class="chip">📲 APK Приложение</a>
+      <a href={refLink} target="_blank" rel="nofollow sponsored" class="chip">🎁 +500% Бонус</a>
+    </nav>
+
+    <!-- Lucky Jet Hero Card -->
+    <section class="hero-card">
+      <div class="hero-tag">🔥 Эксклюзив 1win</div>
+      <h1 class="hero-title">Лаки Джет — Играйте с Счастливчиком Джо (+500%)</h1>
+      <p class="hero-subtitle">Максимальные коэффициенты до 200x. Пополнение через Uzcard и Humo от 10 000 сум без комиссии.</p>
+      <a href={refLink} target="_blank" rel="nofollow sponsored" class="btn-play-lj">
+        Играть в Lucky Jet (Регистрация на 1win)
+      </a>
+    </section>
+
+    <!-- REALISTIC LUCKY JOE CANVAS SIMULATOR -->
+    <section class="sim-card">
+      <div class="sim-header">
+        <div class="bal-badge">
+          <span>💰 Balans:</span>
+          <span id="bal-val" style="color:#ffffff;">1 000 000 сум</span>
+        </div>
+        <span class="sim-badge">
+          <span class="purple-dot"></span>
+          LUCKY JOE DEMO
+        </span>
+      </div>
+
+      <!-- History Ribbon -->
+      <div id="history-bar" class="history-ribbon">
+        <span class="history-pill pill-purple">2.15x</span>
+        <span class="history-pill pill-blue">1.38x</span>
+        <span class="history-pill pill-gold">28.40x</span>
+        <span class="history-pill pill-purple">4.10x</span>
+        <span class="history-pill pill-blue">1.18x</span>
+        <span class="history-pill pill-purple">6.75x</span>
+        <span class="history-pill pill-blue">1.42x</span>
+        <span class="history-pill pill-gold">12.50x</span>
+      </div>
+
+      <!-- Canvas Box -->
+      <div class="sim-screen">
+        <canvas id="lj-canvas"></canvas>
+        <div class="sim-overlay">
+          <div id="sim-mult" class="sim-mult">1.00x</div>
+          <div id="flew-tag" class="flew-tag">ДЖО УЛЕТЕЛ!</div>
+        </div>
+        <div id="waiting-label" class="waiting-label">ОЖИДАНИЕ СЛЕДУЮЩЕГО РАУНДА...</div>
+        <div id="waiting-bar-wrap" class="waiting-bar-wrap">
+          <div id="waiting-bar-fill" class="waiting-bar-fill"></div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="sim-controls">
+        <div class="bet-row">
+          <div class="stepper">
+            <button id="btn-minus" class="step-btn">−</button>
+            <span id="bet-disp" class="bet-amount">10 000 сум</span>
+            <button id="btn-plus" class="step-btn">+</button>
+          </div>
+          <div class="auto-cash-label">
+            <span>Auto Cash:</span>
+            <select id="auto-cash-select" class="auto-cash-select">
+              <option value="0">O'chiq</option>
+              <option value="1.30">1.30x</option>
+              <option value="1.50">1.50x</option>
+              <option value="2.00" selected>2.00x</option>
+              <option value="3.00">3.00x</option>
+              <option value="5.00">5.00x</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="sim-chips">
+          <button class="sim-chip-btn active" data-b="10000">10 000</button>
+          <button class="sim-chip-btn" data-b="25000">25 000</button>
+          <button class="sim-chip-btn" data-b="50000">50 000</button>
+          <button class="sim-chip-btn" data-b="100000">100 000</button>
+        </div>
+
+        <button id="btn-action" class="sim-action-btn">
+          <span>ЗАПУСК ДЖО (ДЕМО)</span>
+        </button>
+
+        <div id="sim-win-box" class="sim-result">
+          <div style="color: #10b981; font-weight: 800; font-size: 13px;" id="win-text"></div>
+          <a href={refLink} target="_blank" rel="nofollow sponsored" style="color: #ffffff; background: #7c3aed; display: inline-block; padding: 8px 16px; border-radius: 10px; text-decoration: none; font-size: 12px; font-weight: 800; margin-top: 6px;">
+            Играть в Lucky Jet на реальные деньги →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Game Specs -->
+    <section class="info-card">
+      <div class="info-row">
+        <span class="info-label">Тип игры:</span>
+        <span class="info-val">Краш-игра (Оригинал 1win)</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">RTP (Возврат игроку):</span>
+        <span class="info-val-purple">97.0%</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Минимальная ставка:</span>
+        <span class="info-val">1 000 сум</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Минимальный депозит:</span>
+        <span class="info-val-purple">10 000 сум</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Платежные методы:</span>
+        <span class="info-val">Uzcard, Humo, Visa</span>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="faq-section">
+      <h2 class="faq-header">Частые вопросы по Lucky Jet</h2>
+
+      <details class="faq-item">
+        <summary class="faq-question">Как выигрывать в Lucky Jet?</summary>
+        <div class="faq-answer">Авто-вывод на коэффициентах 1.30x-1.60x показал лучший результат. Ожидание 100x каждый раунд быстро опустошает банк.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">В чем отличие от Авиатора?</summary>
+        <div class="faq-answer">Вместо самолета летит Счастливчик Джо на джетпаке. Это эксклюзив платформы 1win с более динамичной анимацией.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Можно ли пополнять через Uzcard/Humo?</summary>
+        <div class="faq-answer">Ha, 10 000 сумdan, komissiyasiz. Mening sinovimda Humo 8 daqiqa, Uzcard 13 daqiqada yechildi.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Нужно ли скачивать приложение?</summary>
+        <div class="faq-answer">Не обязательно, игра отлично летает в мобильном браузере или через официальный APK 45 МБ.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">В чем разница между демо и игрой на деньги?</summary>
+        <div class="faq-answer">Механика та же, эмоции разные. Начните с минимальной ставки 10 000 сум.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Действует ли бонус +500% в Lucky Jet?</summary>
+        <div class="faq-answer">Да, приветственный бонус распространяется на все игры казино 1win.</div>
+      </details>
+    </section>
+
+    <!-- Footer -->
     <footer>
-      <div><a href="/ru-otvetstvennaya-igra">Ответственная игра (18+)</a><a href="/ru-politika">Политика</a></div>
-      © 2026 Лаки Джет Узбекистан. 18+ Играйте ответственно.
+      <div style="margin-bottom: 8px;">
+        <a href="/ru-otvetstvennaya-igra/">Ответственная игра (18+)</a>
+        <a href="/ru-politika/">Maxfiylik siyosati</a>
+      </div>
+      © 2026 Авиатор и Lucky Jet Узбекистан. 18+ Играйте ответственно.
     </footer>
+
   </div>
+
+  <!-- Bottom Navigation Bar (Lucky Jet Active in Purple) -->
+  <nav class="bottom-bar">
+    <a href="/ru/" class="bottom-item">
+      <span class="bottom-icon">🏠</span>
+      <span>Главная</span>
+    </a>
+    <a href={refLink} target="_blank" rel="nofollow sponsored" class="bottom-item">
+      <span class="bottom-icon">✈️</span>
+      <span>Aviator</span>
+    </a>
+    <a href="/ru-lucky-jet/" class="bottom-item active-purple">
+      <span class="bottom-icon">🎰</span>
+      <span>Lucky Jet</span>
+    </a>
+    <a href="/ru-depozit/" class="bottom-item">
+      <span class="bottom-icon">💳</span>
+      <span>Депозит</span>
+    </a>
+    <a href={refLink} target="_blank" rel="nofollow sponsored" class="bottom-item">
+      <span class="bottom-icon">🎁</span>
+      <span>Бонус</span>
+    </a>
+  </nav>
+
+  <!-- Interactive Lucky Jet Script -->
+  <script>
+    const canvas = document.getElementById('lj-canvas');
+    const ctx = canvas.getContext('2d');
+    const multDisp = document.getElementById('sim-mult');
+    const flewTag = document.getElementById('flew-tag');
+    const waitingLabel = document.getElementById('waiting-label');
+    const waitingBarWrap = document.getElementById('waiting-bar-wrap');
+    const waitingBarFill = document.getElementById('waiting-bar-fill');
+    const actionBtn = document.getElementById('btn-action');
+    const winBox = document.getElementById('sim-win-box');
+    const winText = document.getElementById('win-text');
+    const balDisplay = document.getElementById('bal-val');
+    const autoCashSelect = document.getElementById('auto-cash-select');
+    const historyBar = document.getElementById('history-bar');
+
+    let virtualBal = 1000000;
+    let currentBet = 10000;
+    let gameState = 'IDLE'; // IDLE, WAITING, FLYING, CRASHED, WON
+    let currentMult = 1.00;
+    let crashTarget = 2.00;
+    let animId = null;
+    let startTime = 0;
+
+    function initCanvas() {
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = rect.width * window.devicePixelRatio;
+      canvas.height = rect.height * window.devicePixelRatio;
+      ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+    }
+    window.addEventListener('resize', initCanvas);
+    initCanvas();
+
+    // Draw Lucky Joe with Jetpack on Canvas
+    function drawLuckyJoe(x, y, angle, isFlying) {
+      ctx.save();
+      ctx.translate(x, y);
+      ctx.rotate(angle);
+
+      // Jetpack flame
+      if (isFlying) {
+        const flameLen = 18 + Math.random() * 8;
+        ctx.fillStyle = '#f59e0b';
+        ctx.beginPath();
+        ctx.moveTo(-10, 4);
+        ctx.lineTo(-10 - flameLen, 8);
+        ctx.lineTo(-10, 12);
+        ctx.closePath();
+        ctx.fill();
+
+        ctx.fillStyle = '#38bdf8';
+        ctx.beginPath();
+        ctx.moveTo(-10, 6);
+        ctx.lineTo(-10 - flameLen * 0.6, 8);
+        ctx.lineTo(-10, 10);
+        ctx.closePath();
+        ctx.fill();
+      }
+
+      // Jetpack cylinder
+      ctx.fillStyle = '#475569';
+      ctx.beginPath();
+      ctx.roundRect(-12, -4, 8, 18, 4);
+      ctx.fill();
+      ctx.strokeStyle = '#94a3b8';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+
+      // Joe Body (Blue jacket)
+      ctx.fillStyle = '#2563eb';
+      ctx.beginPath();
+      ctx.roundRect(-6, -2, 14, 18, 4);
+      ctx.fill();
+
+      // Joe Head & Sunglasses
+      ctx.fillStyle = '#fed7aa'; // skin
+      ctx.beginPath();
+      ctx.arc(2, -10, 7, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Black Cap
+      ctx.fillStyle = '#1e293b';
+      ctx.beginPath();
+      ctx.arc(2, -12, 7, Math.PI, Math.PI * 2);
+      ctx.fill();
+      ctx.fillRect(-2, -12, 10, 2); // visor
+
+      // Sunglasses
+      ctx.fillStyle = '#0f172a';
+      ctx.fillRect(1, -11, 7, 3);
+
+      ctx.restore();
+    }
+
+    function renderScene(progress, isCrash, joeOffset) {
+      const w = canvas.width / window.devicePixelRatio;
+      const h = canvas.height / window.devicePixelRatio;
+      ctx.clearRect(0, 0, w, h);
+
+      // Background cosmic gradient
+      ctx.fillStyle = '#0c0817';
+      ctx.fillRect(0, 0, w, h);
+
+      // Grid
+      ctx.strokeStyle = 'rgba(168, 85, 247, 0.06)';
+      ctx.lineWidth = 1;
+      for (let x = 0; x < w; x += 32) {
+        ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, h); ctx.stroke();
+      }
+      for (let y = 0; y < h; y += 32) {
+        ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(w, y); ctx.stroke();
+      }
+
+      if (gameState === 'IDLE' || gameState === 'WAITING') {
+        drawLuckyJoe(40, h - 35, 0, false);
+        return;
+      }
+
+      const startX = 20;
+      const startY = h - 20;
+      const endX = startX + progress * (w - 75);
+      const endY = startY - Math.pow(progress, 1.35) * (h - 75) + joeOffset.y;
+
+      // Purple trajectory gradient
+      const grad = ctx.createLinearGradient(0, endY, 0, startY);
+      if (isCrash) {
+        grad.addColorStop(0, 'rgba(239, 68, 68, 0.3)');
+        grad.addColorStop(1, 'rgba(239, 68, 68, 0.0)');
+      } else {
+        grad.addColorStop(0, 'rgba(124, 58, 237, 0.4)');
+        grad.addColorStop(1, 'rgba(124, 58, 237, 0.0)');
+      }
+
+      ctx.beginPath();
+      ctx.moveTo(startX, startY);
+      ctx.quadraticCurveTo(startX + (endX - startX) * 0.45, startY, endX, endY);
+      ctx.lineTo(endX, startY);
+      ctx.closePath();
+      ctx.fillStyle = grad;
+      ctx.fill();
+
+      // Neon Purple Trajectory Line
+      ctx.beginPath();
+      ctx.moveTo(startX, startY);
+      ctx.quadraticCurveTo(startX + (endX - startX) * 0.45, startY, endX, endY);
+      ctx.strokeStyle = isCrash ? '#ef4444' : '#a855f7';
+      ctx.lineWidth = 3.5;
+      ctx.shadowColor = '#c084fc';
+      ctx.shadowBlur = isCrash ? 2 : 12;
+      ctx.stroke();
+      ctx.shadowBlur = 0;
+
+      if (!isCrash) {
+        drawLuckyJoe(endX, endY, -0.25, true);
+      } else {
+        drawLuckyJoe(endX + joeOffset.crashX, endY + joeOffset.crashY, 0.45, false);
+      }
+    }
+
+    renderScene(0, false, { y: 0, crashX: 0, crashY: 0 });
+
+    // Round Controller
+    function startRound() {
+      if (virtualBal < currentBet) {
+        alert("Balansingizda mablag' yetarli emas! Balans yangilandi.");
+        virtualBal = 1000000;
+        balDisplay.textContent = virtualBal.toLocaleString('uz-UZ') + " so'm";
+      }
+
+      virtualBal -= currentBet;
+      balDisplay.textContent = virtualBal.toLocaleString('uz-UZ') + " so'm";
+      winBox.style.display = 'none';
+      flewTag.style.display = 'none';
+
+      gameState = 'WAITING';
+      actionBtn.className = 'sim-action-btn waiting';
+      actionBtn.innerHTML = '<span>ОЖИДАНИЕ...</span>';
+
+      waitingLabel.style.display = 'block';
+      waitingBarWrap.style.display = 'block';
+      waitingBarFill.style.width = '0%';
+      multDisp.textContent = '1.00x';
+      multDisp.style.color = '#ffffff';
+
+      let wp = 0;
+      const wInt = setInterval(() => {
+        wp += 2.5;
+        waitingBarFill.style.width = wp + '%';
+        renderScene(0, false, { y: 0, crashX: 0, crashY: 0 });
+
+        if (wp >= 100) {
+          clearInterval(wInt);
+          waitingLabel.style.display = 'none';
+          waitingBarWrap.style.display = 'none';
+          launchJoe();
+        }
+      }, 75);
+    }
+
+    function launchJoe() {
+      gameState = 'FLYING';
+      currentMult = 1.00;
+      startTime = performance.now();
+
+      const r = Math.random();
+      if (r < 0.03) crashTarget = 1.00;
+      else if (r < 0.50) crashTarget = 1.15 + Math.random() * 0.90;
+      else if (r < 0.82) crashTarget = 2.05 + Math.random() * 2.40;
+      else if (r < 0.94) crashTarget = 4.50 + Math.random() * 5.50;
+      else crashTarget = 10.0 + Math.random() * 30.0;
+
+      actionBtn.className = 'sim-action-btn cashing';
+      updateCashoutLabel();
+
+      function loop(now) {
+        const elapsed = (now - startTime) / 1000;
+        currentMult = 1.00 + Math.pow(elapsed * 0.72, 1.48);
+        multDisp.textContent = currentMult.toFixed(2) + 'x';
+
+        const autoVal = parseFloat(autoCashSelect.value);
+        if (autoVal > 0 && currentMult >= autoVal && gameState === 'FLYING') {
+          doCashOut();
+          return;
+        }
+
+        if (currentMult >= crashTarget) {
+          doCrash();
+          return;
+        }
+
+        const progress = Math.min(elapsed / 6.5, 1);
+        const floatY = Math.sin(elapsed * 5) * 4;
+        renderScene(progress, false, { y: floatY, crashX: 0, crashY: 0 });
+        updateCashoutLabel();
+
+        if (gameState === 'FLYING') {
+          animId = requestAnimationFrame(loop);
+        }
+      }
+      animId = requestAnimationFrame(loop);
+    }
+
+    function updateCashoutLabel() {
+      if (gameState !== 'FLYING') return;
+      const curWin = Math.round(currentBet * currentMult);
+      actionBtn.innerHTML = '<span>ЗАБРАТЬ ВЫИГРЫШ</span><span style="font-size: 13px; font-weight: 700; color: #fef08a;">' + curWin.toLocaleString('uz-UZ') + " so'm</span>";
+    }
+
+    function doCashOut() {
+      gameState = 'WON';
+      cancelAnimationFrame(animId);
+      const won = Math.round(currentBet * currentMult);
+      virtualBal += won;
+      balDisplay.textContent = virtualBal.toLocaleString('uz-UZ') + " so'm";
+
+      actionBtn.className = 'sim-action-btn';
+      actionBtn.innerHTML = '<span>НОВАЯ СТАВКА</span>';
+
+      winText.innerHTML = "🎉 Вы выиграли со Счастливчиком Джо <b>" + won.toLocaleString('ru-RU') + " сум</b> (на " + currentMult.toFixed(2) + "x)!";
+      winBox.style.display = 'block';
+
+      const elapsed = (performance.now() - startTime) / 1000;
+      const progress = Math.min(elapsed / 6.5, 1);
+      renderScene(progress, false, { y: 0, crashX: 0, crashY: 0 });
+    }
+
+    function doCrash() {
+      gameState = 'CRASHED';
+      cancelAnimationFrame(animId);
+
+      multDisp.textContent = crashTarget.toFixed(2) + 'x';
+      multDisp.style.color = '#ef4444';
+      flewTag.style.display = 'block';
+
+      addHistoryPill(crashTarget);
+
+      actionBtn.className = 'sim-action-btn';
+      actionBtn.innerHTML = '<span>ПОВТОРИТЬ СТАВКУ</span>';
+
+      let cx = 0;
+      function flyOff() {
+        cx += 1;
+        const elapsed = (performance.now() - startTime) / 1000;
+        const progress = Math.min(elapsed / 6.5, 1);
+        renderScene(progress, true, { y: 0, crashX: cx * 14, crashY: -cx * 8 });
+        if (cx < 25) requestAnimationFrame(flyOff);
+      }
+      flyOff();
+    }
+
+    function addHistoryPill(val) {
+      const pill = document.createElement('span');
+      pill.className = 'history-pill ' + (val < 2 ? 'pill-blue' : (val < 10 ? 'pill-purple' : 'pill-gold'));
+      pill.textContent = val.toFixed(2) + 'x';
+      historyBar.insertBefore(pill, historyBar.firstChild);
+      if (historyBar.children.length > 10) historyBar.removeChild(historyBar.lastChild);
+    }
+
+    actionBtn.addEventListener('click', () => {
+      if (gameState === 'IDLE' || gameState === 'CRASHED' || gameState === 'WON') {
+        startRound();
+      } else if (gameState === 'FLYING') {
+        doCashOut();
+      }
+    });
+
+    const betDisp = document.getElementById('bet-disp');
+    const chipBtns = document.querySelectorAll('.sim-chip-btn');
+
+    function setBet(amount) {
+      if (gameState === 'FLYING' || gameState === 'WAITING') return;
+      currentBet = Math.max(5000, Math.min(1000000, amount));
+      betDisp.textContent = currentBet.toLocaleString('uz-UZ') + " so'm";
+      chipBtns.forEach(c => {
+        if (parseInt(c.dataset.b, 10) === currentBet) c.classList.add('active');
+        else c.classList.remove('active');
+      });
+    }
+
+    document.getElementById('btn-plus').addEventListener('click', () => setBet(currentBet + 5000));
+    document.getElementById('btn-minus').addEventListener('click', () => setBet(currentBet - 5000));
+    chipBtns.forEach(c => c.addEventListener('click', () => setBet(parseInt(c.dataset.b, 10))));
+
+  </script>
 </body>
 </html>
+
+

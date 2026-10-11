@@ -1,5 +1,5 @@
 ---
-const title = "Пополнение Авиатор через Uzcard и Humo (2026) — 1win Узбекистан";
+const title = "Пополнение Авиатор через Uzcard и Humo (2026) — 1win UZ";
 const description = "Инструкция по пополнению счета в Авиатор через карты Uzcard и Humo от 10 000 сум без комиссии. Быстрый вывод выигрышей за 5-15 минут.";
 const playLink = "/go/1win";
 
@@ -34,16 +34,21 @@ const schema = {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
   <meta name="description" content={description} />
-  <link rel="canonical" href="https://aviator-uzbek.online/ru-depozit" />
-  <link rel="alternate" hreflang="ru" href="https://aviator-uzbek.online/ru-depozit" />
-  <link rel="alternate" hreflang="uz" href="https://aviator-uzbek.online/uzcard-depozit" />
-  <link rel="alternate" hreflang="x-default" href="https://aviator-uzbek.online/uzcard-depozit" />
+  <link rel="canonical" href="https://aviator-uzbek.online/ru-depozit/" />
+  <link rel="alternate" hreflang="ru" href="https://aviator-uzbek.online/ru-depozit/" />
+  <link rel="alternate" hreflang="uz" href="https://aviator-uzbek.online/uzcard-depozit/" />
+  <link rel="alternate" hreflang="x-default" href="https://aviator-uzbek.online/uzcard-depozit/" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ru_RU" />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
-  <meta property="og:url" content="https://aviator-uzbek.online/ru-depozit" />
+  <meta property="og:url" content="https://aviator-uzbek.online/ru-depozit/" />
+  <meta property="og:image" content="https://aviator-uzbek.online/og-preview.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://aviator-uzbek.online/og-preview.png" />
   <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   <style>
     * {
@@ -57,34 +62,57 @@ const schema = {
       color: #f1f5f9;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       min-height: 100vh;
-      padding-bottom: 120px;
+      padding-bottom: 90px;
+      display: flex;
+      justify-content: center;
     }
     .app-wrapper {
       max-width: 460px;
+      width: 100%;
       margin: 0 auto;
       padding: 14px 14px 20px;
+      background-color: #0b0e14;
+    }
+
+    /* Top Bar */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 19px;
+      font-weight: 900;
+      color: #ffffff;
+      text-decoration: none;
+      letter-spacing: -0.3px;
     }
     .lang-bar {
       display: flex;
-      justify-content: flex-end;
       gap: 6px;
-      margin-bottom: 12px;
     }
     .lang-btn {
       font-size: 11px;
       font-weight: 700;
-      padding: 4px 10px;
+      padding: 5px 11px;
       border-radius: 8px;
       text-decoration: none;
       color: #94a3b8;
       background: #171d28;
       border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.2s;
     }
     .lang-btn.active {
       background: #007aff;
       color: #ffffff;
       border-color: #007aff;
     }
+
+    /* Top Chips */
     .top-chips {
       display: flex;
       gap: 8px;
@@ -103,6 +131,9 @@ const schema = {
       white-space: nowrap;
       text-decoration: none;
       border: 1px solid rgba(255, 255, 255, 0.05);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
     }
     .chip.active {
       background: #007aff;
@@ -110,14 +141,16 @@ const schema = {
       border-color: #007aff;
       box-shadow: 0 4px 12px rgba(0, 122, 255, 0.35);
     }
+
+    /* Hero Card */
     .hero-card {
       background: linear-gradient(145deg, #0738b8 0%, #0056e0 50%, #007aff 100%);
       border-radius: 24px;
       padding: 22px 18px 20px;
       position: relative;
       overflow: hidden;
-      margin-bottom: 14px;
-      box-shadow: 0 12px 28px rgba(0, 86, 224, 0.25);
+      margin-bottom: 16px;
+      box-shadow: 0 12px 28px rgba(0, 86, 224, 0.28);
     }
     .hero-card::after {
       content: '💳';
@@ -125,7 +158,7 @@ const schema = {
       right: -8px;
       top: 10px;
       font-size: 88px;
-      opacity: 0.18;
+      opacity: 0.16;
       pointer-events: none;
     }
     .hero-tag {
@@ -139,6 +172,7 @@ const schema = {
       border-radius: 12px;
       text-transform: uppercase;
       margin-bottom: 12px;
+      letter-spacing: 0.5px;
     }
     .hero-title {
       font-size: 22px;
@@ -149,85 +183,162 @@ const schema = {
     }
     .hero-subtitle {
       font-size: 13px;
-      color: rgba(255, 255, 255, 0.85);
       line-height: 1.45;
-      margin-bottom: 20px;
-      max-width: 85%;
+      color: rgba(255, 255, 255, 0.88);
+      margin-bottom: 16px;
     }
-    .btn-deposit {
-      background: #ffffff;
-      color: #0738b8;
-      font-weight: 800;
-      font-size: 16px;
-      text-align: center;
-      padding: 15px;
-      border-radius: 16px;
+    .btn-deposit-main {
       display: block;
+      background: #ffffff;
+      color: #0056e0;
+      font-size: 15px;
+      font-weight: 900;
+      text-align: center;
+      padding: 13px;
+      border-radius: 14px;
       text-decoration: none;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+      transition: transform 0.15s;
     }
-    .step-box {
-      background: linear-gradient(145deg, #102434 0%, #0d1e2d 100%);
-      border: 1px solid #1a2f42;
-      border-radius: 20px;
-      padding: 16px;
+    .btn-deposit-main:active { transform: scale(0.98); }
+
+    /* Payment Methods Mini Cards Grid */
+    .methods-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .method-card {
+      background: #141a24;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 14px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .method-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 13px;
+      font-weight: 900;
+      color: #ffffff;
+    }
+    .method-tag {
+      font-size: 10px;
+      color: #10b981;
+      font-weight: 800;
+    }
+    .method-speed {
+      font-size: 11px;
+      color: #94a3b8;
+    }
+
+    /* Step-by-Step Deposit Guide */
+    .section-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: #ffffff;
       margin-bottom: 12px;
-    }
-    .step-header {
       display: flex;
       align-items: center;
-      gap: 10px;
-      margin-bottom: 6px;
+      gap: 6px;
+    }
+    .step-card {
+      background: #141a24;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 18px;
+      padding: 16px;
+      margin-bottom: 10px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
     }
     .step-badge {
       background: #007aff;
       color: #ffffff;
-      font-weight: 800;
-      font-size: 12px;
-      width: 24px;
-      height: 24px;
-      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 900;
+      width: 28px;
+      height: 28px;
+      border-radius: 9px;
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(0, 122, 255, 0.4);
     }
-    .step-title {
-      font-size: 15px;
+    .step-content h3 {
+      font-size: 14px;
       font-weight: 800;
       color: #ffffff;
+      margin-bottom: 4px;
     }
-    .step-desc {
-      font-size: 13px;
-      color: #8fa0b5;
-      line-height: 1.5;
-      padding-left: 34px;
+    .step-content p {
+      font-size: 12px;
+      color: #cbd5e1;
+      line-height: 1.45;
     }
+
+    /* Key Metrics & Test Results Card */
     .info-card {
-      background: #111722;
-      border: 1px solid #1c2637;
+      background: #141a24;
+      border: 1px solid rgba(255, 255, 255, 0.05);
       border-radius: 20px;
-      padding: 16px 18px;
-      margin: 16px 0 24px;
+      padding: 16px;
+      margin-bottom: 14px;
     }
     .info-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 10px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
       font-size: 13px;
     }
     .info-row:last-child {
       border-bottom: none;
       padding-bottom: 2px;
     }
-    .info-label { color: #76879d; }
-    .info-val-green { font-weight: 800; color: #10b981; }
+    .info-label { color: #94a3b8; }
     .info-val { font-weight: 700; color: #ffffff; }
+    .info-val-green { font-weight: 800; color: #10b981; }
+
+    /* Security / Troubleshooting Box */
+    .alert-card {
+      background: #141a24;
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      border-radius: 18px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    .alert-header {
+      font-size: 14px;
+      font-weight: 800;
+      color: #fbbf24;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .alert-text {
+      font-size: 12px;
+      color: #cbd5e1;
+      line-height: 1.5;
+    }
+    .alert-text a {
+      color: #38bdf8;
+      text-decoration: underline;
+    }
+
+    /* Footer */
     footer {
       text-align: center;
       font-size: 11px;
-      color: #4f5f73;
+      color: #475569;
+      margin-top: 24px;
       padding: 16px 0 20px;
     }
     footer a {
@@ -235,6 +346,8 @@ const schema = {
       text-decoration: underline;
       margin: 0 6px;
     }
+
+    /* Bottom Bar */
     .bottom-bar {
       position: fixed;
       bottom: 0;
@@ -248,6 +361,8 @@ const schema = {
       align-items: center;
       z-index: 100;
       box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.4);
+      max-width: 460px;
+      margin: 0 auto;
     }
     .bottom-item {
       display: flex;
@@ -267,111 +382,158 @@ const schema = {
 <body>
 
   <div class="app-wrapper">
-    <div class="lang-bar">
-      <a href="/uzcard-depozit" class="lang-btn">🇺🇿 O'zbek</a>
-      <span class="lang-btn active">🇷🇺 Русский</span>
-    </div>
+    
+    <!-- Top Bar -->
+    <header class="top-bar">
+      <a href="/ru/" class="logo">
+        <span>✈️</span>
+        <span>Aviator UZ</span>
+      </a>
+      <div class="lang-bar">
+        <a href="/uzcard-depozit/" class="lang-btn">🇺🇿 O'zbek</a>
+        <span class="lang-btn active">🇷🇺 Русский</span>
+      </div>
+    </header>
 
-    <div class="top-chips">
-      <a href="/ru" class="chip">🚀 Авиатор</a>
-      <a href="/ru-apk" class="chip">📲 APK Скачать</a>
+    <!-- Top Chips -->
+    <nav class="top-chips">
+      <a href="/ru/" class="chip">🚀 Авиатор</a>
+      <a href="/ru-apk/" class="chip">📲 APK Приложение</a>
       <span class="chip active">💳 Uzcard / Humo</span>
       <a href={playLink} target="_blank" rel="nofollow sponsored" class="chip">🎁 +500% Бонус</a>
-    </div>
+    </nav>
 
-    <div class="hero-card">
-      <div class="hero-tag">💳 Комиссия 0%</div>
-      <h1 class="hero-title">Пополнение через Uzcard и Humo</h1>
-      <p class="hero-subtitle">Моментальное зачисление от 10 000 сум. Быстрый вывод на карту за 5-15 минут.</p>
-      <a href={playLink} target="_blank" rel="nofollow sponsored" class="btn-deposit">
+    <!-- Hero Card -->
+    <section class="hero-card">
+      <div class="hero-tag">💳 0% Комиссия при пополнении</div>
+      <h1 class="hero-title">Пополнение Авиатор через Uzcard и Humo</h1>
+      <p class="hero-subtitle">От 10 000 сум моментально на баланс. Вывод средств на Uzcard/Humo за 5-15 минут.</p>
+      <a href={playLink} target="_blank" rel="nofollow sponsored" class="btn-deposit-main">
         💰 Пополнить Счет и Играть
       </a>
-    </div>
+    </section>
 
-    <div class="step-box">
-      <div class="step-header">
+    <!-- Local Payment Methods Overview Grid -->
+    <section class="methods-grid">
+      <div class="method-card">
+        <span class="method-badge">💳 Uzcard</span>
+        <span class="method-tag">0% комиссия • от 10 000 сум</span>
+        <span class="method-speed">⚡️ Моментальное зачисление</span>
+      </div>
+
+      <div class="method-card">
+        <span class="method-badge">💳 Humo</span>
+        <span class="method-tag">0% комиссия • от 10 000 сум</span>
+        <span class="method-speed">⚡️ Без задержек за 0 секунд</span>
+      </div>
+
+      <div class="method-card">
+        <span class="method-badge">📱 CLICK</span>
+        <span class="method-tag">Прямой перевод</span>
+        <span class="method-speed">⏱ 2-3 минуты на зачисление</span>
+      </div>
+
+      <div class="method-card">
+        <span class="method-badge">📲 Payme</span>
+        <span class="method-tag">Подтверждение в приложении</span>
+        <span class="method-speed">⏱ 2-3 минуты на зачисление</span>
+      </div>
+    </section>
+
+    <!-- Step-by-Step Deposit Guide (HowTo Schema) -->
+    <section>
+      <div class="section-title">
+        <span>📋 Пошаговая инструкция пополнения:</span>
+      </div>
+
+      <div class="step-card">
         <span class="step-badge">1</span>
-        <span class="step-title">Зарегистрируйтесь</span>
+        <div class="step-content">
+          <h3>Зарегистрируйтесь</h3>
+          <p>Войдите на 1win и откройте счет в валюте <b>UZS (узбекский сум)</b>.</p>
+        </div>
       </div>
-      <p class="step-desc">
-        Откройте сайт 1win и выберите валюту счета <b>UZS (узбекский сум)</b>. Регистрация занимает 30 секунд.
-      </p>
-    </div>
 
-    <div class="step-box">
-      <div class="step-header">
+      <div class="step-card">
         <span class="step-badge">2</span>
-        <span class="step-title">Выберите способ оплаты</span>
+        <div class="step-content">
+          <h3>Выберите способ оплаты</h3>
+          <p>В разделе «Пополнить» нажмите на значок <b>Uzcard</b> или <b>Humo</b>.</p>
+        </div>
       </div>
-      <p class="step-desc">
-        В разделе «Пополнить» нажмите на логотип <b>Uzcard</b> или <b>Humo</b>.
-      </p>
-    </div>
 
-    <div class="step-box">
-      <div class="step-header">
+      <div class="step-card">
         <span class="step-badge">3</span>
-        <span class="step-title">Подтвердите перевод</span>
+        <div class="step-content">
+          <h3>Подтвердите сумму</h3>
+          <p>Минимальная сумма — <b>10 000 сум</b>. Деньги зачисляются без комиссии.</p>
+        </div>
       </div>
-      <p class="step-desc">
-        Минимальная сумма — <b>10 000 сум</b>. Деньги зачисляются на игровой баланс мгновенно без комиссии.
-      </p>
-    </div>
+    </section>
 
-    <div class="info-card">
+    <!-- Payout Speeds & Live Test Info Card -->
+    <section class="info-card">
+      <div class="section-title" style="margin-bottom: 4px;">
+        <span>⏱ Сроки зачисления и вывода:</span>
+      </div>
       <div class="info-row">
         <span class="info-label">Минимальный депозит:</span>
         <span class="info-val-green">10 000 сум</span>
       </div>
       <div class="info-row">
-        <span class="info-label">Время зачисления:</span>
-        <span class="info-val">Мгновенно (0 сек)</span>
+        <span class="info-label">Скорость зачисления:</span>
+        <span class="info-val">Моментально (0 сек)</span>
       </div>
       <div class="info-row">
-        <span class="info-label">Время вывода:</span>
+        <span class="info-label">Вывод на карту (стандарт):</span>
         <span class="info-val">5-15 минут</span>
       </div>
-    </div>
-
-    <div class="info-card">
+      <div class="info-row">
+        <span class="info-label">Личный тест автора:</span>
+        <span class="info-val-green">Humo 7 мин, Uzcard 12 мин</span>
+      </div>
       <div class="info-row">
         <span class="info-label">CLICK / Payme:</span>
-        <span class="info-val">тоже работают, 2-3 минуты</span>
+        <span class="info-val">зачисляется за 2-3 мин</span>
       </div>
-      <div class="info-row">
-        <span class="info-label">Мой замер:</span>
-        <span class="info-val-green">Humo 7 мин, Uzcard 12 мин вывод</span>
+    </section>
+
+    <!-- Security & Troubleshooting Card -->
+    <section class="alert-card">
+      <div class="alert-header">
+        <span>⚠️ Если средства задерживаются:</span>
       </div>
-    </div>
+      <p class="alert-text">
+        Проверьте номер карты, SMS-код и статус платежа в Истории Кассы. Вечером транзакции могут занять до 15-20 минут. Если прошло более 30 минут, напишите в онлайн-чат поддержки с ID аккаунта и скриншотом чека. В разделе <a href="/ru-strategiya/">Стратегия</a> читайте о безопасном управлении банком.
+      </p>
+    </section>
 
-    <div class="step-box">
-      <div class="step-header"><span class="step-badge">!</span><span class="step-title">Не пришло — проверьте</span></div>
-      <p class="step-desc">Номер карты, SMS, история Кассы. Вечером до 15 минут. Больше 30 минут — в поддержку с ID и чеком. <a href="/ru-strategiya" style="color:#fff;">Стратегия банка</a> тоже гляньте.</p>
-    </div>
-
+    <!-- Footer -->
     <footer>
       <div style="margin-bottom: 8px;">
-        <a href="/ru-otvetstvennaya-igra">Ответственная игра (18+)</a>
-        <a href="/ru-politika">Политика конфиденциальности</a>
+        <a href="/ru-otvetstvennaya-igra/">Ответственная игра (18+)</a>
+        <a href="/ru-politika/">Maxfiylik siyosati</a>
       </div>
-      © 2026 Авиатор Узбекистан 1win. 18+ Играйте ответственно.
+      © 2026 Авиатор Узбекистан. 18+ Играйте ответственно.
     </footer>
+
   </div>
 
+  <!-- Bottom Navigation Bar (To'lov Active) -->
   <nav class="bottom-bar">
-    <a href="/ru" class="bottom-item">
+    <a href="/ru/" class="bottom-item">
       <span class="bottom-icon">🏠</span>
       <span>Главная</span>
     </a>
     <a href={playLink} target="_blank" rel="nofollow sponsored" class="bottom-item">
       <span class="bottom-icon">✈️</span>
-      <span>Авиатор</span>
+      <span>Aviator</span>
     </a>
-    <a href="/ru-apk" class="bottom-item">
+    <a href="/ru-apk/" class="bottom-item">
       <span class="bottom-icon">📲</span>
       <span>APK</span>
     </a>
-    <a href="/ru-depozit" class="bottom-item active">
+    <a href="/ru-depozit/" class="bottom-item active">
       <span class="bottom-icon">💳</span>
       <span>Депозит</span>
     </a>
@@ -383,3 +545,5 @@ const schema = {
 
 </body>
 </html>
+
+

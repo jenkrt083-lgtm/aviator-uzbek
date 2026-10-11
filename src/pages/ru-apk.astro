@@ -1,5 +1,5 @@
 ---
-const title = "Скачать Авиатор APK на Андроид (2026) — 1win Узбекистан Бесплатно";
+const title = "Скачать Авиатор APK (2026) — 1win Андроид Узбекистан";
 const description = "Скачать официальное приложение Авиатор 1win на Android в Узбекистане. Прямой APK файл без блокировок, пополнение через Uzcard/Humo и бонус +500%.";
 const apkLink = "/download/apk";
 const refLink = "/go/1win";
@@ -30,16 +30,21 @@ const schema = {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
   <meta name="description" content={description} />
-  <link rel="canonical" href="https://aviator-uzbek.online/ru-apk" />
-  <link rel="alternate" hreflang="ru" href="https://aviator-uzbek.online/ru-apk" />
-  <link rel="alternate" hreflang="uz" href="https://aviator-uzbek.online/ilova" />
-  <link rel="alternate" hreflang="x-default" href="https://aviator-uzbek.online/ilova" />
+  <link rel="canonical" href="https://aviator-uzbek.online/ru-apk/" />
+  <link rel="alternate" hreflang="ru" href="https://aviator-uzbek.online/ru-apk/" />
+  <link rel="alternate" hreflang="uz" href="https://aviator-uzbek.online/ilova/" />
+  <link rel="alternate" hreflang="x-default" href="https://aviator-uzbek.online/ilova/" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ru_RU" />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
-  <meta property="og:url" content="https://aviator-uzbek.online/ru-apk" />
+  <meta property="og:url" content="https://aviator-uzbek.online/ru-apk/" />
+  <meta property="og:image" content="https://aviator-uzbek.online/og-preview.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://aviator-uzbek.online/og-preview.png" />
   <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   <style>
     * {
@@ -53,34 +58,57 @@ const schema = {
       color: #f1f5f9;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       min-height: 100vh;
-      padding-bottom: 120px;
+      padding-bottom: 90px;
+      display: flex;
+      justify-content: center;
     }
     .app-wrapper {
       max-width: 460px;
+      width: 100%;
       margin: 0 auto;
       padding: 14px 14px 20px;
+      background-color: #0b0e14;
+    }
+
+    /* Top Bar */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 19px;
+      font-weight: 900;
+      color: #ffffff;
+      text-decoration: none;
+      letter-spacing: -0.3px;
     }
     .lang-bar {
       display: flex;
-      justify-content: flex-end;
       gap: 6px;
-      margin-bottom: 12px;
     }
     .lang-btn {
       font-size: 11px;
       font-weight: 700;
-      padding: 4px 10px;
+      padding: 5px 11px;
       border-radius: 8px;
       text-decoration: none;
       color: #94a3b8;
       background: #171d28;
       border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.2s;
     }
     .lang-btn.active {
       background: #007aff;
       color: #ffffff;
       border-color: #007aff;
     }
+
+    /* Top Chips */
     .top-chips {
       display: flex;
       gap: 8px;
@@ -99,6 +127,9 @@ const schema = {
       white-space: nowrap;
       text-decoration: none;
       border: 1px solid rgba(255, 255, 255, 0.05);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
     }
     .chip.active {
       background: #007aff;
@@ -106,133 +137,275 @@ const schema = {
       border-color: #007aff;
       box-shadow: 0 4px 12px rgba(0, 122, 255, 0.35);
     }
-    .hero-card {
-      background: linear-gradient(145deg, #0738b8 0%, #0056e0 50%, #007aff 100%);
+
+    /* Modern App Store Card Header */
+    .app-header-card {
+      background: #141a24;
+      border: 1px solid rgba(255, 255, 255, 0.06);
       border-radius: 24px;
-      padding: 22px 18px 20px;
+      padding: 20px 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
+    }
+    .app-badge-row {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .app-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      border: 1.5px solid rgba(255, 255, 255, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 38px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
       position: relative;
-      overflow: hidden;
-      margin-bottom: 14px;
-      box-shadow: 0 12px 28px rgba(0, 86, 224, 0.25);
+      flex-shrink: 0;
     }
-    .hero-card::after {
-      content: '📲';
+    .app-verified-badge {
       position: absolute;
-      right: -8px;
-      top: 10px;
-      font-size: 88px;
-      opacity: 0.18;
-      pointer-events: none;
-    }
-    .hero-tag {
-      display: inline-block;
-      background: rgba(255, 255, 255, 0.18);
-      backdrop-filter: blur(8px);
+      bottom: -4px;
+      right: -4px;
+      background: #10b981;
       color: #ffffff;
-      font-size: 11px;
-      font-weight: 800;
-      padding: 4px 10px;
-      border-radius: 12px;
-      text-transform: uppercase;
-      margin-bottom: 12px;
+      font-size: 10px;
+      font-weight: 900;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #141a24;
     }
-    .hero-title {
-      font-size: 22px;
+    .app-info-col h1 {
+      font-size: 18px;
       font-weight: 900;
       line-height: 1.25;
       color: #ffffff;
-      margin-bottom: 8px;
+      margin-bottom: 4px;
     }
-    .hero-subtitle {
-      font-size: 13px;
-      color: rgba(255, 255, 255, 0.85);
-      line-height: 1.45;
-      margin-bottom: 20px;
-      max-width: 85%;
+    .app-dev-name {
+      font-size: 12px;
+      color: #38bdf8;
+      font-weight: 700;
+      margin-bottom: 6px;
     }
-    .btn-download {
-      background: #ffffff;
-      color: #0738b8;
+    .app-rating-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      color: #94a3b8;
+    }
+    .rating-stars {
+      color: #fbbf24;
       font-weight: 800;
-      font-size: 16px;
-      text-align: center;
-      padding: 15px;
-      border-radius: 16px;
+      background: rgba(251, 191, 36, 0.12);
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+
+    /* Hero Subtitle */
+    .app-sub-desc {
+      font-size: 13px;
+      line-height: 1.45;
+      color: #cbd5e1;
+      margin-bottom: 16px;
+    }
+
+    /* High-Impact Download Button */
+    .btn-download-main {
       display: block;
+      width: 100%;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: #ffffff;
+      padding: 15px 16px;
+      border-radius: 14px;
       text-decoration: none;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      font-size: 15px;
+      font-weight: 900;
+      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+      transition: transform 0.15s;
     }
-    .card-box {
-      background: linear-gradient(145deg, #102434 0%, #0d1e2d 100%);
-      border: 1px solid #1a2f42;
-      border-radius: 24px;
-      padding: 18px;
-      margin-bottom: 14px;
+    .btn-download-main:active { transform: scale(0.98); }
+    .btn-sub-note {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.85);
+      margin-top: 3px;
     }
-    .card-title {
-      font-size: 16px;
+
+    /* Security Badges Row */
+    .security-badges {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      font-size: 11px;
+      color: #94a3b8;
+    }
+    .sec-badge-item {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-weight: 600;
+    }
+
+    /* App Specs Grid */
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .spec-card {
+      background: #141a24;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 12px 14px;
+    }
+    .spec-label {
+      font-size: 11px;
+      color: #7b8e9f;
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+    .spec-value {
+      font-size: 14px;
       font-weight: 800;
       color: #ffffff;
-      margin-bottom: 12px;
     }
-    .card-row {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: 14px;
-      padding: 10px 14px;
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 8px;
-      font-size: 13px;
+    .spec-green {
+      color: #34d399;
     }
-    .card-row:last-child { margin-bottom: 0; }
-    .label { color: #8fa0b5; }
-    .val { font-weight: 700; color: #ffffff; }
-    .val-green { font-weight: 800; color: #10b981; }
 
-    .guide-box {
-      background: #111722;
-      border: 1px solid #1c2637;
-      border-radius: 20px;
-      padding: 18px;
-      margin-bottom: 24px;
+    /* Step-by-Step Installation Timeline */
+    .guide-card {
+      background: #141a24;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 24px;
+      padding: 18px 16px;
+      margin-bottom: 16px;
     }
     .guide-title {
       font-size: 15px;
       font-weight: 800;
       color: #ffffff;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
-    .guide-steps {
+    .guide-steps-list {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 12px;
     }
-    .guide-step {
+    .step-row {
       display: flex;
-      gap: 10px;
-      font-size: 13px;
-      line-height: 1.5;
-      color: #94a3b8;
+      gap: 12px;
+      align-items: flex-start;
     }
-    .step-num {
+    .step-circle {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
       background: #007aff;
       color: #ffffff;
-      font-weight: 800;
-      font-size: 11px;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
+      font-size: 12px;
+      font-weight: 900;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      margin-top: 1px;
+      box-shadow: 0 2px 8px rgba(0, 122, 255, 0.4);
     }
+    .step-desc {
+      font-size: 13px;
+      color: #cbd5e1;
+      line-height: 1.45;
+    }
+    .step-desc b {
+      color: #ffffff;
+    }
+
+    /* Troubleshooting Warning Card */
+    .alert-card {
+      background: #141a24;
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      border-radius: 20px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    .alert-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: #fbbf24;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .alert-item {
+      display: flex;
+      gap: 8px;
+      font-size: 12px;
+      color: #94a3b8;
+      line-height: 1.45;
+      margin-bottom: 8px;
+    }
+    .alert-item:last-child { margin-bottom: 0; }
+    .alert-icon {
+      color: #fbbf24;
+      font-weight: 900;
+    }
+
+    /* Next Steps Navigation Card */
+    .next-steps-card {
+      background: #141a24;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    .next-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+    .next-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      text-decoration: none;
+      color: #e2e8f0;
+      font-size: 13px;
+      font-weight: 600;
+      transition: color 0.15s;
+    }
+    .next-link:last-child { border-bottom: none; }
+    .next-link:hover { color: #38bdf8; }
+    .next-link span.arrow { color: #007aff; font-weight: 900; }
+
+    /* Footer */
     footer {
       text-align: center;
       font-size: 11px;
-      color: #4f5f73;
+      color: #475569;
+      margin-top: 24px;
       padding: 16px 0 20px;
     }
     footer a {
@@ -240,6 +413,8 @@ const schema = {
       text-decoration: underline;
       margin: 0 6px;
     }
+
+    /* Bottom Bar */
     .bottom-bar {
       position: fixed;
       bottom: 0;
@@ -253,6 +428,8 @@ const schema = {
       align-items: center;
       z-index: 100;
       box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.4);
+      max-width: 460px;
+      margin: 0 auto;
     }
     .bottom-item {
       display: flex;
@@ -272,106 +449,172 @@ const schema = {
 <body>
 
   <div class="app-wrapper">
-    <div class="lang-bar">
-      <a href="/ilova" class="lang-btn">🇺🇿 O'zbek</a>
-      <span class="lang-btn active">🇷🇺 Русский</span>
-    </div>
-
-    <div class="top-chips">
-      <a href="/ru" class="chip">🚀 Авиатор</a>
-      <span class="chip active">📲 Скачать APK</span>
-      <a href="/ru-depozit" class="chip">💳 Uzcard / Humo</a>
-      <a href={refLink} target="_blank" rel="nofollow sponsored" class="chip">🎁 +500% Бонус</a>
-    </div>
-
-    <div class="hero-card">
-      <div class="hero-tag">⚡️ Официальный APK v2.4 (2026)</div>
-      <h1 class="hero-title">Скачать Авиатор 1win на Андроид</h1>
-      <p class="hero-subtitle">Вход без блокировок, пополнение через Uzcard за 1 минуту и эксклюзивные бонусы.</p>
-      <a href={apkLink} target="_blank" rel="nofollow sponsored" class="btn-download">
-        📥 Скачать APK (45 МБ)
+    
+    <!-- Top Bar -->
+    <header class="top-bar">
+      <a href="/ru/" class="logo">
+        <span>✈️</span>
+        <span>Aviator UZ</span>
       </a>
-    </div>
+      <div class="lang-bar">
+        <a href="/ilova/" class="lang-btn">🇺🇿 O'zbek</a>
+        <span class="lang-btn active">🇷🇺 Русский</span>
+      </div>
+    </header>
 
-    <div class="card-box">
-      <div class="card-title">Параметры приложения</div>
-      <div class="card-row">
-        <span class="label">ОС:</span>
-        <span class="val">Android 5.0+</span>
-      </div>
-      <div class="card-row">
-        <span class="label">Размер файла:</span>
-        <span class="val">45.2 МБ</span>
-      </div>
-      <div class="card-row">
-        <span class="label">Рейтинг пользователей:</span>
-        <span class="val-green">★ 4.9 (1,280+)</span>
-      </div>
-      <div class="card-row">
-        <span class="label">Стоимость:</span>
-        <span class="val-green">Бесплатно</span>
-      </div>
-      <div class="card-row">
-        <span class="label">Языки:</span>
-        <span class="val">Русский / O'zbek</span>
-      </div>
-    </div>
+    <!-- Top Chips -->
+    <nav class="top-chips">
+      <a href="/ru/" class="chip">🚀 Авиатор</a>
+      <span class="chip active">📲 APK Приложение</span>
+      <a href="/ru-depozit/" class="chip">💳 Uzcard / Humo</a>
+      <a href={refLink} target="_blank" rel="nofollow sponsored" class="chip">🎁 +500% Бонус</a>
+    </nav>
 
-    <div class="guide-box">
-      <div class="guide-title">📲 Установка за 1 минуту:</div>
-      <div class="guide-steps">
-        <div class="guide-step">
-          <span class="step-num">1</span>
-          <span>Нажмите кнопку <b>«Скачать APK»</b> выше и загрузите установочный файл.</span>
+    <!-- App Store Lookalike Header Card -->
+    <section class="app-header-card">
+      <div class="app-badge-row">
+        <div class="app-icon">
+          <span>✈️</span>
+          <span class="app-verified-badge">✓</span>
         </div>
-        <div class="guide-step">
-          <span class="step-num">2</span>
-          <span>В настройках безопасности телефона разрешите установку из неизвестных источников.</span>
-        </div>
-        <div class="guide-step">
-          <span class="step-num">3</span>
-          <span>Откройте загруженный файл и нажмите кнопку <b>«Установить»</b>.</span>
-        </div>
-        <div class="guide-step">
-          <span class="step-num">4</span>
-          <span>Запустите приложение, пополните баланс в сумах и начните игру.</span>
+        <div class="app-info-col">
+          <h1>Авиатор Android APK</h1>
+          <div class="app-dev-name">Spribe • 1win Official v2.4</div>
+          <div class="app-rating-row">
+            <span class="rating-stars">★ 4.9</span>
+            <span>1,280+ оценок</span>
+            <span>• 50K+ скачиваний</span>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="guide-box">
-      <div class="guide-title">⚠️ Если ошибка при установке:</div>
-      <div class="guide-steps">
-        <div class="guide-step"><span class="step-num">!</span><span>Удалите старый APK — у меня поверх дважды не встало, после очистки прошло.</span></div>
-        <div class="guide-step"><span class="step-num">!</span><span>Android ниже 5.0 — играйте в браузере, сайт 1win тянет и так.</span></div>
-        <div class="guide-step"><span class="step-num">→</span><span><a href="/ru-strategiya" style="color:#fff;">Стратегия 1.30x авто</a> — прочитайте перед первой ставкой.</span></div>
-        <div class="guide-step"><span class="step-num">→</span><span><a href="/ru-bonus" style="color:#fff;">Условия +500%</a> и <a href="/ru-rtp" style="color:#fff;">RTP 97%</a>.</span></div>
+      <p class="app-sub-desc">
+        Прямой вход без блокировок, моментальный депозит через Uzcard/Humo и приветственный бонус +500%.
+      </p>
+
+      <a href={apkLink} target="_blank" rel="nofollow sponsored" class="btn-download-main">
+        📥 СКАЧАТЬ АВИАТОР APK (45.2 МБ)
+        <span class="btn-sub-note">Android 5.0+ • Бесплатно • v2.4 (2026)</span>
+      </a>
+
+      <div class="security-badges">
+        <span class="sec-badge-item">🛡️ VirusTotal: Чисто</span>
+        <span class="sec-badge-item">⚡️ Установка за 1 минуту</span>
+        <span class="sec-badge-item">🔒 SSL Защита</span>
       </div>
-    </div>
+    </section>
 
+    <!-- App Specs Grid (4 Cards) -->
+    <section class="specs-grid">
+      <div class="spec-card">
+        <div class="spec-label">Операционная система</div>
+        <div class="spec-value">Android 5.0+</div>
+      </div>
+      <div class="spec-card">
+        <div class="spec-label">Размер файла</div>
+        <div class="spec-value">45.2 MB</div>
+      </div>
+      <div class="spec-card">
+        <div class="spec-label">Цена</div>
+        <div class="spec-value spec-green">Бесплатно (0 UZS)</div>
+      </div>
+      <div class="spec-card">
+        <div class="spec-label">Язык интерфейса</div>
+        <div class="spec-value">Русский / O'zbek</div>
+      </div>
+    </section>
+
+    <!-- Installation Timeline Guide -->
+    <section class="guide-card">
+      <div class="guide-title">
+        <span>📲 Установка за 1 минуту:</span>
+      </div>
+      <div class="guide-steps-list">
+        <div class="step-row">
+          <div class="step-circle">1</div>
+          <div class="step-desc">
+            Нажмите кнопку <b>«Скачать Авиатор APK»</b> выше и загрузите установочный файл.
+          </div>
+        </div>
+        <div class="step-row">
+          <div class="step-circle">2</div>
+          <div class="step-desc">
+            В настройках безопасности Android разрешите <b>«Установку из неизвестных источников»</b>.
+          </div>
+        </div>
+        <div class="step-row">
+          <div class="step-circle">3</div>
+          <div class="step-desc">
+            Откройте скачанный APK-файл и нажмите <b>«Установить»</b>.
+          </div>
+        </div>
+        <div class="step-row">
+          <div class="step-circle">4</div>
+          <div class="step-desc">
+            Войдите в приложение, пополните счет через Uzcard/Humo и запускайте Авиатор.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Troubleshooting Warning Card -->
+    <section class="alert-card">
+      <div class="alert-title">
+        <span>⚠️ Если возникла ошибка при установке:</span>
+      </div>
+      <div class="alert-item">
+        <span class="alert-icon">!</span>
+        <span><b>Удалите старый APK:</b> если ранее стояла старая версия, удалите её перед чистой установкой.</span>
+      </div>
+      <div class="alert-item">
+        <span class="alert-icon">!</span>
+        <span><b>Если версия Android ниже 5.0:</b> можно играть прямо в мобильном браузере на сайте 1win.</span>
+      </div>
+    </section>
+
+    <!-- Next Steps Guides Links -->
+    <section class="next-steps-card">
+      <div class="next-title">📚 Полезные разделы:</div>
+      <a href="/ru-strategiya/" class="next-link">
+        <span>Стратегия: авто-кэшаут 1.30x и удержание банка</span>
+        <span class="arrow">→</span>
+      </a>
+      <a href="/ru-bonus/" class="next-link">
+        <span>Условия бонуса +500% (до вывода)</span>
+        <span class="arrow">→</span>
+      </a>
+      <a href="/ru-rtp/" class="next-link">
+        <span>Что означает RTP 97% и Provably Fair</span>
+        <span class="arrow">→</span>
+      </a>
+    </section>
+
+    <!-- Footer -->
     <footer>
       <div style="margin-bottom: 8px;">
-        <a href="/ru-otvetstvennaya-igra">Ответственная игра (18+)</a>
-        <a href="/ru-politika">Политика конфиденциальности</a>
+        <a href="/ru-otvetstvennaya-igra/">Ответственная игра (18+)</a>
+        <a href="/ru-politika/">Политика конфиденциальности</a>
       </div>
-      © 2026 Авиатор Узбекистан 1win. 18+ Играйте ответственно.
+      © 2026 Авиатор Узбекистан. 18+ Играйте ответственно.
     </footer>
+
   </div>
 
+  <!-- Bottom Navigation Bar (APK Active) -->
   <nav class="bottom-bar">
-    <a href="/ru" class="bottom-item">
+    <a href="/ru/" class="bottom-item">
       <span class="bottom-icon">🏠</span>
       <span>Главная</span>
     </a>
     <a href={refLink} target="_blank" rel="nofollow sponsored" class="bottom-item">
-      <span class="bottom-icon">✈️️</span>
-      <span>Авиатор</span>
+      <span class="bottom-icon">✈️</span>
+      <span>Aviator</span>
     </a>
-    <a href="/ru-apk" class="bottom-item active">
+    <a href="/ru-apk/" class="bottom-item active">
       <span class="bottom-icon">📲</span>
       <span>APK</span>
     </a>
-    <a href="/ru-depozit" class="bottom-item">
+    <a href="/ru-depozit/" class="bottom-item">
       <span class="bottom-icon">💳</span>
       <span>Депозит</span>
     </a>
@@ -383,3 +626,5 @@ const schema = {
 
 </body>
 </html>
+
+

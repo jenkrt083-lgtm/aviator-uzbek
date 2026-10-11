@@ -10,110 +10,88 @@ const description = "Qimor o'yinlariga qaramlikning oldini olish, 18+ yosh chega
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
   <meta name="description" content={description} />
-  <link rel="canonical" href="https://aviator-uzbek.online/masuliyatli-oyin" />
-  <link rel="alternate" hreflang="uz" href="https://aviator-uzbek.online/masuliyatli-oyin" />
-  <link rel="alternate" hreflang="ru" href="https://aviator-uzbek.online/ru-otvetstvennaya-igra" />
+  <link rel="canonical" href="https://aviator-uzbek.online/masuliyatli-oyin/" />
+  <meta property="og:url" content="https://aviator-uzbek.online/masuliyatli-oyin/" />
+  <link rel="alternate" hreflang="uz" href="https://aviator-uzbek.online/masuliyatli-oyin/" />
+  <link rel="alternate" hreflang="ru" href="https://aviator-uzbek.online/ru-otvetstvennaya-igra/" />
+  <link rel="alternate" hreflang="x-default" href="https://aviator-uzbek.online/masuliyatli-oyin/" />
   <meta name="robots" content="index, follow" />
+  <meta property="og:image" content="https://aviator-uzbek.online/og-preview.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://aviator-uzbek.online/og-preview.png" />
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      background-color: #090d16;
-      color: #f1f5f9;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 16px;
-    }
-    .container {
-      max-width: 520px;
-      margin: 0 auto;
-      width: 100%;
-      padding-top: 16px;
-    }
-    .nav-back {
-      display: inline-block;
-      color: #94a3b8;
-      font-size: 13px;
-      text-decoration: none;
-      margin-bottom: 20px;
-    }
-    h1 {
-      font-size: 24px;
-      font-weight: 800;
-      margin-bottom: 16px;
-      color: #ffffff;
-    }
-    .card {
-      background: #0f172a;
-      border: 1px solid #1e293b;
-      border-radius: 16px;
-      padding: 20px;
-      margin-bottom: 20px;
-      font-size: 14px;
-      line-height: 1.6;
-      color: #94a3b8;
-    }
-    .card h2 {
-      font-size: 16px;
-      color: #f1f5f9;
-      margin-bottom: 8px;
-    }
-    .card p { margin-bottom: 12px; }
-    .card p:last-child { margin-bottom: 0; }
-    .badge-18 {
-      display: inline-block;
-      background: rgba(239, 68, 68, 0.15);
-      border: 1px solid rgba(239, 68, 68, 0.4);
-      color: #f87171;
-      font-size: 12px;
-      font-weight: 700;
-      padding: 4px 10px;
-      border-radius: 9999px;
-      margin-bottom: 12px;
-    }
-    footer {
-      text-align: center;
-      font-size: 11px;
-      color: #475569;
-      padding: 16px 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    body { background-color: #0b0e14; color: #f1f5f9; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; min-height: 100vh; padding-bottom: 90px; display: flex; justify-content: center; }
+    .app-wrapper { max-width: 460px; width: 100%; margin: 0 auto; padding: 14px 14px 20px; background-color: #0b0e14; }
+    .top-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+    .logo { display: flex; align-items: center; gap: 7px; font-size: 19px; font-weight: 900; color: #ffffff; text-decoration: none; }
+    .lang-bar { display: flex; gap: 6px; }
+    .lang-btn { font-size: 11px; font-weight: 700; padding: 5px 11px; border-radius: 8px; text-decoration: none; color: #94a3b8; background: #171d28; border: 1px solid rgba(255, 255, 255, 0.05); }
+    .lang-btn.active { background: #007aff; color: #ffffff; border-color: #007aff; }
+    .hero-card { background: linear-gradient(145deg, #0738b8 0%, #0056e0 50%, #007aff 100%); border-radius: 24px; padding: 22px 18px 20px; position: relative; overflow: hidden; margin-bottom: 16px; box-shadow: 0 12px 28px rgba(0, 86, 224, 0.28); }
+    .hero-tag { display: inline-block; background: rgba(255, 255, 255, 0.18); backdrop-filter: blur(8px); color: #ffffff; font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 12px; text-transform: uppercase; margin-bottom: 12px; }
+    .hero-title { font-size: 21px; font-weight: 900; line-height: 1.25; color: #ffffff; margin-bottom: 8px; }
+    .content-card { background: #141a24; border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px; padding: 18px 16px; margin-bottom: 14px; }
+    .content-card h2 { font-size: 15px; font-weight: 800; color: #ffffff; margin-bottom: 8px; }
+    .content-card p { font-size: 13px; color: #cbd5e1; line-height: 1.55; margin-bottom: 10px; }
+    .content-card p:last-child { margin-bottom: 0; }
+    footer { text-align: center; font-size: 11px; color: #475569; margin-top: 24px; padding: 16px 0 20px; }
+    footer a { color: #64748b; text-decoration: underline; margin: 0 6px; }
+    .bottom-bar { position: fixed; bottom: 0; left: 0; right: 0; background: #0f141d; border-top: 1px solid #1c2433; height: 64px; display: flex; justify-content: space-around; align-items: center; z-index: 100; max-width: 460px; margin: 0 auto; }
+    .bottom-item { display: flex; flex-direction: column; align-items: center; text-decoration: none; color: #708096; font-size: 10px; font-weight: 600; gap: 3px; flex: 1; }
+    .bottom-item.active { color: #007aff; }
+    .bottom-icon { font-size: 18px; }
   </style>
 </head>
 <body>
-  <main class="container">
-    <a href="/" class="nav-back">← Asosiy sahifaga qaytish</a>
-    <span class="badge-18">🔞 18+ Yosh chegarasi</span>
-    <h1>Mas'uliyatli O'yin Qoidalari</h1>
+  <div class="app-wrapper">
+    <header class="top-bar">
+      <a href="/" class="logo"><span>✈️</span><span>Aviator UZ</span></a>
+      <div class="lang-bar">
+        <span class="lang-btn active">🇺🇿 O'zbek</span>
+        <a href="/ru-otvetstvennaya-igra/" class="lang-btn">🇷🇺 Русский</a>
+      </div>
+    </header>
 
-    <div class="card">
-      <h2>1. Voyaga yetganlik talabi</h2>
-      <p>
-        Saytda taqdim etilgan barcha axborotlar faqat 18 yoshga to'lgan shaxslar uchun mo'ljallangan. Voyaga yetmaganlarning qimor o'yinlarida ishtirok etishi qat'iyan taqiqlanadi.
-      </p>
-    </div>
+    <section class="hero-card">
+      <div class="hero-tag">🛡️ Mas'uliyatli O'yin</div>
+      <h1 class="hero-title">Mas'uliyatli o'yin (18+)</h1>
+      <p style="font-size: 13px; line-height: 1.45; color: rgba(255,255,255,0.9);">Qimor o'yinlariga faqat ko'ngilochar vosita sifatida qarang. Xavfsiz o'yin qoidalari va 18+ cheklovi.</p>
+    </section>
 
-    <div class="card">
-      <h2>2. Qimor o'yini — daromad manbai emas</h2>
-      <p>
-        Aviator va boshqa qimor o'yinlari faqat ko'ngilochar vosita hisoblanadi. Hech qachon o'yinni asosiy yoki qo'shimcha daromad topish usuli sifatida qabul qilmang.
-      </p>
-      <p>
-        Yo'qotilishi sizning moddiy yoki oilaviy farovonligingizga ta'sir qilmaydigan mablag' bilan o'ynang.
-      </p>
-    </div>
+    <section class="content-card">
+      <h2>1. 18+ yosh chegarasi</h2>
+      <p>Aviator va boshqa qimor o'yinlarida ishtirok etish faqat 18 yoshga to'lgan shaxslar uchun ruxsat etiladi. Voyaga yetmaganlarning platformalardan foydalanishi taqiqlanadi.</p>
+    </section>
 
-    <div class="card">
-      <h2>3. Moliyaviy nazorat va cheklovlar</h2>
-      <p>
-        O'yinni boshlashdan oldin aniq byudjet va vaqt chegarasini belgilang. Agar o'yin hayotingizga, ishingizga yoki munosabatlaringizga salbiy ta'sir ko'rsatayotganini sezsangiz, darhol to'xtating va mutaxassislarga murojaat qiling.
-      </p>
-    </div>
-  </main>
+    <section class="content-card">
+      <h2>2. Pul va vaqt nazorati</h2>
+      <p>O'yinga faqat yo'qotish og'riqli bo'lmagan summani ajrating. Qarzga olingan yoki oilaviy byudjetga mo'ljallangan pullarni hech qachon tikmang.</p>
+      <p>Oldindan aniq limit qo'ying: kuniga ko'pi bilan 30-40 daqiqa va ma'lum bir maksimal yo'qotish chegarasi.</p>
+    </section>
 
-  <footer>
-    © 2026 Aviator Uzbek. 18+ Mas'uliyat bilan o'ynang.
-  </footer>
+    <section class="content-card">
+      <h2>3. Qaramlik belgilari paydo bo'lsa</h2>
+      <p>Agar o'yin hayotingizga, ishingizga yoki munosabatlaringizga salbiy ta'sir ko'rsatayotganini his qilsangiz, zudlik bilan o'yinni to'xtating va o'z-o'zini cheklash funksiyasidan foydalaning.</p>
+    </section>
+
+    <footer>
+      <div style="margin-bottom: 8px;">
+        <a href="/masuliyatli-oyin/">Mas'uliyatli o'yin (18+)</a>
+        <a href="/maxfiylik-siyosati/">Maxfiylik siyosati</a>
+      </div>
+      © 2026 Aviator Uzbek. 18+ Mas'uliyat bilan o'ynang.
+    </footer>
+  </div>
+
+  <nav class="bottom-bar">
+    <a href="/" class="bottom-item"><span class="bottom-icon">🏠</span><span>Asosiy</span></a>
+    <a href="/go/1win" target="_blank" rel="nofollow sponsored" class="bottom-item"><span class="bottom-icon">✈️</span><span>Aviator</span></a>
+    <a href="/ilova/" class="bottom-item"><span class="bottom-icon">📲</span><span>APK</span></a>
+    <a href="/uzcard-depozit/" class="bottom-item"><span class="bottom-icon">💳</span><span>To'lov</span></a>
+    <a href="/go/1win" target="_blank" rel="nofollow sponsored" class="bottom-item"><span class="bottom-icon">🎁</span><span>Bonus</span></a>
+  </nav>
 </body>
 </html>
