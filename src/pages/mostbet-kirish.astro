@@ -1,6 +1,6 @@
 ---
 const title = "Mostbet Kirish (2026) — Rasmiy Saytga Kirish Yo'riqnomasi";
-const description = "Mostbet kirish O'zbekistonda: rasmiy saytga kirish, ishchi ko'zgu, Uzcard orqali hisob to'ldirish va 3 000 000 so'm xush kelibsiz bonusi. Kiring!";
+const description = "Mostbet kirish O'zbekistonda: rasmiy saytga kirish, ishchi ko'zgu, Uzcard orqali hisob to'ldirish va 125% (3 000 000 so'm) xush kelibsiz bonusi!";
 const canonical = "https://aviator-uzbek.online/mostbet-kirish/";
 const refLink = "/go/1win";
 const apkLink = "/ilova/";
@@ -97,9 +97,13 @@ const faqSchema = {
     .content-card p { font-size: 13px; color: #cbd5e1; line-height: 1.55; margin-bottom: 12px; }
     
     /* Screen mockup placeholder */
-    .mockup-box { background: #0b0e14; border: 1px dashed rgba(249, 115, 22, 0.4); border-radius: 14px; padding: 16px; margin: 12px 0; text-align: center; }
-    .mockup-title { font-size: 13px; font-weight: 800; color: #f97316; margin-bottom: 4px; }
-    .mockup-desc { font-size: 11px; color: #94a3b8; }
+    .ui-mockup-card { background: #0a0f18; border: 1px solid rgba(249, 115, 22, 0.35); border-radius: 16px; padding: 14px; margin: 14px 0; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4); }
+    .ui-mockup-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 8px; margin-bottom: 10px; font-size: 12px; font-weight: 800; color: #f97316; }
+    .ui-badge-bonus { background: rgba(249, 115, 22, 0.15); color: #f97316; border: 1px solid rgba(249, 115, 22, 0.3); font-size: 10px; padding: 2px 8px; border-radius: 6px; font-weight: 800; }
+    .ui-field-row { background: #131b28; border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 10px; padding: 8px 12px; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center; font-size: 11px; }
+    .ui-field-label { color: #8fa0b5; }
+    .ui-field-val { color: #ffffff; font-weight: 700; }
+    .ui-mockup-btn { background: #f97316; color: #ffffff; text-align: center; font-size: 12px; font-weight: 800; padding: 8px; border-radius: 8px; margin-top: 6px; }
     
     .steps-list { display: flex; flex-direction: column; gap: 10px; margin: 12px 0; }
     .step-item { display: flex; gap: 10px; background: #0f141d; padding: 10px 12px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05); }
@@ -147,7 +151,7 @@ const faqSchema = {
     <section class="hero-card">
       <div class="hero-tag">🔐 Rasmiy Kirish Yo'riqnomasi</div>
       <h1 class="hero-title">Mostbet Kirish: Rasmiy Saytga Kirish va Ro'yxatdan O'tish (2026)</h1>
-      <p class="hero-subtitle">Mostbet kirish O'zbekistonda provayderlar blokirovkasi sababli qiyinlashishi mumkin. Men shaxsan Ucell, Beeline va Uztelecom tarmoqlarida tekshirdim: ishchi ko'zgu orqali sayt 1 soniyada ochiladi, Uzcard bilan minimal 10 000 so'm depozit qilinadi va +125% bonus beriladi.</p>
+      <p class="hero-subtitle">Mostbet kirish O'zbekistonda provayderlar blokirovkasi sababli qiyinlashishi mumkin. Men shaxsan Ucell, Beeline va Uztelecom tarmoqlarida tekshirdim: ishchi ko'zgu orqali sayt 1 soniyada ochiladi, Uzcard bilan minimal 10 000 so'm depozit qilinadi va +125% (3 000 000 so'mgacha) bonus beriladi.</p>
     </section>
 
     <!-- INTRO CONTENT & FAST ACCESS -->
@@ -173,10 +177,21 @@ const faqSchema = {
         </div>
       </div>
 
-      <!-- Screenshot Placeholder 1 -->
-      <div class="mockup-box">
-        <div class="mockup-title">📸 Skrinshot 1: Mostbet UZ Kirish Shakli</div>
-        <div class="mockup-desc">[Telefon raqam (+998), parol va «Kirish» tugmasi joylashuvi]</div>
+      <!-- UI Mockup: Mostbet Kirish Shakli -->
+      <div class="ui-mockup-card">
+        <div class="ui-mockup-header">
+          <span>🔐 Mostbet UZ — Kirish Shakli</span>
+          <span class="ui-badge-bonus">125% BONUS</span>
+        </div>
+        <div class="ui-field-row">
+          <span class="ui-field-label">📱 Telefon / Login:</span>
+          <span class="ui-field-val">+998 (__) ___ __ __</span>
+        </div>
+        <div class="ui-field-row">
+          <span class="ui-field-label">🔑 Parol:</span>
+          <span class="ui-field-val">••••••••••••</span>
+        </div>
+        <div class="ui-mockup-btn">Saytga Kirish (Avtorizatsiya)</div>
       </div>
 
       <a href={refLink} target="_blank" rel="nofollow sponsored" class="btn-orange">
@@ -192,10 +207,24 @@ const faqSchema = {
       </div>
       <p>O'zbekiston hududida xalqaro kazino saytlari davriy ravishda bloklanadi. Mostbet ma'muriyati har kuni yangi domenlarni (ko'zgularni) ishga tushiradi. Ular asosiy server bilan yagona ma'lumotlar bazasiga ulangan.</p>
 
-      <!-- Screenshot Placeholder 2 -->
-      <div class="mockup-box">
-        <div class="mockup-title">📸 Skrinshot 2: Mostbet Casino Aviator Bo'limi</div>
-        <div class="mockup-desc">[Aviator, Crash o'yinlar va jonli dilerlar qatori]</div>
+      <!-- UI Mockup: Mostbet Casino Aviator -->
+      <div class="ui-mockup-card">
+        <div class="ui-mockup-header">
+          <span>✈️ Mostbet Casino — Spribe Aviator</span>
+          <span class="ui-badge-bonus" style="color:#10b981;border-color:rgba(16,185,129,0.3);background:rgba(16,185,129,0.1);">RTP 97.0%</span>
+        </div>
+        <div class="ui-field-row">
+          <span class="ui-field-label">O'yin provayderi:</span>
+          <span class="ui-field-val">Spribe (Litsenziyalangan)</span>
+        </div>
+        <div class="ui-field-row">
+          <span class="ui-field-label">Halollik nazorati:</span>
+          <span class="ui-field-val">Provably Fair (Kriptografik)</span>
+        </div>
+        <div class="ui-field-row">
+          <span class="ui-field-label">Minimal stavka:</span>
+          <span class="ui-field-val" style="color:#f97316;">1 000 so'm</span>
+        </div>
       </div>
 
       <p>Mostbet Casino bo'limida eng mashhur o'yin bu — <b>Spribe Aviator</b>. Samolyot 1.00x dan parvoz qilib, koeffitsiyentlar 100x gacha ko'tariladi. O'yinni to'g'ridan-to'g'ri brauzerda yoki <a href="/ilova/" style="color:#38bdf8;font-weight:700;">Android APK ilovasi</a> orqali qotmasdan o'ynash mumkin.</p>
@@ -212,7 +241,7 @@ const faqSchema = {
         <li><b>Minimal depozit:</b> 10 000 so'm (komissiya 0%);</li>
         <li><b>To'lov usullari:</b> Uzcard, Humo, CLICK, Payme;</li>
         <li><b>Pul yechish vaqti:</b> 15 daqiqadan 1 soatgacha;</li>
-        <li><b>Xush kelibsiz bonusi:</b> Birinchi to'lovga 125% gacha.</li>
+        <li><b>Xush kelibsiz bonusi:</b> Birinchi to'lovga 125% (3 000 000 so'mgacha).</li>
       </ul>
       <p>Batafsil to'lov ko'rsatmalari bilan <a href="/uzcard-depozit/" style="color:#38bdf8;font-weight:700;">Uzcard va Humo depozit yo'riqnomamizda</a> tanishing.</p>
       

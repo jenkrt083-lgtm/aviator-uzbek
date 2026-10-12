@@ -649,7 +649,7 @@ const howToSchema = {
     <section class="sim-card">
       <div class="sim-header">
         <div class="bal-badge">
-          <span>💰 Balans:</span>
+          <span>💰 Баланс:</span>
           <span id="bal-val" style="color:#ffffff;">1 000 000 сум</span>
         </div>
         <span class="sim-badge">
@@ -694,7 +694,7 @@ const howToSchema = {
           <div class="auto-cash-label">
             <span>Auto Cash:</span>
             <select id="auto-cash-select" class="auto-cash-select">
-              <option value="0">O'chiq</option>
+              <option value="0">Выкл</option>
               <option value="1.30">1.30x</option>
               <option value="1.50">1.50x</option>
               <option value="2.00" selected>2.00x</option>
@@ -982,13 +982,13 @@ const howToSchema = {
     // Round Controller
     function startRound() {
       if (virtualBal < currentBet) {
-        alert("Balansingizda mablag' yetarli emas! Balans yangilandi.");
+        alert("На вашем балансе недостаточно средств! Баланс пополнен.");
         virtualBal = 1000000;
-        balDisplay.textContent = virtualBal.toLocaleString('uz-UZ') + " so'm";
+        balDisplay.textContent = virtualBal.toLocaleString('ru-RU') + " сум";
       }
 
       virtualBal -= currentBet;
-      balDisplay.textContent = virtualBal.toLocaleString('uz-UZ') + " so'm";
+      balDisplay.textContent = virtualBal.toLocaleString('ru-RU') + " сум";
       winBox.style.display = 'none';
       flewTag.style.display = 'none';
 
@@ -1071,7 +1071,7 @@ const howToSchema = {
       cancelAnimationFrame(animId);
       const won = Math.round(currentBet * currentMult);
       virtualBal += won;
-      balDisplay.textContent = virtualBal.toLocaleString('uz-UZ') + " so'm";
+      balDisplay.textContent = virtualBal.toLocaleString('ru-RU') + " сум";
 
       actionBtn.className = 'sim-action-btn';
       actionBtn.innerHTML = '<span>НОВАЯ СТАВКА</span>';
@@ -1130,7 +1130,7 @@ const howToSchema = {
     function setBet(amount) {
       if (gameState === 'FLYING' || gameState === 'WAITING') return;
       currentBet = Math.max(5000, Math.min(1000000, amount));
-      betDisp.textContent = currentBet.toLocaleString('uz-UZ') + " so'm";
+      betDisp.textContent = currentBet.toLocaleString('ru-RU') + " сум";
       chipBtns.forEach(c => {
         if (parseInt(c.dataset.b, 10) === currentBet) c.classList.add('active');
         else c.classList.remove('active');
