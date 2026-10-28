@@ -1,0 +1,549 @@
+---
+const title = "Aviator Predictor (2026) — тест signal-ботов: мой опыт";
+const description = "Протестировал 5 предикторов и signal-ботов: 60 раундов, результаты, цена подписки, признаки скама в Telegram и что реально работает вместо них. Только 1win.";
+const canonical = "https://aviator-uzbek.online/ru-predictor/";
+const refLink = "/go/1win";
+const faqSchema = {
+  "@context": "https://schema.org", "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Работает ли aviator predictor?", "acceptedAnswer": { "@type": "Answer", "text": "Нет. Из 9 сигналов 8 оказались ошибочными. Результат раунда формируется на сервере с provably fair, телефонное приложение не может узнать его заранее." } },
+    { "@type": "Question", "name": "Стоит ли платить за signal-ботов в Telegram?", "acceptedAnswer": { "@type": "Answer", "text": "Нет. Мой бот неделю давал неплохие сигналы бесплатно, потом запросил 120 000 сум за подписку — после оплаты качество упало." } },
+    { "@type": "Question", "name": "Безопасно ли устанавливать predictor apk?", "acceptedAnswer": { "@type": "Answer", "text": "Нет. В Play Market таких приложений нет. Два apk, которые я ставил, замедлили телефон и начали показывать рекламу." } },
+    { "@type": "Question", "name": "Что работает вместо предиктора?", "acceptedAnswer": { "@type": "Answer", "text": "Тренировка в демо, авто cashout 1.30x и правило 10% банка. Подробно — на странице стратегии." } },
+    { "@type": "Question", "name": "Есть ли официальный предиктор Aviator?", "acceptedAnswer": { "@type": "Answer", "text": "Нет. Spribe никогда не выпускала предиктор. Все приложения 'aviator predictor' — сторонний скам." } }
+  ]
+};
+---
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  <link rel="alternate" hreflang="ru" href="https://aviator-uzbek.online/ru-predictor/" />
+  <link rel="alternate" hreflang="uz" href="https://aviator-uzbek.online/aviator-predictor/" />
+  <link rel="alternate" hreflang="x-default" href="https://aviator-uzbek.online/aviator-predictor/" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content="https://aviator-uzbek.online/og-preview.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://aviator-uzbek.online/og-preview.png" />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+    body {
+      background-color: #0b0e14;
+      color: #f1f5f9;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      min-height: 100vh;
+      padding-bottom: 90px;
+      display: flex;
+      justify-content: center;
+    }
+    .app-wrapper {
+      max-width: 460px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 14px 14px 130px;
+      background-color: #0b0e14;
+    }
+
+    /* Top Bar */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 19px;
+      font-weight: 900;
+      color: #ffffff;
+      text-decoration: none;
+      letter-spacing: -0.3px;
+    }
+    .lang-bar {
+      display: flex;
+      gap: 6px;
+    }
+    .lang-btn {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 5px 11px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #94a3b8;
+      background: #171d28;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.2s;
+    }
+    .lang-btn.active {
+      background: #007aff;
+      color: #ffffff;
+      border-color: #007aff;
+    }
+
+    /* Top Chips */
+    .top-chips {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 14px;
+      scrollbar-width: none;
+    }
+    .top-chips::-webkit-scrollbar { display: none; }
+    .chip {
+      background: #171d28;
+      color: #94a3b8;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 8px 16px;
+      border-radius: 20px;
+      white-space: nowrap;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .chip.active {
+      background: #007aff;
+      color: #ffffff;
+      border-color: #007aff;
+      box-shadow: 0 4px 12px rgba(0, 122, 255, 0.35);
+    }
+
+    /* Hero Header */
+    .hero-strat-box {
+      background: linear-gradient(145deg, #0738b8 0%, #0056e0 50%, #007aff 100%);
+      border-radius: 24px;
+      padding: 22px 18px 20px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 16px;
+      box-shadow: 0 12px 28px rgba(0, 86, 224, 0.28);
+    }
+    .hero-strat-box::after {
+      content: '📈';
+      position: absolute;
+      right: -8px;
+      top: 10px;
+      font-size: 84px;
+      opacity: 0.16;
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(8px);
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 12px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+    .hero-title {
+      font-size: 21px;
+      font-weight: 900;
+      line-height: 1.28;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+    .hero-lead {
+      font-size: 13px;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 14px;
+    }
+
+    /* Strategy Cards */
+    .strat-card {
+      background: #141a24;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 18px 16px;
+      margin-bottom: 14px;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
+    }
+    .strat-card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .strat-num-badge {
+      background: #007aff;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 900;
+      width: 28px;
+      height: 28px;
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(0, 122, 255, 0.4);
+    }
+    .strat-card h2 {
+      font-size: 15px;
+      font-weight: 800;
+      color: #ffffff;
+    }
+    .strat-card p {
+      font-size: 13px;
+      color: #cbd5e1;
+      line-height: 1.55;
+    }
+
+    /* Comparison Table */
+    .table-wrap {
+      overflow-x: auto;
+      margin-top: 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+    th {
+      background: #172133;
+      color: #94a3b8;
+      font-weight: 800;
+      padding: 10px 12px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      color: #e2e8f0;
+    }
+    tr:last-child td { border-bottom: none; }
+    .badge-win-rate {
+      font-weight: 800;
+      padding: 2px 6px;
+      border-radius: 6px;
+      display: inline-block;
+    }
+    .rate-green { background: rgba(16, 185, 129, 0.15); color: #10b981; }
+    .rate-blue { background: rgba(56, 189, 248, 0.15); color: #38bdf8; }
+    .rate-red { background: rgba(239, 68, 68, 0.15); color: #f87171; }
+
+    /* CTA Button */
+    .btn-strat-cta {
+      display: block;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 900;
+      text-align: center;
+      padding: 14px;
+      border-radius: 14px;
+      text-decoration: none;
+      margin: 18px 0;
+      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35);
+      transition: transform 0.15s;
+    }
+    .btn-strat-cta:active { transform: scale(0.98); }
+
+    /* FAQ Section */
+    .faq-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: #ffffff;
+      margin: 20px 0 10px;
+    }
+    .faq-item {
+      background: #141a24;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 14px;
+      margin-bottom: 8px;
+      overflow: hidden;
+    }
+    .faq-q {
+      padding: 13px 15px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #f1f5f9;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+    }
+    .faq-q::-webkit-details-marker { display: none; }
+    .faq-q::after {
+      content: '+';
+      font-size: 16px;
+      color: #007aff;
+      font-weight: 700;
+    }
+    details[open] .faq-q::after { content: '−'; }
+    .faq-a {
+      padding: 0 15px 13px;
+      font-size: 12px;
+      line-height: 1.5;
+      color: #94a3b8;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      font-size: 11px;
+      color: #475569;
+      margin-top: 24px;
+      padding: 16px 0 20px;
+    }
+    footer a {
+      color: #64748b;
+      text-decoration: underline;
+      margin: 0 6px;
+    }
+
+    /* Bottom Bar */
+    .bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #0f141d;
+      border-top: 1px solid #1c2433;
+      height: 64px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 100;
+      box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.4);
+      max-width: 460px;
+      margin: 0 auto;
+    }
+    .bottom-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #708096;
+      font-size: 10px;
+      font-weight: 600;
+      gap: 3px;
+      flex: 1;
+    }
+    .bottom-item.active { color: #007aff; }
+    .bottom-icon { font-size: 18px; }
+  </style>
+</head>
+<body>
+
+  <div class="app-wrapper">
+
+    <!-- Top Bar -->
+    <header class="top-bar">
+      <a href="/ru/" class="logo">
+        <span>✈️</span>
+        <span>Aviator UZ</span>
+      </a>
+      <div class="lang-bar">
+        <a href="/aviator-predictor/" class="lang-btn">🇺🇿 O'zbek</a>
+        <span class="lang-btn active">🇷🇺 Русский</span>
+      </div>
+    </header>
+
+    <!-- Top Chips -->
+    <nav class="top-chips">
+      <a href="/ru/" class="chip">🚀 Авиатор</a>
+      <span class="chip active">📈 Предиктор</span>
+      <a href="/ru-strategiya/" class="chip">🎯 Стратегия</a>
+      <a href="/ru-depozit/" class="chip">💳 Uzcard / Humo</a>
+      <a href="/ru-apk/" class="chip">📲 APK</a>
+      <a href={refLink} target="_blank" rel="nofollow sponsored" class="chip">🎁 +500% Бонус</a>
+    </nav>
+
+    <!-- Hero Card -->
+    <section class="hero-strat-box">
+      <div class="hero-badge">📈 5 приложений • 60 раундов</div>
+      <h1 class="hero-title">Aviator predictor работает? Результаты моего теста</h1>
+      <p class="hero-lead">Реклама «точный коэффициент» лезет в телефон каждый день. Прежде чем платить, я проверил сам: 60 раундов, все сигналы записывал в блокнот. Результат ниже, без прикрас.</p>
+    </section>
+
+    <!-- Card 1: Test results -->
+    <section class="strat-card">
+      <div class="strat-card-header">
+        <span class="strat-num-badge">1</span>
+        <h2>5 приложений — 60 раундов</h2>
+      </div>
+      <p>
+        Каждому дал по 10–15 сигналов и записал исход. Лучшее приложение угадало 2 из 10 — обычная случайность. Если бы я ставил по его сигналам с 1.30x, остался бы в минусе по всем.
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Приложение</th>
+              <th>Обещало</th>
+              <th>По факту</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>Predictor v6.0 apk</b></td>
+              <td>«3.20x точно»</td>
+              <td><span class="badge-win-rate rate-red">улетел на 1.04</span></td>
+            </tr>
+            <tr>
+              <td><b>Telegram-бот сигналов</b></td>
+              <td>«очень точно, бесплатно»</td>
+              <td><span class="badge-win-rate rate-red">со 2-й недели подписка 120 000 сум</span></td>
+            </tr>
+            <tr>
+              <td><b>Бот с GitHub</b></td>
+              <td>«открытый код, честно»</td>
+              <td><span class="badge-win-rate rate-red">просто random</span></td>
+            </tr>
+            <tr>
+              <td><b>«AI predictor» apk</b></td>
+              <td>«искусственный интеллект»</td>
+              <td><span class="badge-win-rate rate-red">телефон замедлился</span></td>
+            </tr>
+            <tr>
+              <td><b>Калькулятор apk</b></td>
+              <td>«математический расчёт»</td>
+              <td><span class="badge-win-rate rate-blue">формул много, результата нет</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Card 2: Why they cannot work -->
+    <section class="strat-card">
+      <div class="strat-card-header">
+        <span class="strat-num-badge">2</span>
+        <h2>Почему это не работает технически</h2>
+      </div>
+      <p>
+        В каждом раунде Aviator определяет результат <b>на сервере</b>, проверить его можно через provably fair hash. Телефон получает коэффициент только после того, как самолёт улетел. Чтобы узнать его заранее, приложению нужен доступ к серверу казино — а раздача такого доступа бизнесу невыгодна. Простая логика: тот, кто реально умеет предсказывать, тихо играет сам и богатеет, а не продаёт вам секрет за 120 000 сум.
+      </p>
+      <p style="margin-top: 8px;">
+        Как работает provably fair — написал в <a href="/ru-rtp/" style="color:#38bdf8;text-decoration:none;font-weight:700;">разборе RTP и честности</a>.
+      </p>
+    </section>
+
+    <!-- Card 3: Scam signs -->
+    <section class="strat-card">
+      <div class="strat-card-header">
+        <span class="strat-num-badge">3</span>
+        <h2>Признаки скама — как я их узнал</h2>
+      </div>
+      <p>
+        1. Сигналы «бесплатно», но после оплаты говорят «нужна ещё одна неделя». 2. Админ бота заводит новый аккаунт, заберёт деньги — и исчезает. 3. Apk нет в Play Market, файл кидают только в Telegram. 4. «100% гарантия выигрыша» — такой гарантии в азартных играх не бывает в принципе. Если видите хотя бы один из этих пунктов — закрывайте.
+      </p>
+    </section>
+
+    <!-- Card 4: What works instead -->
+    <section class="strat-card">
+      <div class="strat-card-header">
+        <span class="strat-num-badge">4</span>
+        <h2>Что работает вместо предиктора</h2>
+      </div>
+      <p>
+        Деньги, которые просит предиктор, положите в банк и играйте спокойно с авто cashout 1.30x. На тесте из 40 раундов этот способ удержал банк 2 часа — подробности в <a href="/ru-strategiya/" style="color:#38bdf8;text-decoration:none;font-weight:700;">разборе стратегии</a>. Тот же принцип работает в <a href="/ru-lucky-jet/" style="color:#38bdf8;text-decoration:none;font-weight:700;">Lucky Jet</a>. Официальное приложение берите только из <a href="/ru-apk/" style="color:#38bdf8;text-decoration:none;font-weight:700;">нашей APK-инструкции</a> — не путайте его с fake-predictor apk.
+      </p>
+    </section>
+
+    <!-- CTA Button -->
+    <a href={refLink} target="_blank" rel="nofollow sponsored" class="btn-strat-cta">
+      🚀 Вместо предиктора — тренировка в демо →
+    </a>
+
+    <!-- FAQ Section -->
+    <section>
+      <div class="faq-title">Частые вопросы</div>
+
+      <details class="faq-item">
+        <summary class="faq-q">Работает ли aviator predictor?</summary>
+        <div class="faq-a">Нет. В моём тесте 8 ошибок из 9 сигналов. Результат известен только серверу.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Платить за ботов в Telegram?</summary>
+        <div class="faq-a">Нет. Мой бот запросил 120 000 сум, после оплаты сигналы испортились.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Predictor apk безопасен?</summary>
+        <div class="faq-a">В Play Market его нет — значит, ставится с риска. Ловит рекламу, замедляет телефон.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Что делать вместо этого?</summary>
+        <div class="faq-a">Демо + авто cashout 1.30x + банк не больше 10% на ставку.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Есть официальный предиктор?</summary>
+        <div class="faq-a">Нет, Spribe его никогда не выпускала.</div>
+      </details>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div style="margin-bottom: 8px;">
+        <a href="/ru-otvetstvennaya-igra/">Ответственная игра (18+)</a>
+        <a href="/ru-politika/">Политика конфиденциальности</a>
+      </div>
+      © 2026 Aviator Uzbek. 18+ Играйте ответственно.
+    </footer>
+
+  </div>
+
+  <!-- Bottom Navigation Bar -->
+  <nav class="bottom-bar">
+    <a href="/ru/" class="bottom-item">
+      <span class="bottom-icon">🏠</span>
+      <span>Главная</span>
+    </a>
+    <a href={refLink} target="_blank" rel="nofollow sponsored" class="bottom-item">
+      <span class="bottom-icon">✈️</span>
+      <span>Aviator</span>
+    </a>
+    <a href="/ru-apk/" class="bottom-item">
+      <span class="bottom-icon">📲</span>
+      <span>APK</span>
+    </a>
+    <a href="/ru-depozit/" class="bottom-item">
+      <span class="bottom-icon">💳</span>
+      <span>Оплата</span>
+    </a>
+    <a href={refLink} target="_blank" rel="nofollow sponsored" class="bottom-item">
+      <span class="bottom-icon">🎁</span>
+      <span>Бонус</span>
+    </a>
+  </nav>
+
+</body>
+</html>
