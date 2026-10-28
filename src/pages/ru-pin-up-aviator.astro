@@ -1,0 +1,547 @@
+---
+const title = "Pin Up Aviator (2026) — вход, бонусы и мой выбор казино";
+const description = "Есть ли Aviator в Pin Up, как работают бонусы, депозиты и почему я остался на 1win. Плюс предупреждение о фейковых 'pin up aviator apk'. Только личный опыт.";
+const canonical = "https://aviator-uzbek.online/ru-pin-up-aviator/";
+const refLink = "/go/1win";
+const faqSchema = {
+  "@context": "https://schema.org", "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Есть ли Aviator в Pin Up и работает ли он?", "acceptedAnswer": { "@type": "Answer", "text": "Есть — это оригинальная игра Spribe с provably fair. Я несколько дней играл и в Pin Up, механизм тот же, что и на 1win." } },
+    { "@type": "Question", "name": "Распространяется ли бонус Pin Up на Aviator?", "acceptedAnswer": { "@type": "Answer", "text": "В условиях бонуса есть список игр и требования вейджера. Я брал бонус и упёрся в тяжёлые условия — читайте их до активации." } },
+    { "@type": "Question", "name": "Что лучше: 1win или Pin Up?", "acceptedAnswer": { "@type": "Answer", "text": "По моему мнению, 1win: мой аккаунт там, депозит через Uzcard зашёл за 5 минут. Pin Up тоже официальный, но я там не остался." } },
+    { "@type": "Question", "name": "Безопасно ли приложение pin up aviator apk?", "acceptedAnswer": { "@type": "Answer", "text": "Apk из Telegram-каналов фейковые, с встроенным «предиктором». Официальное приложение скачивается только с сайта казино." } },
+    { "@type": "Question", "name": "Есть ли в Pin Up демо-режим?", "acceptedAnswer": { "@type": "Answer", "text": "В самой игре Aviator демо есть. Как его открыть — описал в своём гайде по демо." } }
+  ]
+};
+---
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  <link rel="alternate" hreflang="ru" href="https://aviator-uzbek.online/ru-pin-up-aviator/" />
+  <link rel="alternate" hreflang="uz" href="https://aviator-uzbek.online/pin-up-aviator/" />
+  <link rel="alternate" hreflang="x-default" href="https://aviator-uzbek.online/pin-up-aviator/" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content="https://aviator-uzbek.online/og-preview.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://aviator-uzbek.online/og-preview.png" />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+    body {
+      background-color: #0b0e14;
+      color: #f1f5f9;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      min-height: 100vh;
+      padding-bottom: 90px;
+      display: flex;
+      justify-content: center;
+    }
+    .app-wrapper {
+      max-width: 460px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 14px 14px 130px;
+      background-color: #0b0e14;
+    }
+
+    /* Top Bar */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 19px;
+      font-weight: 900;
+      color: #ffffff;
+      text-decoration: none;
+      letter-spacing: -0.3px;
+    }
+    .lang-bar {
+      display: flex;
+      gap: 6px;
+    }
+    .lang-btn {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 5px 11px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #94a3b8;
+      background: #171d28;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.2s;
+    }
+    .lang-btn.active {
+      background: #007aff;
+      color: #ffffff;
+      border-color: #007aff;
+    }
+
+    /* Top Chips */
+    .top-chips {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 14px;
+      scrollbar-width: none;
+    }
+    .top-chips::-webkit-scrollbar { display: none; }
+    .chip {
+      background: #171d28;
+      color: #94a3b8;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 8px 16px;
+      border-radius: 20px;
+      white-space: nowrap;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .chip.active {
+      background: #007aff;
+      color: #ffffff;
+      border-color: #007aff;
+      box-shadow: 0 4px 12px rgba(0, 122, 255, 0.35);
+    }
+
+    /* Hero Header */
+    .hero-strat-box {
+      background: linear-gradient(145deg, #9f1239 0%, #be123c 50%, #e11d48 100%);
+      border-radius: 24px;
+      padding: 22px 18px 20px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 16px;
+      box-shadow: 0 12px 28px rgba(190, 18, 60, 0.28);
+    }
+    .hero-strat-box::after {
+      content: '🎰';
+      position: absolute;
+      right: -8px;
+      top: 10px;
+      font-size: 84px;
+      opacity: 0.16;
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(8px);
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 12px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+    .hero-title {
+      font-size: 21px;
+      font-weight: 900;
+      line-height: 1.28;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+    .hero-lead {
+      font-size: 13px;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 14px;
+    }
+
+    /* Strategy Cards */
+    .strat-card {
+      background: #141a24;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 18px 16px;
+      margin-bottom: 14px;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
+    }
+    .strat-card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .strat-num-badge {
+      background: #007aff;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 900;
+      width: 28px;
+      height: 28px;
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(0, 122, 255, 0.4);
+    }
+    .strat-card h2 {
+      font-size: 15px;
+      font-weight: 800;
+      color: #ffffff;
+    }
+    .strat-card p {
+      font-size: 13px;
+      color: #cbd5e1;
+      line-height: 1.55;
+    }
+
+    /* Comparison Table */
+    .table-wrap {
+      overflow-x: auto;
+      margin-top: 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+    th {
+      background: #172133;
+      color: #94a3b8;
+      font-weight: 800;
+      padding: 10px 12px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      color: #e2e8f0;
+    }
+    tr:last-child td { border-bottom: none; }
+    .badge-win-rate {
+      font-weight: 800;
+      padding: 2px 6px;
+      border-radius: 6px;
+      display: inline-block;
+    }
+    .rate-green { background: rgba(16, 185, 129, 0.15); color: #10b981; }
+    .rate-blue { background: rgba(56, 189, 248, 0.15); color: #38bdf8; }
+    .rate-red { background: rgba(239, 68, 68, 0.15); color: #f87171; }
+
+    /* CTA Button */
+    .btn-strat-cta {
+      display: block;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 900;
+      text-align: center;
+      padding: 14px;
+      border-radius: 14px;
+      text-decoration: none;
+      margin: 18px 0;
+      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35);
+      transition: transform 0.15s;
+    }
+    .btn-strat-cta:active { transform: scale(0.98); }
+
+    /* FAQ Section */
+    .faq-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: #ffffff;
+      margin: 20px 0 10px;
+    }
+    .faq-item {
+      background: #141a24;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 14px;
+      margin-bottom: 8px;
+      overflow: hidden;
+    }
+    .faq-q {
+      padding: 13px 15px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #f1f5f9;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+    }
+    .faq-q::-webkit-details-marker { display: none; }
+    .faq-q::after {
+      content: '+';
+      font-size: 16px;
+      color: #007aff;
+      font-weight: 700;
+    }
+    details[open] .faq-q::after { content: '−'; }
+    .faq-a {
+      padding: 0 15px 13px;
+      font-size: 12px;
+      line-height: 1.5;
+      color: #94a3b8;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      font-size: 11px;
+      color: #475569;
+      margin-top: 24px;
+      padding: 16px 0 20px;
+    }
+    footer a {
+      color: #64748b;
+      text-decoration: underline;
+      margin: 0 6px;
+    }
+
+    /* Bottom Bar */
+    .bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #0f141d;
+      border-top: 1px solid #1c2433;
+      height: 64px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 100;
+      box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.4);
+      max-width: 460px;
+      margin: 0 auto;
+    }
+    .bottom-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #708096;
+      font-size: 10px;
+      font-weight: 600;
+      gap: 3px;
+      flex: 1;
+    }
+    .bottom-item.active { color: #007aff; }
+    .bottom-icon { font-size: 18px; }
+  </style>
+</head>
+<body>
+
+  <div class="app-wrapper">
+
+    <!-- Top Bar -->
+    <header class="top-bar">
+      <a href="/ru/" class="logo">
+        <span>✈️</span>
+        <span>Aviator UZ</span>
+      </a>
+      <div class="lang-bar">
+        <a href="/pin-up-aviator/" class="lang-btn">🇺🇿 O'zbek</a>
+        <span class="lang-btn active">🇷🇺 Русский</span>
+      </div>
+    </header>
+
+    <!-- Top Chips -->
+    <nav class="top-chips">
+      <a href="/ru/" class="chip">🚀 Авиатор</a>
+      <span class="chip active">🎰 Pin Up</span>
+      <a href="/ru-strategiya/" class="chip">🎯 Стратегия</a>
+      <a href="/ru-depozit/" class="chip">💳 Uzcard / Humo</a>
+      <a href="/ru-apk/" class="chip">📲 APK</a>
+      <a href={refLink} target="_blank" rel="nofollow sponsored" class="chip">🎁 +500% Бонус</a>
+    </nav>
+
+    <!-- Hero Card -->
+    <section class="hero-strat-box">
+      <div class="hero-badge">🎰 Сравнение казино • мой опыт</div>
+      <h1 class="hero-title">Pin Up Aviator: игра есть, но я выбрал другое</h1>
+      <p class="hero-lead">В красной рекламе Pin Up тоже мелькает Aviator. Несколько дней я играл там, потом сравнил с 1win бок о бок. Разница небольшая, но одна деталь всё решила — о ней ниже.</p>
+    </section>
+
+    <!-- Card 1: Does Pin Up have Aviator -->
+    <section class="strat-card">
+      <div class="strat-card-header">
+        <span class="strat-num-badge">1</span>
+        <h2>Есть ли Aviator в Pin Up?</h2>
+      </div>
+      <p>
+        Есть — оригинальная игра Spribe, с provably fair и RTP 97%. В Pin Up игру можно найти через поиск в каталоге игр. Ключевой момент, по-моему, такой: Aviator во всех официальных казино — <b>одна и та же</b> игра, коэффициенты всюду приходят с сервера. Казино — это только вход. Поэтому вопрос смещается с «где игра настоящая» на «где условия удобнее».
+      </p>
+      <p style="margin-top: 8px;">
+        Механизм provably fair я разобрал в <a href="/ru-rtp/" style="color:#38bdf8;text-decoration:none;font-weight:700;">статье про честность и RTP</a>.
+      </p>
+    </section>
+
+    <!-- Card 2: Comparison -->
+    <section class="strat-card">
+      <div class="strat-card-header">
+        <span class="strat-num-badge">2</span>
+        <h2>Моё сравнение: Pin Up против 1win</h2>
+      </div>
+      <p>
+        Играл в обоих. Игра одинаковая — разница проявилась в условиях и локальных платежах:
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Параметр</th>
+              <th>1win</th>
+              <th>Pin Up</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>Aviator (Spribe)</b></td>
+              <td><span class="badge-win-rate rate-green">официальный</span></td>
+              <td><span class="badge-win-rate rate-green">официальный</span></td>
+            </tr>
+            <tr>
+              <td><b>Мой депозит</b></td>
+              <td>50 000 сум, Uzcard, 5 минут</td>
+              <td>небольшая сумма на пробу</td>
+            </tr>
+            <tr>
+              <td><b>Демо-режим</b></td>
+              <td><span class="badge-win-rate rate-blue">есть — мой гайд внутри</span></td>
+              <td><span class="badge-win-rate rate-blue">есть в игре</span></td>
+            </tr>
+            <tr>
+              <td><b>Где я остался</b></td>
+              <td><span class="badge-win-rate rate-green">основной счёт</span></td>
+              <td>после пробы не остался</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top: 10px;">
+        Почему 1win? Первый депозит я сделал через <a href="/ru-depozit/" style="color:#38bdf8;text-decoration:none;font-weight:700;">Uzcard/Humo</a> — зашёл за 5 минут, и именно эта скорость всё решила. С бонусами тоже не всё просто: я читал условия Pin Up — вейджер показался тяжёлым. По-моему, смотреть надо не на размер бонуса, а на условия его отыгрыша.
+      </p>
+    </section>
+
+    <!-- Card 3: Fake apk warning -->
+    <section class="strat-card">
+      <div class="strat-card-header">
+        <span class="strat-num-badge">3</span>
+        <h2>Фейковый «pin up aviator apk» — осторожно</h2>
+      </div>
+      <p>
+        По запросу «pin up aviator apk download» Telegram-каналы подсовывают подделку — внутри ещё и «предиктор» прилагается. Двойной фейк: неофициальное apk плюс неработающий предиктор. Я пробовал такие — в телефоне осталась реклама и замедление. Официальное приложение скачивается только с сайта казино. Почему предиктор не работает в принципе — написал в <a href="/ru-predictor/" style="color:#38bdf8;text-decoration:none;font-weight:700;">тесте 5 приложений</a>.
+      </p>
+    </section>
+
+    <!-- Card 4: Where to practice -->
+    <section class="strat-card">
+      <div class="strat-card-header">
+        <span class="strat-num-badge">4</span>
+        <h2>Прежде чем выбирать казино — демо</h2>
+      </div>
+      <p>
+        По-моему, сначала стоит выучить саму игру: в <a href="/ru-demo/" style="color:#38bdf8;text-decoration:none;font-weight:700;">гайде по демо-режиму</a> я описал бесплатную тренировку — авто cashout 1.30x и правило 10% банка. Игра в Pin Up и 1win одинаковая, поэтому тренироваться можно в одном месте, а вход выбирать потом. Полную стратегию я записал в <a href="/ru-strategiya/" style="color:#38bdf8;text-decoration:none;font-weight:700;">разборе на 40 раундов</a>.
+      </p>
+    </section>
+
+    <!-- CTA Button -->
+    <a href={refLink} target="_blank" rel="nofollow sponsored" class="btn-strat-cta">
+      🚀 Где играю я — демо без риска →
+    </a>
+
+    <!-- FAQ Section -->
+    <section>
+      <div class="faq-title">Частые вопросы</div>
+
+      <details class="faq-item">
+        <summary class="faq-q">В Pin Up есть Aviator?</summary>
+        <div class="faq-a">Есть — оригинал Spribe с provably fair. Находится через поиск в каталоге игр.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Что лучше, 1win или Pin Up?</summary>
+        <div class="faq-a">По-моему, 1win: мой счёт там, Uzcard-депозит за 5 минут. Pin Up тоже официальный.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Стоит ли брать бонус Pin Up?</summary>
+        <div class="faq-a">Читайте вейджер: цифра бонуса выглядит крупно, а условия бывают тяжёлыми.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Откуда качать приложение?</summary>
+        <div class="faq-a">Только с официального сайта. Apk из Telegram — подделка.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Есть демо?</summary>
+        <div class="faq-a">Есть, внутри самой игры. Как открыть — в моём гайде по демо.</div>
+      </details>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div style="margin-bottom: 8px;">
+        <a href="/ru-otvetstvennaya-igra/">Ответственная игра (18+)</a>
+        <a href="/ru-politika/">Политика конфиденциальности</a>
+      </div>
+      © 2026 Aviator Uzbek. 18+ Играйте ответственно.
+    </footer>
+
+  </div>
+
+  <!-- Bottom Navigation Bar -->
+  <nav class="bottom-bar">
+    <a href="/ru/" class="bottom-item">
+      <span class="bottom-icon">🏠</span>
+      <span>Главная</span>
+    </a>
+    <a href={refLink} target="_blank" rel="nofollow sponsored" class="bottom-item">
+      <span class="bottom-icon">✈️</span>
+      <span>Aviator</span>
+    </a>
+    <a href="/ru-apk/" class="bottom-item">
+      <span class="bottom-icon">📲</span>
+      <span>APK</span>
+    </a>
+    <a href="/ru-depozit/" class="bottom-item">
+      <span class="bottom-icon">💳</span>
+      <span>Оплата</span>
+    </a>
+    <a href={refLink} target="_blank" rel="nofollow sponsored" class="bottom-item">
+      <span class="bottom-icon">🎁</span>
+      <span>Бонус</span>
+    </a>
+  </nav>
+
+</body>
+</html>

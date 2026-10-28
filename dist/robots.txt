@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /go/
+Disallow: /download/
+
+Sitemap: https://aviator-uzbek.online/sitemap.xml

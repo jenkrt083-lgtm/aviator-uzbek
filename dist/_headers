@@ -1,0 +1,6 @@
+/favicon.svg
+  Cache-Control: public, max-age=86400
+/og-preview.png
+  Cache-Control: public, max-age=604800
+/sitemap.xml
+  Content-Type: application/xml
