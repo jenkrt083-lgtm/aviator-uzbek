@@ -1,0 +1,555 @@
+---
+const title = "Онлайн Казино УЗ Узбекистан (2026) — Рейтинг, Бонусы и Uzcard";
+const description = "Казино уз: мой рейтинг онлайн-казино — 1win, Mostbet, Pin Up, 1xbet. Скорость пополнения через Uzcard/Humo, условия бонусов и где есть Aviator — из моего личного опыта.";
+const canonical = "https://aviator-uzbek.online/ru-kazino-uz/";
+const refLink = "/go/1win";
+const faqSchema = {
+  "@context": "https://schema.org", "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Что такое онлайн-казино?", "acceptedAnswer": { "@type": "Answer", "text": "Сайт с играми онлайн: слоты, крэш-игры (Aviator, JetX), рулетка. Честнее работают те, кто использует provably fair — результат можно проверить." } },
+    { "@type": "Question", "name": "Казино заблокированы в Узбекистане — как заходить?", "acceptedAnswer": { "@type": "Answer", "text": "Провайдеры блокируют гемблинг-домены. Обход: зеркало (рабочее) или официальный APK. Вход разобран отдельно для Pin Up, Mostbet и 1win." } },
+    { "@type": "Question", "name": "Какой бонус лучше брать?", "acceptedAnswer": { "@type": "Answer", "text": "Смотрите не на процент, а на вейджер. У 1win (+500% на четыре депозита) и Mostbet (125%, до 3 000 000 сум) условия были проще. Бонус Pin Up я не взял — вейджер оказался тяжёлым." } },
+    { "@type": "Question", "name": "Aviator есть везде?", "acceptedAnswer": { "@type": "Answer", "text": "Да — во всех официальных казино стоит оригинал Spribe с provably fair. Разница не в игре, а в скорости депозитов и условиях бонусов." } },
+    { "@type": "Question", "name": "Сколько идёт депозит через Uzcard?", "acceptedAnswer": { "@type": "Answer", "text": "По моим тестам: 1win — 5 минут (50 000 сум), Mostbet — 1-2 минуты, Pin Up — чуть медленнее. Минимальный депозит обычно 10 000 сум." } }
+  ]
+};
+---
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  <link rel="alternate" hreflang="uz" href="https://aviator-uzbek.online/kazino-uz/" />
+  <link rel="alternate" hreflang="ru" href="https://aviator-uzbek.online/ru-kazino-uz/" />
+  <link rel="alternate" hreflang="x-default" href="https://aviator-uzbek.online/kazino-uz/" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content="https://aviator-uzbek.online/og-preview.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://aviator-uzbek.online/og-preview.png" />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+    body {
+      background-color: #0b0e14;
+      color: #f1f5f9;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      min-height: 100vh;
+      padding-bottom: 90px;
+      display: flex;
+      justify-content: center;
+    }
+    .app-wrapper {
+      max-width: 460px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 14px 14px 130px;
+      background-color: #0b0e14;
+    }
+
+    /* Top Bar */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 19px;
+      font-weight: 900;
+      color: #ffffff;
+      text-decoration: none;
+      letter-spacing: -0.3px;
+    }
+    .lang-bar {
+      display: flex;
+      gap: 6px;
+    }
+    .lang-btn {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 5px 11px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #94a3b8;
+      background: #171d28;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.2s;
+    }
+    .lang-btn.active {
+      background: #007aff;
+      color: #ffffff;
+      border-color: #007aff;
+    }
+
+    /* Top Chips */
+    .top-chips {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 14px;
+      scrollbar-width: none;
+    }
+    .top-chips::-webkit-scrollbar { display: none; }
+    .chip {
+      background: #171d28;
+      color: #94a3b8;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 8px 16px;
+      border-radius: 20px;
+      white-space: nowrap;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .chip.active {
+      background: #007aff;
+      color: #ffffff;
+      border-color: #007aff;
+      box-shadow: 0 4px 12px rgba(0, 122, 255, 0.35);
+    }
+
+    /* Hero Header */
+    .hero-strat-box {
+      background: linear-gradient(145deg, #0738b8 0%, #0056e0 50%, #007aff 100%);
+      border-radius: 24px;
+      padding: 22px 18px 20px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 16px;
+      box-shadow: 0 12px 28px rgba(0, 122, 255, 0.28);
+    }
+    .hero-strat-box::after {
+      content: '🏬';
+      position: absolute;
+      right: -8px;
+      top: 10px;
+      font-size: 84px;
+      opacity: 0.16;
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(8px);
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 12px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+    .hero-title {
+      font-size: 21px;
+      font-weight: 900;
+      line-height: 1.28;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+    .hero-lead {
+      font-size: 13px;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 14px;
+    }
+
+    /* Strategy Cards */
+    .strat-card {
+      background: #141a24;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 18px 16px;
+      margin-bottom: 14px;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
+    }
+    .strat-card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .strat-num-badge {
+      background: #007aff;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 900;
+      width: 28px;
+      height: 28px;
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(0, 122, 255, 0.4);
+    }
+    .strat-card h2 {
+      font-size: 15px;
+      font-weight: 800;
+      color: #ffffff;
+    }
+    .strat-card p {
+      font-size: 13px;
+      color: #cbd5e1;
+      line-height: 1.55;
+    }
+
+    /* Comparison Table */
+    .table-wrap {
+      overflow-x: auto;
+      margin-top: 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+    th {
+      background: #172133;
+      color: #94a3b8;
+      font-weight: 800;
+      padding: 10px 12px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      color: #e2e8f0;
+    }
+    tr:last-child td { border-bottom: none; }
+    .badge-win-rate {
+      font-weight: 800;
+      padding: 2px 6px;
+      border-radius: 6px;
+      display: inline-block;
+    }
+    .rate-green { background: rgba(16, 185, 129, 0.15); color: #10b981; }
+    .rate-blue { background: rgba(56, 189, 248, 0.15); color: #38bdf8; }
+    .rate-red { background: rgba(239, 68, 68, 0.15); color: #f87171; }
+
+    /* CTA Button */
+    .btn-strat-cta {
+      display: block;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 900;
+      text-align: center;
+      padding: 14px;
+      border-radius: 14px;
+      text-decoration: none;
+      margin: 18px 0;
+      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35);
+      transition: transform 0.15s;
+    }
+    .btn-strat-cta:active { transform: scale(0.98); }
+
+    /* FAQ Section */
+    .faq-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: #ffffff;
+      margin: 20px 0 10px;
+    }
+    .faq-item {
+      background: #141a24;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 14px;
+      margin-bottom: 8px;
+      overflow: hidden;
+    }
+    .faq-q {
+      padding: 13px 15px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #f1f5f9;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+    }
+    .faq-q::-webkit-details-marker { display: none; }
+    .faq-q::after {
+      content: '+';
+      font-size: 16px;
+      color: #007aff;
+      font-weight: 700;
+    }
+    details[open] .faq-q::after { content: '−'; }
+    .faq-a {
+      padding: 0 15px 13px;
+      font-size: 12px;
+      line-height: 1.5;
+      color: #94a3b8;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      font-size: 11px;
+      color: #475569;
+      margin-top: 24px;
+      padding: 16px 0 20px;
+    }
+    footer a {
+      color: #64748b;
+      text-decoration: underline;
+      margin: 0 6px;
+    }
+
+    /* Bottom Bar */
+    .bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #0f141d;
+      border-top: 1px solid #1c2433;
+      height: 64px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 100;
+      box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.4);
+      max-width: 460px;
+      margin: 0 auto;
+    }
+    .bottom-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #708096;
+      font-size: 10px;
+      font-weight: 600;
+      gap: 3px;
+      flex: 1;
+    }
+    .bottom-item.active { color: #007aff; }
+    .bottom-icon { font-size: 18px; }
+  </style>
+</head>
+<body>
+
+  <div class="app-wrapper">
+
+    <!-- Top Bar -->
+    <header class="top-bar">
+      <a href="/ru/" class="logo">
+        <span>✈️</span>
+        <span>Aviator RU</span>
+      </a>
+      <div class="lang-bar">
+        <a href="/kazino-uz/" class="lang-btn">🇺🇿 O'zbek</a>
+        <span class="lang-btn active">🇷🇺 Русский</span>
+      </div>
+    </header>
+
+    <!-- Top Chips -->
+    <nav class="top-chips">
+      <a href="/ru/" class="chip">🚀 Авиатор</a>
+      <span class="chip active">🏬 Казино УЗ</span>
+      <a href="/ru-pin-up-kirish/" class="chip">🎰 Pin Up Вход</a>
+      <a href="/ru-depozit/" class="chip">💳 Uzcard / Humo</a>
+      <a href={refLink} target="_blank" rel="nofollow sponsored" class="chip">🎁 +500% Бонус</a>
+    </nav>
+
+    <!-- Hero Card -->
+    <section class="hero-strat-box">
+      <div class="hero-badge">🏬 Рейтинг • 2026</div>
+      <h1 class="hero-title">Онлайн-казино УЗ: сравнение четырёх сайтов из моего опыта</h1>
+      <p class="hero-lead">По запросу «казино уз» интернет завален «рейтингами» — купленными списками. Я написал только про четыре казино, где играл сам: все цифры с моего реального счёта — как шёл депозит, как отыгрывался бонус.</p>
+    </section>
+
+    <!-- Card 1: Blocking -->
+    <section class="strat-card">
+      <div class="strat-card-header">
+        <span class="strat-num-badge">1</span>
+        <h2>Казино заблокированы — как заходить</h2>
+      </div>
+      <p>
+        В Узбекистане провайдеры блокируют гемблинг-домены. Обхода два: зеркало (рабочее) или официальный APK. Подделок вокруг много, поэтому вход я разобрал по отдельной странице для каждой: <a href="/ru-pin-up-kirish/" style="color:#38bdf8;text-decoration:none;font-weight:700;">вход Pin Up</a>, <a href="/mostbet-kirish/" style="color:#38bdf8;text-decoration:none;font-weight:700;">вход Mostbet</a>, <a href="/1win-kirish/" style="color:#38bdf8;text-decoration:none;font-weight:700;">вход 1win</a>.
+      </p>
+    </section>
+
+    <!-- Card 2: Rating table -->
+    <section class="strat-card">
+      <div class="strat-card-header">
+        <span class="strat-num-badge">2</span>
+        <h2>Мой короткий рейтинг</h2>
+      </div>
+      <p style="margin-bottom: 4px;">Это не купленный список — все цифры с моей карты:</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Казино</th>
+              <th>Бонус</th>
+              <th>Мой опыт с депозитом</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>1win</b></td>
+              <td><span class="badge-win-rate rate-green">+500% (на 4 депозита)</span></td>
+              <td>50 000 сум — зашли за 5 минут</td>
+            </tr>
+            <tr>
+              <td><b>Mostbet</b></td>
+              <td>125% (до 3 млн сум)</td>
+              <td>быстро, 1-2 минуты</td>
+            </tr>
+            <tr>
+              <td><b>Pin Up</b></td>
+              <td>процент, вейджер тяжёлый</td>
+              <td>вошёл, но чуть медленнее</td>
+            </tr>
+            <tr>
+              <td><b>1xbet</b></td>
+              <td>процент</td>
+              <td>мало пользуюсь — вход по-другому устроен</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Card 3: Payments -->
+    <section class="strat-card">
+      <div class="strat-card-header">
+        <span class="strat-num-badge">3</span>
+        <h2>Узбекские платежи — Uzcard, Humo, CLICK</h2>
+      </div>
+      <p>
+        Все казино принимают Uzcard, Humo, CLICK и Payme, играть можно в сумах. Это важно: нет конвертации и нет скрытых комиссий. Детали платежей я выписывал отдельно — в <a href="/ru-depozit/" style="color:#38bdf8;text-decoration:none;font-weight:700;">моей инструкции по Uzcard/Humo</a>. Комментарий от автора: 1win стал моим основным потому, что депозит в 50 000 сум там стабильно шёл 5 минут — не везде так.
+      </p>
+    </section>
+
+    <!-- Card 4: Criteria -->
+    <section class="strat-card">
+      <div class="strat-card-header">
+        <span class="strat-num-badge">4</span>
+        <h2>Пять критериев выбора казино</h2>
+      </div>
+      <p>
+        1. Лицензия и provably fair. 2. Платёж через Uzcard/Humo в сумах. 3. Бонус смотрите не по цифре, а по вейджеру — чем выше вейджер, тем тяжелее вывести бонус. 4. Официальный APK должен быть. 5. Скорость вывода выигрыша. Про механизм справедливости я написал отдельно — в <a href="/ru-rtp/" style="color:#38bdf8;text-decoration:none;font-weight:700;">статье про RTP и честность</a>.
+      </p>
+    </section>
+
+    <!-- Card 5: Why 1win -->
+    <section class="strat-card">
+      <div class="strat-card-header">
+        <span class="strat-num-badge">5</span>
+        <h2>Почему основной счёт остался на 1win</h2>
+      </div>
+      <p>
+        Честный ответ: из опыта. Депозит в 50 000 сум в 1win зашёл за 5 минут, условия бонуса +500% читались проще. Плюс <a href="/ru-lucky-jet/" style="color:#38bdf8;text-decoration:none;font-weight:700;">Lucky Jet — только на 1win</a>. Pin Up и Mostbet тоже официальные, у меня к ним претензий нет — просто мой выбор вырос из собственного опыта. Стратегию разобрал отдельно — на странице <a href="/ru-strategiya/" style="color:#38bdf8;text-decoration:none;font-weight:700;">моего раздела стратегий</a>.
+      </p>
+    </section>
+
+    <!-- CTA Button -->
+    <a href={refLink} target="_blank" rel="nofollow sponsored" class="btn-strat-cta">
+      🚀 Мой выбор: начать с 1win демо →
+    </a>
+
+    <!-- Legal warning -->
+    <section class="strat-card" style="border-color: rgba(239, 68, 68, 0.25);">
+      <p style="font-size: 12px; color:#f87171;">
+        ⚠️ 18+ Азартные игры могут привести к потерям — играйте только на деньги, которые готовы потерять, не повышайте ставку.
+      </p>
+    </section>
+
+    <!-- FAQ Section -->
+    <section>
+      <div class="faq-title">Частые вопросы</div>
+
+      <details class="faq-item">
+        <summary class="faq-q">Что такое онлайн-казино?</summary>
+        <div class="faq-a">Сайт с играми: слоты, крэш-игры (Aviator, JetX), рулетка.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Заблокировано — откуда заходить?</summary>
+        <div class="faq-a">Зеркало или официальный APK. Вход разобран для каждой казинки отдельно.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Какой бонус лучше?</summary>
+        <div class="faq-a">Смотри на вейджер, а не на процент. Мои: 1win (+500%) и Mostbet (125%) были проще.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Aviator есть везде?</summary>
+        <div class="faq-a">Да — во всех официальных стоит оригинал Spribe.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">Депозит через Uzcard — как долго?</summary>
+        <div class="faq-a">По моим тестам: 1win 5 минут, Mostbet 1-2 минуты. Минимум обычно 10 000 сум.</div>
+      </details>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div style="margin-bottom: 8px;">
+        <a href="/masuliyatli-oyin/">Ответственная игра (18+)</a>
+        <a href="/maxfiylik-siyosati/">Политика конфиденциальности</a>
+      </div>
+      © 2026 Aviator Uzbek. 18+ Играйте ответственно.
+    </footer>
+
+  </div>
+
+  <!-- Bottom Navigation Bar -->
+  <nav class="bottom-bar">
+    <a href="/ru/" class="bottom-item">
+      <span class="bottom-icon">🏠</span>
+      <span>Главная</span>
+    </a>
+    <a href="/ru-kazino-uz/" class="bottom-item active">
+      <span class="bottom-icon">🏬</span>
+      <span>Казино</span>
+    </a>
+    <a href="/ru-apk/" class="bottom-item">
+      <span class="bottom-icon">📲</span>
+      <span>APK</span>
+    </a>
+    <a href="/ru-depozit/" class="bottom-item">
+      <span class="bottom-icon">💳</span>
+      <span>Оплата</span>
+    </a>
+    <a href={refLink} target="_blank" rel="nofollow sponsored" class="bottom-item">
+      <span class="bottom-icon">🎁</span>
+      <span>Бонус</span>
+    </a>
+  </nav>
+
+</body>
+</html>
